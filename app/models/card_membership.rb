@@ -1,0 +1,2 @@
+class CardMembership < ApplicationRecord
+end

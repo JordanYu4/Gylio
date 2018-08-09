@@ -25,8 +25,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+trello_screenshots/
 node_modules/
-bundle.js
+bundle.js*
 bundle.js.map
 .DS_Store
 npm-debug.log
