@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
+// TESTING START
+import { signup, login, logout } from './actions/session_actions';
+
+window.signup = signup;
+window.login = login;
+window.logout = logout;
+window.user = { username: "frank", password: "sinatra" };
+// TESTING END
+
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   // TESTING START
