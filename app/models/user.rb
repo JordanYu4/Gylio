@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :email, uniqueness: true
   validates :session_token, uniqueness: true
-  validates :password, length: { minumum: 6, allow_nil: true }
+  validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :card_memberships
   has_many :cards,
