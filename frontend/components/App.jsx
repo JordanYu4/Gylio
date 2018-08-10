@@ -1,7 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import {
   Route,
-  Switch 
+  Switch,
+  HashRouter
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
