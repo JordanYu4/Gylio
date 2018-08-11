@@ -13,3 +13,31 @@ $roboto: 'Roboto', sans-serif;
 body {
   font-family: $roboto;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  color: #fff;
+  background-color: #026AA7;
+}
+
+header a {
+  // box-sizing: border-box;
+  border: 1px none;
+  color: #fff;
+  text-decoration: none;
+  background: #035A90;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 #0E5B8A;
+  padding: 10px 15px 10px;
+}
+
+header a:hover {
+  background: #035A90;
+}
+
+h1 {
+  font-weight: 700;
+}

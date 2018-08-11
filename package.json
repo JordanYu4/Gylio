@@ -29,7 +29,8 @@
     "npm": "6.1.0"
   },
   "scripts": {
-    "postinstall": "webpack --mode=development --display-error-details"
+    "postinstall": "webpack --mode=production --display-error-details",
+    "webpack-debug": "webpack --mode=development --display-error-details"
   },
   "keywords": [],
   "author": "",

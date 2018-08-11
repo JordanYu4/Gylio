@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Styles
+body {
+  background-color: #F8F9F9;
+  align-items: center;
+}
 
 .login-form-container {
   width: 50%;
@@ -12,8 +15,4 @@
 h1 {
   font-size: 36px;
   font-weight: 800;
-}
-
-Link:hover {
-  color: black;
 }
