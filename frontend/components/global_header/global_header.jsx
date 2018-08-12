@@ -8,8 +8,8 @@ const GlobalHeader = ({ currentUser, logout, login }) => {
     password: 'shadowfax'
   };
 
-  const demoLogin = (user = demoUser) => {
-    login(user);
+  const demoLogin = () => {
+    login(demoUser);
   };
 
   const sessionLinks = () => (
