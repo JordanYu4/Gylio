@@ -12,7 +12,8 @@ $roboto: 'Roboto', sans-serif;
 
 body {
   font-family: $roboto;
-  height: 500px;
+  height: 100%;
+  margin: 0;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
   padding: 20px 25px 20px;
   color: #fff;
   background-color: #026AA7;
+  box-sizing: border-box;
 }
 
 header h1 {
