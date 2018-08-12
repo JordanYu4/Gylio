@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import { login, logout } from '../../actions/session_actions';
 
 import GlobalHeader from './global_header';
 
@@ -10,6 +10,7 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  login: user => dispatch(login(user)),
   logout: () => dispatch(logout())
 });
 

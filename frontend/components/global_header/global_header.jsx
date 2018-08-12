@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const GlobalHeader = ({ currentUser, logout }) => {
+const GlobalHeader = ({ currentUser, logout, login }) => {
+
+  const demoUser = {
+    username: 'Jean Valjean',
+    password: 'whoami'
+  };
+
+  const demoLogin = () => {
+    login(demoUser);
+  };
+
   const sessionLinks = () => (
     <nav className="header-login-signup">
-      <Link to="">Demo</Link>
+      <button className="demo-login" onClick={demoLogin}>Demo</button>
       &nbsp;
       <Link to="/login">Log In</Link>
       &nbsp;
