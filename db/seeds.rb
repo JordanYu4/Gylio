@@ -31,3 +31,8 @@ Board.create!(
   title: 'Recruit some hobbits',
   background_color: '#0078BF'
 )
+
+Board.create!(
+  title: 'Research Bilbo\'s shady ring',
+  background_color: '#282C34'
+)
