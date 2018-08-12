@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const GlobalHeader = ({ currentUser, logout, login }) => {
 
   const demoUser = {
-    username: 'Jean Valjean',
-    password: 'whoami'
+    username: 'Gandalf',
+    password: 'shadowfax'
   };
 
-  const demoLogin = () => {
-    login(demoUser);
+  const demoLogin = (user = demoUser) => {
+    login(user);
   };
 
   const sessionLinks = () => (

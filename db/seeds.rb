@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
+Board.delete_all
 
 User.create!(
   username: 'Jean Valjean',
@@ -18,4 +19,15 @@ User.create!(
   username: 'frank',
   email: 'frank@frank.com',
   password: 'sinatra'
+)
+
+User.create!(
+  username: 'Gandalf',
+  email: 'thewhitewizard@undin.com',
+  password: 'shadowfax'
+)
+
+Board.create!(
+  title: 'Recruit some hobbits',
+  background_color: '#0078BF'
 )
