@@ -30,7 +30,7 @@
   },
   "scripts": {
     "postinstall": "webpack --mode=production --display-error-details",
-    "webpack-debug": "webpack --mode=production --display-error-details"
+    "webpack": "webpack --mode=development --watch"
   },
   "keywords": [],
   "author": "",

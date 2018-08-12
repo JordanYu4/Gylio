@@ -12,32 +12,45 @@ $roboto: 'Roboto', sans-serif;
 
 body {
   font-family: $roboto;
+  height: 500px;
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 20px 25px 20px;
   color: #fff;
   background-color: #026AA7;
 }
 
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
 header a {
-  // box-sizing: border-box;
+  font-size: 1.2em;
   border: 1px none;
   color: #fff;
   text-decoration: none;
-  background: #035A90;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  box-shadow: 0 1.5px 0 #0E5B8A;
-  padding: 10px 15px 10px;
+  box-shadow: 0 2px 0 #0E5B8A;
+  padding: 10px 18px 10px;
 }
 
 header a:hover {
-  background: #035A90;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-h1 {
+header a:last-child {
   font-weight: 700;
+  background: rgba(92, 176, 71, 1);
+}
+
+header a:last-child:hover {
+  font-weight: 700;
+  background: rgba(92, 176, 71, 0.8);
 }

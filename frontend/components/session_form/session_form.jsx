@@ -41,12 +41,11 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1>{ this.props.sessionFormHeader }</h1>
-          <br />
           <h3>or {this.props.navLink}</h3>
           {this.renderErrors()}
           <div className="login-form">
             <br />
-            <label>Username:
+            <label>Username
               <br />
               <input type="text"
                 value={this.state.username}
@@ -55,7 +54,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <label>Password:
+            <label>Password
               <br />
               <input type="password"
                 value={this.state.password}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout }) => {
+const GlobalHeader = ({ currentUser, logout }) => {
   const sessionLinks = () => (
-    <nav className="login-signup">
+    <nav className="header-login-signup">
       <Link to="">Demo</Link>
       &nbsp;
       <Link to="/login">Log In</Link>
@@ -12,14 +12,14 @@ const Greeting = ({ currentUser, logout }) => {
     </nav>
   );
 
-  const headerUser = () => (
+  const userNav = () => (
     <hgroup className="hgroup">
       <h2 className="header-name">{ currentUser.username }</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
     </hgroup>
   );
 
-  return currentUser ? headerUser() : sessionLinks()
+  return currentUser ? userNav() : sessionLinks()
 };
 
-export default Greeting;
+export default GlobalHeader;
