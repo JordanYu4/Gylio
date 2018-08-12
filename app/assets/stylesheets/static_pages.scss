@@ -29,28 +29,3 @@ header h1 {
   font-size: 36px;
   font-weight: 700;
 }
-
-header a {
-  font-size: 1.2em;
-  border: 1px none;
-  color: #fff;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  box-shadow: 0 2px 0 #0E5B8A;
-  padding: 10px 18px 10px;
-}
-
-header a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-header a:last-child {
-  font-weight: 700;
-  background: rgba(92, 176, 71, 1);
-}
-
-header a:last-child:hover {
-  font-weight: 700;
-  background: rgba(92, 176, 71, 0.8);
-}

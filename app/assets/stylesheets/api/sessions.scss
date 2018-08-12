@@ -75,14 +75,16 @@ nav.header-login-signup a:last-child:hover {
 
 .login-form-box input {
   width: 100%;
+  color: #4D4D4D;
   font-size: 24px;
   line-height: 1.5em;
   background: #EDEFF0;
   border: 1px solid lightgray;
   border-radius: 3px;
+  padding: 5px 12px 5px;
 }
 
-input.session-submit {
+.login-form-box input.session-submit {
   color: #fff;
   font-family: $roboto;
   border: none;
@@ -91,6 +93,6 @@ input.session-submit {
   margin-top: 1em;
 }
 
-input.session-submit:hover {
+.login-form-box input.session-submit:hover {
   background: rgba(90, 172, 68, 1);
 }
