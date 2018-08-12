@@ -5,6 +5,7 @@ import {
   Switch,
   HashRouter
 } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
 
 import GlobalHeader from './global_header/global_header_container';
 import LogInFormContainer from './session_form/login_form_container';
@@ -17,8 +18,8 @@ const App = () => (
       <GlobalHeader />
     </header>
     <Switch>
-      <Route path="/login" component={LogInFormContainer} />
-      <Route path="/signup" component={SignUpFormContainer} />
+      <AuthRoute path="/login" component={LogInFormContainer} />
+      <AuthRoute path="/signup" component={SignUpFormContainer} />
     </Switch>
   </div>
 );
