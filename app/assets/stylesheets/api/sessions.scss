@@ -47,9 +47,19 @@ nav.header-login-signup a:last-child:hover {
   background: rgba(92, 176, 71, 0.8);
 }
 
-.login-signup h1 {
+.user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav h2 {
+  font-size: 20px;
+}
+
+header h1 {
   font-size: 36px;
   font-weight: 800;
+  margin-left: 20px;
 }
 
 .login-form-box h1 {

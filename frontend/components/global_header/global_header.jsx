@@ -23,10 +23,11 @@ const GlobalHeader = ({ currentUser, logout, login }) => {
   );
 
   const userNav = () => (
-    <hgroup className="hgroup">
+    <nav className="user-nav">
       <h2 className="header-name">{ currentUser.username }</h2>
+      &nbsp;&nbsp;
       <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
+    </nav>
   );
 
   return currentUser ? userNav() : sessionLinks()
