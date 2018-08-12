@@ -29,11 +29,11 @@ nav.header-login-signup a, button {
   text-decoration: none;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  box-shadow: 0, 2px, rgba(0, 0, 0, 0.7);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.3);
   padding: 10px 18px 10px;
 }
 
-nav.header-login-signup a, button:hover {
+nav.header-login-signup a:hover, button:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
