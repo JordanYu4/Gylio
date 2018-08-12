@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  # skip_before_action :verify_authenticity_token, only: [:create]
 
   helper_method :logged_in?, :current_user
 

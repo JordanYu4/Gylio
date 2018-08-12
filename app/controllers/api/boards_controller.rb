@@ -1,4 +1,4 @@
-class BoardsController < ApplicationController
+class Api::BoardsController < ApplicationController
   before_action :require_login
 
   def show
@@ -8,12 +8,12 @@ class BoardsController < ApplicationController
   def index
     boards = Board.all
 
-    if params[:user_id]
-      boards = boards.where(:user_id == current_user.id)
-    end
+    # if params[:user_id]
+    #   boards = boards.where(:user_id == current_user.id)
+    # end
 
     @boards = boards
-    render :json
+    render :index
   end
 
   def create

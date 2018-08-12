@@ -24,6 +24,14 @@ export const fetchBoards = data => {
   })
 };
 
+export const fetchBoard = boardId => {
+  $.ajax({
+    method: 'GET',
+    url: `api/boards/${boardId}`,
+    error: err => console.log(err)
+  })
+};
+
 export const deleteBoard = boardId => {
   $.ajax({
     method: 'DELETE',
