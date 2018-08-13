@@ -5,16 +5,14 @@ import configureStore from './store/store';
 
 // TESTING START
 import { signup, login, logout } from './actions/session_actions';
-import { createBoard, fetchBoard, fetchBoards } from './util/board_api_util';
+import { fetchBoards } from './actions/board_actions';
 
 window.signup = signup;
 window.login = login;
 window.logout = logout;
 window.user = { username: "frank", password: "sinatra" };
 
-window.fetchBoard = fetchBoard;
 window.fetchBoards = fetchBoards;
-window.createBoard = createBoard;
 // TESTING END
 
 document.addEventListener('DOMContentLoaded', () => {
