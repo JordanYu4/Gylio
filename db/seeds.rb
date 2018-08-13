@@ -46,3 +46,8 @@ Board.create!(
   title: 'Invent new fireworks',
   background_color: 'black'
 )
+
+Board.create!(
+  title: 'Annual wizard\'s council',
+  background_color: 'navyblue'
+)
