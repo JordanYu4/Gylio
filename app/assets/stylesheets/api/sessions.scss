@@ -15,9 +15,11 @@ body {
   background-color: #F8F9F9;
 }
 
-header h1 {
+header a {
   font-size: 36px;
   font-weight: 800;
+  text-decoration: none;
+  color: #fff;
 }
 
 nav.header-login-signup {

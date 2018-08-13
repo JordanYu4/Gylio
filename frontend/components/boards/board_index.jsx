@@ -20,12 +20,16 @@ class BoardIndex extends React.Component {
     );
 
     return(
-      <div>
-        <h1>Personal Boards</h1>
-        <ul>
-          {indexedBoards}
-          <Link to="">Create new board...</Link>
-        </ul>
+      <div className="board-index-container">
+        <div className="board-index-section">
+          <div className="board-index-section-header">
+            <h1>Personal Boards</h1>
+          </div>
+          <ul className="board-index-list">
+            {indexedBoards}
+            <Link to="" className="board-index-item">Create new board...</Link>
+          </ul>
+        </div>
       </div>
     );
   }

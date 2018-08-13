@@ -5,7 +5,7 @@ import {
   Switch,
   HashRouter
 } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import GlobalHeader from './global_header/global_header_container';
 import LogInFormContainer from './session_form/login_form_container';
@@ -21,7 +21,7 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={LogInFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
-      <Route exact path="/" component={ BoardIndexContainer } /> // Make this a protected route
+      <ProtectedRoute exact path="/" component={ BoardIndexContainer } /> // Make this a protected route
     </Switch>
   </div>
 );

@@ -1,0 +1,42 @@
+// Place all the styles related to the Boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.board-index-section {
+  width: 70%;
+  margin: 0;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+.board-index-section-header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.board-index-list {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: row;
+}
+
+.board-index-item {
+  height: 5em;
+  word-wrap: normal;
+  margin: 0 1em 0.5em 0;
+  border: 1px solid none;
+  border-radius: 3px;
+  background: lightgray; // Replace this w/ custom board background
+}
+
+.board-index-item * {
+  font-size: 18px;
+  font-weight: 1000;
+  padding: 0.5em;
+  line-height: 2em;
+}
+
+.board-index-item:hover {
+  cursor: pointer;
+}
