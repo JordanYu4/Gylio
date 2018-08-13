@@ -10,16 +10,18 @@ import { AuthRoute } from '../util/route_util';
 import GlobalHeader from './global_header/global_header_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
+import BoardIndexContainer from './boards/board_index_container';
 
 const App = () => (
   <div>
     <header>
-      <h1>Mise</h1>
+      <a href="/">Mise</a>
       <GlobalHeader />
     </header>
     <Switch>
       <AuthRoute path="/login" component={LogInFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
+      <Route exact path="/" component={ BoardIndexContainer } /> // Make this a protected route
     </Switch>
   </div>
 );
