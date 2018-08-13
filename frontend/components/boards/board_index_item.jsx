@@ -15,14 +15,14 @@ class BoardIndexItem extends React.Component {
   render() {
     const { title, backgroundColor } = this.props.board;
     return (
-      <div
-        className="board-index-item"
+      <li
+        className="board-index-item-box"
         onClick={this.handleClick}
       >
-        <span className="index-item-title">
+        <span className="board-index-item">
           {title}
         </span>
-      </div>
+      </li>
     );
   }
 }

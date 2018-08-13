@@ -27,7 +27,9 @@ class BoardIndex extends React.Component {
           </div>
           <ul className="board-index-list">
             {indexedBoards}
-            <Link to="" className="board-index-item">Create new board...</Link>
+            <li className="create-new-board-box">
+              <Link to="" className="create-new-board">Create new board...</Link>
+            </li>
           </ul>
         </div>
       </div>

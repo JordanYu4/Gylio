@@ -36,3 +36,13 @@ Board.create!(
   title: 'Research Bilbo\'s shady ring',
   background_color: '#282C34'
 )
+
+Board.create!(
+  title: 'Find Aragorn',
+  background_color: 'green'
+)
+
+Board.create!(
+  title: 'Invent new fireworks',
+  background_color: 'black'
+)
