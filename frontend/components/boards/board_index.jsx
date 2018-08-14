@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import BoardIndexItem from './board_index_item';
+import BoardFormModal from './board_form_modal';
 
 class BoardIndex extends React.Component {
   componentDidMount() {
@@ -27,10 +28,11 @@ class BoardIndex extends React.Component {
           <ul className="board-index-list">
             {indexedBoards}
             <li className="create-new-board-box">
-              <Link to="" className="create-new-board">Create new board...</Link>
+              <span className="create-new-board js-modal-open">Create new board...</span>
             </li>
           </ul>
         </div>
+        <BoardFormModal />
       </div>
     );
   }
