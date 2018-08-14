@@ -5,16 +5,15 @@ import BoardIndexItem from './board_index_item';
 
 class BoardIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchBoards();
+    this.props.fetchBoards(); // what exactly does this do?
   }
 
   render() {
     const boards = this.props.boards;
-    const boardKeys = Object.keys(boards);
-    const indexedBoards = boardKeys.map(boardKey => (
+    const indexedBoards = boards.map(board => (
       <BoardIndexItem
-        board={boards[boardKey]}
-        key={boardKey}
+        board={board}
+        key={board.id}
       />
       )
     );

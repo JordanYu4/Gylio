@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import { fetchBoards } from '../../actions/board_actions';
+import { getAllBoards } from '../../reducers/selectors';
 
 import BoardIndex from './board_index';
 
-const mapStateToProps = ({ entities: { boards } }) => {
+const mapStateToProps = state => {
   return {
-    boards: boards, // board_memberships?
-    // board_memberships: board_memberships
+    boards: getAllBoards(state.entities),
+    // board_memberships: board_memberships ?
   };
 };
 

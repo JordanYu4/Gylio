@@ -5,7 +5,7 @@ import configureStore from './store/store';
 
 // TESTING START
 import { signup, login, logout } from './actions/session_actions';
-import { fetchBoards } from './actions/board_actions';
+import { fetchBoards, fetchBoard } from './actions/board_actions';
 
 window.signup = signup;
 window.login = login;
@@ -13,14 +13,11 @@ window.logout = logout;
 window.user = { username: "frank", password: "sinatra" };
 
 window.fetchBoards = fetchBoards;
+window.fetchBoard = fetchBoard;
 // TESTING END
 
 document.addEventListener('DOMContentLoaded', () => {
-  let store = configureStore();
-  // TESTING START
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  // TESTING END
+  let store = {};
   if (window.currentUser) {
     const preloadedState = {
       entities: {
@@ -33,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
+  // TESTING START
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // TESTING END
+  
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
