@@ -62,7 +62,6 @@ nav.header-login-signup a:last-child:hover {
   font-size: 20px;
 }
 
-
 .login-form-box h1 {
   font-size: 42px;
   font-weight: 1000px;
@@ -74,6 +73,20 @@ nav.header-login-signup a:last-child:hover {
 
 .login-form-box a:hover {
   color: #000;
+}
+
+.login-form {
+  margin-top: 10px;
+}
+
+.session-form-error {
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  background: #EB5A46;
 }
 
 .login-form-box {
@@ -108,3 +121,13 @@ nav.header-login-signup a:last-child:hover {
 .login-form-box input.session-submit:hover {
   background: rgba(90, 172, 68, 1);
 }
+
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+// input:focus {
+//   ::-webkit-input-placeholder {
+//     color: rgba(0, 0, 0, 0.2);
+//   }
+// }

@@ -25,18 +25,25 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return (
+    const errors = this.props.errors;
+    const fullErrors = () => (
       <ul>
-        {this.props.errors.map((error, idx) => (
+        {errors.map((error, idx) => (
           <li key={`error-${idx}`}>
             { error }
           </li>
         ))}
       </ul>
     );
+
+    return (
+      <span>{ errors[0] }</span>
+    );
   }
 
   render () {
+    // this.props.clearFormErrors();
+
     const emailInput = () => (
       <div>
         <label>Email
@@ -45,6 +52,7 @@ class SessionForm extends React.Component {
             value={this.state.email}
             onChange={this.update('email')}
             className="login-input"
+            placeholder="e.g., gandalf@istar.edu"
           />
         </label>
         <br />
@@ -54,17 +62,18 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+          <section className="session-form-error">
+            {this.renderErrors()}
+          </section>
           <h1>{ this.props.sessionFormHeader }</h1>
           <h3>or {this.props.navLink}</h3>
-          {this.renderErrors()}
           <div className="login-form">
-            <br />
             <label>Username
-              <br />
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
+                placeholder="e.g., Gandalf the Grey"
               />
             </label>
             <br />
@@ -75,6 +84,7 @@ class SessionForm extends React.Component {
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
+                placeholder="e.g., ••••••••"
               />
             </label>
             <br />
