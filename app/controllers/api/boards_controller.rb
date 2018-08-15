@@ -6,13 +6,7 @@ class Api::BoardsController < ApplicationController
   end
 
   def index
-    boards = Board.all
-
-    # if params[:user_id]
-    #   boards = boards.where(:user_id == current_user.id)
-    # end
-
-    @boards = boards
+    @boards = current_user.boards
     render :index
   end
 
@@ -24,6 +18,16 @@ class Api::BoardsController < ApplicationController
       render json: @board.errors.full_messages, status: 422
     end
   end
+
+  def create_new(val)
+    @board = Board.new(val)
+    @board_memberships = BoardMembership.new
+
+    @board_memberships.board_id = @board.id
+    .save
+    .save
+
+  end 
 
   def update
     @board = Board.find(params[:board_id])

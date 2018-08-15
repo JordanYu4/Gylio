@@ -12,6 +12,7 @@
 class Board < ApplicationRecord
   validates :title, :background_color, presence: true
 
+  has_many :lists, dependent: :destroy
   has_many :board_memberships
   has_many :members,
            through: :board_memberships,
