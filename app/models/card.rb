@@ -12,7 +12,7 @@
 #
 
 class Card < ApplicationRecord
-  validates :title, :list_id, presence: true
+  validates :title, presence: true
 
   has_many :comments
   has_many :labelings
