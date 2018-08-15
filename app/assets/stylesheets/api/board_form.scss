@@ -98,3 +98,8 @@ input.board-submit-enabled {
   background: rgba(90, 172, 68, 0.9);
   cursor: pointer;
 }
+
+.board-submit-enabled:focus {
+  outline: none;
+  box-shadow: none;
+}
