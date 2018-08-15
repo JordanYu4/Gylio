@@ -11,26 +11,28 @@ class Api::BoardsController < ApplicationController
   end
 
   def create
-    @board = Board.new(board_params)
-    if @board.save
+    @board = Board.new(board_params) # refer to reddit lite to refactor w/ inverse of
+    unless @board.save
+      render json: @board.errors.full_messages, status: 422
+    end
+    create_board_membership(@board.id, current_user.id, true)
+  end
+
+  def create_board_membership(board_id, member_id, is_admin)
+    @board_membership = BoardMembership.new(
+      board_id: board_id,
+      member_id: member_id,
+      admin: is_admin
+    )
+    if @board_membership.save
       render :show
     else
-      render json: @board.errors.full_messages, status: 422
+      render json: @board_membership.errors.full_messages, status: 422
     end
   end
 
-  def create_new(val)
-    @board = Board.new(val)
-    @board_memberships = BoardMembership.new
-
-    @board_memberships.board_id = @board.id
-    .save
-    .save
-
-  end 
-
   def update
-    @board = Board.find(params[:board_id])
+    @board = Board.find(params[:id])
     # execute edits
     render :show
   end

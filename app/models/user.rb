@@ -22,7 +22,10 @@ class User < ApplicationRecord
   has_many :cards,
            through: :card_memberships,
            source: :card
-  has_many :board_memberships
+  has_many :board_memberships,
+           primary_key: :id,
+           foreign_key: :member_id,
+           class_name: :BoardMembership
   has_many :boards,
            through: :board_memberships,
            source: :board

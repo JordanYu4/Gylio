@@ -21,7 +21,7 @@ export const receiveErrors = errors =>  ({
 
 export const createList = list => dispatch => (
   ListAPIUtil.createList(list).then(list => (
-    dispatch(receiveList(list)),
+    dispatch(receiveList(list))
   )
   // , error => (
   //   dispatch(receiveErrors(error.responseJSON))
@@ -31,7 +31,7 @@ export const createList = list => dispatch => (
 
 export const fetchLists = () => dispatch => (
   ListAPIUtil.fetchLists().then(lists => (
-    dispatch(receiveLists(lists)),
+    dispatch(receiveLists(lists))
   )
   // , error => (
   //   dispatch(receiveErrors(error.responseJSON))

@@ -10,7 +10,7 @@ import { fetchBoards, fetchBoard } from './actions/board_actions';
 window.signup = signup;
 window.login = login;
 window.logout = logout;
-window.user = { username: "frank", password: "sinatra" };
+window.user = { username: "Frank", password: "sinatra" };
 
 window.fetchBoards = fetchBoards;
 window.fetchBoard = fetchBoard;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // TESTING END
-  
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

@@ -28,7 +28,6 @@ class BoardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("trying to submit");
     const board = Object.assign({}, this.state);
     this.props.createBoard(board).then(
       ({ board }) => this.navigateToBoard(board.id)

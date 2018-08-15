@@ -12,7 +12,7 @@
 class CardMembership < ApplicationRecord
   validates :member_id, :card_id, presence: true
 
-  belongs_to :member,
+  belongs_to :member, # expect error asking for user_id; set primary key explicitly to id 
              foreign_key: :member_id,
              class_name: :User
   belongs_to :card,
