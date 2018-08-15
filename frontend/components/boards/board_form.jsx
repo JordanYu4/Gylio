@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class BoardForm extends React.Component {
   constructor(props) {
@@ -11,15 +12,27 @@ class BoardForm extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return e => {
+      // if (e.target.value !== "") {
+      //   document.getElementById("sub").disabled = false;
+      // }
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+    };
+  }
+
+  navigateToBoard(boardId) {
+    this.props.history.push(`/boards/${boardId}/`);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const newBoard = Object.assign({}, this.state);
-    // create board and redirect
+    console.log("trying to submit");
+    const board = Object.assign({}, this.state);
+    this.props.createBoard(board).then(
+      ({ board }) => this.navigateToBoard(board.id)
+    );
   }
 
   render () {
@@ -34,10 +47,15 @@ class BoardForm extends React.Component {
           />
           <span className="modal-close js-modal-close">&times;</span>
         </section>
-        <input className="board-submit" type="submit" value="Create Board" />
+        <input id="sub"
+          className={this.state.title ? "board-submit-enabled" : "board-submit-disabled"}
+          type="submit"
+          value="Create Board"
+          disabled={!this.state.title}
+        />
       </form>
     );
   }
 }
 
-export default BoardForm;
+export default withRouter(BoardForm);

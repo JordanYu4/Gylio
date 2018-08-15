@@ -22,7 +22,7 @@ class Board < ApplicationRecord
   DEFAULT_BACKROUND_COLOR = '#0078BF'
 
   def ensure_background_color
-    self.background_color ||= DEFAULT_BACKGROUND_COLOR
+    self.background_color ||= '#0078BF'
   end
 
 end

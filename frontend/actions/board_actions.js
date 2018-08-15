@@ -2,7 +2,7 @@ import * as APIUtil from '../util/board_api_util';
 
 export const RECEIVE_BOARDS = 'RECEIVE_BOARDS';
 export const RECEIVE_BOARD = 'RECEIVE_BOARD';
-export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
 
 export const receiveBoards = boards => ({
   type: RECEIVE_BOARDS,
@@ -15,9 +15,19 @@ export const receiveBoard = board => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIVE_SESSION_ERRORS,
+  type: RECEIVE_BOARD_ERRORS,
   errors
 });
+
+export const createBoard = board => dispatch => (
+  APIUtil.createBoard(board).then(board => (
+    dispatch(receiveBoard(board))
+  )
+  // , error => (
+  //   dispatch(receiveErrors(error.responseJSON))
+  // )
+  )
+);
 
 export const fetchBoards = () => dispatch => (
   APIUtil.fetchBoards().then(boards => (

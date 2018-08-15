@@ -1,13 +1,13 @@
 import React from 'react';
 
-import BoardForm from './board_form';
+import BoardFormContainer from './board_form_container';
 
 const BoardFormModal = () => {
   return (
     <div className="modal">
       <section className="modal-screen js-modal-close"></section>
       <section className="modal-form">
-        <BoardForm />
+        <BoardFormContainer />
       </section>
     </div>
   );

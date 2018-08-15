@@ -4,6 +4,7 @@ import BoardHeader from './board_header';
 
 class BoardShow extends React.Component {
   componentDidMount() {
+    console.log(this.props);
     this.props.fetchBoard(this.props.boardId);
   }
 
@@ -14,7 +15,6 @@ class BoardShow extends React.Component {
     return (
       <div>
         <BoardHeader board={board}/>
-        
       </div>
     );
   }

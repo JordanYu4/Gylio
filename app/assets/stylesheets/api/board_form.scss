@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 
-.board-submit {
+input[class^="board-submit"] {
   position: absolute;
   left: 0;
   bottom: -45px;
@@ -81,9 +81,20 @@
   font-size: 16px;
   font-weight: 700;
   color: rgba(180, 180, 180, 1);
-  border: 1px solid none;
+  border: none;
   border-radius: 4px;
   box-sizing: border-box;
   padding: 0 1.2em 0;
   background: rgba(248, 249, 249, 1);
+  transition: 0.3s;
+}
+
+input.board-submit-enabled {
+  background: rgba(90, 172, 68, 1);
+  color: #fff;
+}
+
+.board-submit-enabled:hover {
+  background: rgba(90, 172, 68, 0.9);
+  cursor: pointer;
 }

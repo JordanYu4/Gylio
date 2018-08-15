@@ -16,7 +16,7 @@ const mapStateToProps = ({ errors }) => {
 
 const mapDispatchToProps = dispatch => ({
   processForm: user => dispatch(login(user)),
-  clearFormErrors: () => dispatch(clearFormErrors()) 
+  clearFormErrors: () => dispatch(clearFormErrors())
 });
 
 export default connect(

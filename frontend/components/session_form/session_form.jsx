@@ -12,6 +12,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearFormErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -42,8 +46,6 @@ class SessionForm extends React.Component {
   }
 
   render () {
-    // this.props.clearFormErrors();
-
     const emailInput = () => (
       <div>
         <label>Email
