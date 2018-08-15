@@ -8,6 +8,7 @@
 
 User.delete_all
 Board.delete_all
+BoardMembership.delete_all
 
 User.create!(
   username: 'Jean Valjean',
@@ -15,39 +16,77 @@ User.create!(
   password: 'whoami'
 )
 
-User.create!(
+sinatra = User.create!(
   username: 'Frank',
   email: 'frank@frank.com',
   password: 'sinatra'
 )
 
-User.create!(
+board_0 = Board.create!(
+  title: 'Do it my way',
+  background_color: 'black'
+)
+
+BoardMembership.create(
+  board_id: board_0.id,
+  member_id: sinatra.id,
+  admin: 'true'
+)
+
+gandalf = User.create!(
   username: 'Gandalf',
   email: 'thewhitewizard@undin.com',
   password: 'shadowfax'
 )
 
-Board.create!(
+board_1 = Board.create!(
   title: 'Recruit some hobbits',
   background_color: '#0078BF'
 )
 
-Board.create!(
+BoardMembership.create(
+  board_id: board_1.id,
+  member_id: gandalf.id,
+  admin: 'true'
+)
+
+board_2 = Board.create!(
   title: 'Research Bilbo\'s shady ring',
   background_color: '#282C34'
 )
 
-Board.create!(
+BoardMembership.create(
+  board_id: board_2.id,
+  member_id: gandalf.id,
+  admin: 'true'
+)
+board_3 = Board.create!(
   title: 'Find Aragorn',
   background_color: 'green'
 )
 
-Board.create!(
+BoardMembership.create(
+  board_id: board_3.id,
+  member_id: gandalf.id,
+  admin: 'true'
+)
+board_4 = Board.create!(
   title: 'Invent new fireworks',
   background_color: 'black'
 )
 
-Board.create!(
+BoardMembership.create(
+  board_id: board_4.id,
+  member_id: gandalf.id,
+  admin: 'true'
+)
+board_5 = Board.create!(
   title: 'Annual wizard\'s council',
   background_color: 'navyblue'
+)
+
+BoardMembership.create(
+  board_id: board_5.id,
+  member_id: gandalf.id,
+  admin: 'true'
 )
