@@ -109,6 +109,11 @@ nav.header-login-signup a:last-child:hover {
   box-sizing: border-box;
 }
 
+.login-form-box input:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgb(190, 190, 190);
+}
+
 .login-form-box input.session-submit {
   color: #fff;
   font-family: $roboto;
