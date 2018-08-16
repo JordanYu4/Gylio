@@ -14,11 +14,11 @@ const GlobalHeader = ({ currentUser, logout, login }) => {
 
   const sessionLinks = () => (
     <nav className="header-login-signup">
-      <button className="demo-login" onClick={demoLogin}>Demo</button>
+      <button className="session-button" onClick={demoLogin}>Demo</button>
       &nbsp;
-      <Link to="/login">Log In</Link>
+      <Link to="/login" className="session-button">Log In</Link>
       &nbsp;
-      <Link to="/signup">Sign Up</Link>
+      <Link to="/signup" className="session-button">Sign Up</Link>
     </nav>
   );
 
@@ -26,11 +26,16 @@ const GlobalHeader = ({ currentUser, logout, login }) => {
     <nav className="user-nav">
       <h2 className="header-name">{ currentUser.username }</h2>
       &nbsp;&nbsp;
-      <button className="header-button" onClick={logout}>Log Out</button>
+      <button className="session-button" onClick={logout}>Log Out</button>
     </nav>
   );
 
-  return currentUser ? userNav() : sessionLinks()
+  return (
+    <header>
+      <a href="/">Gylio</a>
+      {currentUser ? userNav() : sessionLinks()}
+    </header>
+  );
 };
 
 export default GlobalHeader;

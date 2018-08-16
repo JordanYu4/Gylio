@@ -1,0 +1,48 @@
+.splash-tagline {
+  display: flex;
+  justify-content: center;
+  background: #077FC4;
+  // background: url("../images/cmu_splash.jpg");
+}
+
+.splash-tagline-box {
+  margin-top: 8em;
+  margin-bottom: 6em;
+  display: flex;
+  width: 550px;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+
+  h1 {
+    font-size: 40px;
+    line-height: 1.1em;
+    font-weight: bold;
+    padding: 0 1em 0;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.2em;
+    margin: 1em 0 1em;
+  }
+
+  a {
+    color: rgb(225, 225, 225);
+    margin: 1em 0 1em;
+
+    &:hover{
+      color: #fff;
+    }
+
+    &.session-button {
+      color: #fff;
+      background: rgba(90, 172, 68, 0.9);
+
+      &:hover {
+        background: rgba(90, 172, 68, 1);
+      }
+    }
+  }
+
+}

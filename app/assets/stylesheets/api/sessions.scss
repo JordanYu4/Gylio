@@ -25,54 +25,56 @@ header a {
 nav.header-login-signup {
   display: flex;
   justify-content: space-between;
+
+  a:last-child {
+    font-weight: 700;
+    background: rgba(92, 176, 71, 1);
+
+    &:hover {
+      font-weight: 700;
+      background: rgba(92, 176, 71, 0.8);
+    }
+  }
 }
 
-nav.header-login-signup a, button {
+.session-button {
   font-size: 1.2em;
   margin: 0 4px 0;
-  border: 1px none;
+  border: none;
   color: #fff;
   text-decoration: none;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   box-shadow: 0 3px rgba(0, 0, 0, 0.3);
   padding: 10px 18px 10px;
+  box-sizing: border-box;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
-nav.header-login-signup a:hover, button:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-nav.header-login-signup a:last-child {
-  font-weight: 700;
-  background: rgba(92, 176, 71, 1);
-}
-
-nav.header-login-signup a:last-child:hover {
-  font-weight: 700;
-  background: rgba(92, 176, 71, 0.8);
-}
 
 .user-nav {
   display: flex;
   align-items: center;
+
+  h2 {
+    font-size: 20px;
+  }
 }
 
-.user-nav h2 {
-  font-size: 20px;
-}
-
-.login-form-box h1 {
-  font-size: 42px;
-  font-weight: 1000px;
-}
-
-.login-form-box a {
-  color: #298FCA;
-}
-
-.login-form-box a:hover {
-  color: #000;
+.login-form-box {
+  h1 {
+    font-size: 42px;
+    font-weight: 1000px;
+  }
+  a {
+    color: #298FCA;
+  }
+  a:hover {
+    color: #000;
+  }
 }
 
 .login-form {
@@ -95,36 +97,35 @@ nav.header-login-signup a:last-child:hover {
   margin-top: 4em;
   font-size: 20px;
   line-height: 2em;
-}
 
-.login-form-box input {
-  width: 100%;
-  color: #4D4D4D;
-  font-size: 24px;
-  line-height: 1.5em;
-  background: #EDEFF0;
-  border: 1px solid lightgray;
-  border-radius: 3px;
-  padding: 5px 12px 5px;
-  box-sizing: border-box;
-}
+  input {
+    width: 100%;
+    color: #4D4D4D;
+    font-size: 24px;
+    line-height: 1.5em;
+    background: #EDEFF0;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 5px 12px 5px;
+    box-sizing: border-box;
 
-.login-form-box input:focus {
-  outline: none;
-  box-shadow: 0 0 3px rgb(190, 190, 190);
-}
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 3px rgb(190, 190, 190);
+    }
 
-.login-form-box input.session-submit {
-  color: #fff;
-  font-family: $roboto;
-  border: none;
-  background: rgba(90, 172, 68, 0.9);
-  box-shadow: 0 2px rgba(0, 0, 0, 0.4);
-  margin-top: 1em;
-}
+    &.session-button {
+      font-family: $roboto;
+      color: #fff;
+      background: rgba(90, 172, 68, 0.9);
+      margin-top: 1em;
+      // box-sizing: border-box;
 
-.login-form-box input.session-submit:hover {
-  background: rgba(90, 172, 68, 1);
+      &:hover {
+        background: rgba(90, 172, 68, 1);
+      }
+    }
+  }
 }
 
 input::-webkit-input-placeholder {
