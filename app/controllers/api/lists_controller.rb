@@ -6,17 +6,15 @@ class Api::ListsController < ApplicationController
   end
 
   def index
-    lists = List.all
-    @lists = lists.where(board_id: params[:id])
+    current_board = Board.find(params[:board_id])
+    @lists = current_board.lists
     render :json
   end
 
   def create
     @list = List.new(list_params)
     @list.board_id = params[:board_id]
-    if @list.save
-      render :show # render index instead?
-    else
+    unless @list.save
       render json: @list.errors.full_messages, status: 422
     end
   end
@@ -30,7 +28,7 @@ class Api::ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:title) #.require(:list)
+    params.require(:list).permit(:title)
   end
 
 end
