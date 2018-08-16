@@ -27,6 +27,6 @@ export const createCard = card => dispatch => (
 
 export const fetchCards = () => dispatch => (
   CardAPIUtil.fetchCards().then(cards =>
-    dispatch(receiveCards))
+    dispatch(receiveCards(cards))
   )
-)
+);

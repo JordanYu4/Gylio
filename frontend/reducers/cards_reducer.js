@@ -1,9 +1,9 @@
-import merge from 'merge/lodash';
+import merge from 'lodash/merge';
 
 import {
   RECEIVE_CARDS,
   RECEIVE_CARD
-} from '../../actions/card_actions';
+} from '../actions/card_actions';
 
 const CardsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -18,4 +18,4 @@ const CardsReducer = (state = {}, action) => {
   }
 };
 
-export const CardsReducer;
+export default CardsReducer;
