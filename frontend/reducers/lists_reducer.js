@@ -2,7 +2,8 @@ import merge from 'lodash/merge'
 
 import {
   RECEIVE_LIST,
-  RECEIVE_LISTS
+  RECEIVE_LISTS,
+  REMOVE_LIST
 } from '../actions/list_actions';
 
 const ListsReducer = (state = {}, action) => {

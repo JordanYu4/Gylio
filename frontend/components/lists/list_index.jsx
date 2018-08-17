@@ -1,20 +1,29 @@
 import React from 'react';
 
-// import ListItemContainer from './list_item_container.jsx';
-//
-// const ListIndex ({boardLists}) => {
-//   const indexedLists = boardLists.map(list => {
-//     return (
-//       <ListItemContainer
-//       />
-//     );
-//   });
-//
-//   return (
-//     <ul>
-//       {indexedLists}
-//     </ul>
-//   );
-// };
-//
-// export default ListIndex;
+class ListIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  componentDidMount() {
+
+  }
+
+  // const indexedLists = lists.map(list => {
+  //   return (
+  //     <div></div>
+  //   );
+  // });
+
+  render() {
+
+    return(
+      <ul>
+
+      </ul>
+    );
+  }
+};
+
+export default ListIndex;
