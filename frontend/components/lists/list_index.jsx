@@ -12,7 +12,7 @@ class ListIndex extends React.Component {
   componentDidMount() {
     // this.props.fetchList
     console.log(this.props.listIds);
-    this.props.listIds.map(listId => this.props.fetchList(listId));
+    // this.props.listIds.map(listId => this.props.fetchList(listId));
   }
 
   // const indexedLists = lists.map(list => {
@@ -28,6 +28,9 @@ class ListIndex extends React.Component {
     return(
       <ul className="list-index">
 
+        <li className="form-toggle-button js-form-open">
+          <span className="create-new-list">+ Add another list</span>
+        </li>
         <ListForm boardId={boardId} createList={createList} />
       </ul>
     );

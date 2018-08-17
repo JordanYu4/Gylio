@@ -1,47 +1,58 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-const GlobalHeader = ({ currentUser, logout, login }) => {
+class GlobalHeader extends React.Component { // ({ currentUser, logout, login }) => {
+  constructor(props) {
+    super(props);
+    this.handleLogout = this.handleLogout.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
+  }
 
-  const demoUser = {
-    username: 'Gandalf',
-    password: 'shadowfax'
+  demoLogin() {
+    const demoUser = {
+      username: 'Gandalf',
+      password: 'shadowfax'
+    };
+    this.props.login(demoUser);
   };
 
-  const demoLogin = () => {
-    login(demoUser);
+  handleLogout() {
+    this.props.history.push("/"); // not working 
+    this.props.logout();
   };
 
-  const sessionLinks = () => (
-    <nav className="header-login-signup">
-      <button className="session-button" onClick={demoLogin}>Demo</button>
-      &nbsp;
-      <Link to="/login" className="session-button">Log In</Link>
-      &nbsp;
-      <Link to="/signup" className="session-button">Sign Up</Link>
-    </nav>
-  );
+  render() {
+    const sessionLinks = () => (
+      <nav className="header-login-signup">
+        <button className="session-button" onClick={this.demoLogin}>Demo</button>
+        &nbsp;
+        <Link to="/login" className="session-button">Log In</Link>
+        &nbsp;
+        <Link to="/signup" className="session-button">Sign Up</Link>
+      </nav>
+    );
 
-  const userNav = () => (
-    <nav className="user-nav">
-      <h2 className="header-name">{ currentUser.username }</h2>
-      &nbsp;&nbsp;
-      <button className="session-button" onClick={logout}>Log Out</button>
-    </nav>
-  );
+    const userNav = () => (
+      <nav className="user-nav">
+        <h2 className="header-name">{ this.props.currentUser.username }</h2>
+        &nbsp;&nbsp;
+        <button className="session-button" onClick={this.handleLogout}>Log Out</button>
+      </nav>
+    );
 
-  return (
-    <div className="global-header-container">
-      <header className="global-header">
-        <a href="/" className="home-link">
-          <i className="icon-home"></i>
-          Gylio
-        </a>
-        {currentUser ? userNav() : sessionLinks()}
-      </header>
-      <section className="global-header-spacer" />
-    </div>
-  );
+    return (
+      <div className="global-header-container">
+        <header className="global-header">
+          <a href="/" className="home-link">
+            <i className="icon-home"></i>
+            Gylio
+          </a>
+          {this.props.currentUser ? userNav() : sessionLinks()}
+        </header>
+        <section className="global-header-spacer" />
+      </div>
+    );
+  }
 };
 
-export default GlobalHeader;
+export default withRouter(GlobalHeader);

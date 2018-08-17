@@ -73,12 +73,17 @@
   cursor: pointer;
 }
 
+.board-form-container {
+  input[type="submit"] {
+    position: absolute;
+    left: 0;
+    bottom: -45px;
+  }
+}
+
 input[class^="form-submit"] {
-  position: absolute;
-  left: 0;
-  bottom: -45px;
-  line-height: 2em;
   font-size: 16px;
+  line-height: 2em;
   font-weight: 700;
   color: rgba(180, 180, 180, 1);
   border: none;

@@ -20,5 +20,19 @@
     });
   });
 </script>
+<script>
+  $(function(){
+
+    $("body").on("click", ".js-form-open", function(event){
+      event.preventDefault();
+      $(".toggle-form").addClass("is-open");
+    });
+
+    $("body").on("click", ".js-form-close", function(event){
+      event.preventDefault();
+      $(".toggle-form").removeClass("is-open");
+    });
+  });
+</script>
 
 <div id="root"></root>

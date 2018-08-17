@@ -31,7 +31,7 @@ class ListForm extends React.Component {
   render() {
 
     return(
-      <form onSubmit={this.handleSubmit} className="list-form-opened">
+      <form onSubmit={this.handleSubmit} className="toggle-form">
         <input type="text"
           value={this.state.title}
           onChange={this.update('title')}
