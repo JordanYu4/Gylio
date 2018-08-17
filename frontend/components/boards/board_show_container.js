@@ -1,7 +1,12 @@
 import { connect } from 'react-redux';
 
-import { fetchBoard, editBoard, deleteBoard } from '../../actions/board_actions';
-import { fetchList, editList, deleteList } from '../../actions/list_actions';
+import { fetchBoard,
+         editBoard,
+         deleteBoard } from '../../actions/board_actions';
+import { fetchList,
+         createList,
+         editList,
+         deleteList } from '../../actions/list_actions';
 import { selectBoard } from '../../reducers/selectors';
 import BoardShow from './board_show';
 
@@ -14,6 +19,9 @@ const mapStateToProps = (state, { match }) => {
 const mapDispatchToProps = dispatch => ({
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   editBoard: board => dispatch(editBoard(board)),
+  deleteBoard: boardId => dispatch(deleteBoard(boardId)),
+  fetchList: listId => dispatch(fetchList(listId)),
+  createList: list => dispatch(createList(list)),
   editList: list => dispatch(editList(list)),
   deleteList: listId => dispatch(deleteList(listId))
 });

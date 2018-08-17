@@ -1,9 +1,9 @@
 .modal {
   display: none;
-}
 
-.modal.is-open {
-  display: block;
+  &.is-open {
+    display: block;
+  }
 }
 
 .modal-screen {
@@ -48,19 +48,19 @@
   outline: none;
   background: none;
   color: #fff;
-}
 
-.board-form-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
+  &::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
 
-.board-form-input:focus {
-  background: rgba(255, 255, 255, 0.2);
-  outline: none;
-}
+  &:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+  }
 
-.board-form-input:hover {
-  background: rgba(255, 255, 255, 0.3);
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .modal-close {
@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 
-input[class^="board-submit"] {
+input[class^="form-submit"] {
   position: absolute;
   left: 0;
   bottom: -45px;
@@ -89,17 +89,17 @@ input[class^="board-submit"] {
   transition: 0.2s;
 }
 
-input.board-submit-enabled {
+input.form-submit-enabled {
   background: rgba(90, 172, 68, 1);
   color: #fff;
 }
 
-.board-submit-enabled:hover {
+.form-submit-enabled:hover {
   background: rgba(90, 172, 68, 0.9);
   cursor: pointer;
 }
 
-.board-submit-enabled:focus {
+.form-submit-enabled:focus {
   outline: none;
   box-shadow: none;
 }

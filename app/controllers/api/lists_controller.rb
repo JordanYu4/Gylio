@@ -13,7 +13,7 @@ class Api::ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.board_id = params[:board_id]
+    # @list.board_id = params[:board_id]
     unless @list.save
       render json: @list.errors.full_messages, status: 422
     end
@@ -28,7 +28,7 @@ class Api::ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:title)
+    params.require(:list).permit(:title, :board_id)
   end
 
 end

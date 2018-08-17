@@ -32,3 +32,7 @@ header h1 {
   font-size: 36px;
   font-weight: 700;
 }
+
+[class*="icon-"] {
+  background-image: url("../../images/sprite.png");
+}

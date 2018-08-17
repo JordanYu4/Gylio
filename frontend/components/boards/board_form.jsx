@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 class BoardForm extends React.Component {
   constructor(props) {
     super(props);
-    // currentUser?
     this.state = {
       title: ""
     }
@@ -13,9 +12,6 @@ class BoardForm extends React.Component {
 
   update(field) {
     return e => {
-      // if (e.target.value !== "") {
-      //   document.getElementById("sub").disabled = false;
-      // }
       this.setState({
         [field]: e.currentTarget.value
       });
@@ -46,8 +42,7 @@ class BoardForm extends React.Component {
           />
           <span className="modal-close js-modal-close">&times;</span>
         </section>
-        <input id="sub"
-          className={this.state.title ? "board-submit-enabled" : "board-submit-disabled"}
+        <input className={this.state.title ? "form-submit-enabled" : "form-submit-disabled"}
           type="submit"
           value="Create Board"
           disabled={!this.state.title}
