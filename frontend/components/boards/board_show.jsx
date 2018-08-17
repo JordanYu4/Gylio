@@ -12,13 +12,13 @@ class BoardShow extends React.Component {
   render() {
     const board = this.props.board;
     const boardLists = board.lists;
+    const editList = this.props.editList;
     if (!board) return null;
 
-    // <ListIndex boardLists={boardLists} />
     return (
       <div>
         <BoardHeader board={board} />
-        <ListIndex lists={boardLists} /> 
+        <ListIndex lists={boardLists} />
       </div>
     );
   }
