@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require_tree .
  */
 
-/* import reset, colors, fonts, components 
+/* import reset, colors, fonts, components; remove require_tree . */
