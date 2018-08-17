@@ -1,23 +1,15 @@
-// .splash-tagline-background {
-//   position: relative;
-// }
 
 .splash-tagline {
+  margin-top: 3em;
   display: flex;
   background: url(images/cmu_splash.jpg);
   background-size: cover;
   justify-content: center;
-  box-shadow: inset 0 0 0 1000px rgba(7, 127, 196, 0.7);
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
+  box-shadow: inset 0 0 0 1000px rgba(7, 127, 196, 0.8);
 }
 
 .splash-tagline-box {
-  margin-top: 8em;
-  margin-bottom: 6em;
+  margin: 8em 2em 7em 2em;
   display: flex;
   width: 550px;
   flex-direction: column;

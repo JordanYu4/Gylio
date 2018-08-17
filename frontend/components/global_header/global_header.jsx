@@ -31,7 +31,7 @@ const GlobalHeader = ({ currentUser, logout, login }) => {
   );
 
   return (
-    <header>
+    <header className="global-navbar">
       <a href="/">Gylio</a>
       {currentUser ? userNav() : sessionLinks()}
     </header>
