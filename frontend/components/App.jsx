@@ -17,16 +17,19 @@ import BoardShowContainer from './boards/board_show_container';
 const App = () => (
   <div>
     <Switch>
-      <AuthRoute exact path="/" component={ GlobalHeaderContainer } />
+      <Route exact path="/" component={ GlobalHeaderContainer } />
+      <AuthRoute exact path="/" component={() => <div></div>} />
       <ProtectedRoute path="/" component={ GlobalHeaderContainer } />
     </Switch>
-    <Switch>
-      <Route exact path="/" component={ SplashBody } />
-      <AuthRoute path="/login" component={ LogInFormContainer } />
-      <AuthRoute path="/signup" component={ SignUpFormContainer } />
-      <ProtectedRoute exact path="/boards" component={ BoardIndexContainer } />
-      <ProtectedRoute path="/boards/:boardId" component={ BoardShowContainer } />
-    </Switch>
+    <div className="main">
+      <Switch>
+        <AuthRoute exact path="/" component={ SplashBody } />
+        <AuthRoute path="/login" component={ LogInFormContainer } />
+        <AuthRoute path="/signup" component={ SignUpFormContainer } />
+        <ProtectedRoute exact path="/boards" component={ BoardIndexContainer } />
+        <ProtectedRoute path="/boards/:boardId" component={ BoardShowContainer } />
+      </Switch>
+    </div>
   </div>
 );
 

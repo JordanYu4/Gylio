@@ -9,9 +9,20 @@
 }
 
 .board-index-section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -10px;
   font-size: 17px;
   font-weight: 800;
   margin-bottom: 1em;
+}
+
+.icon-personal {
+  background-position: -984px -670px;
+  transform: scale(0.5);
+  height: 50px;
+  width: 50px;
 }
 
 .board-index-list {

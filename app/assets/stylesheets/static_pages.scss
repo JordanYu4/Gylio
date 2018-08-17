@@ -28,11 +28,7 @@ header {
   box-sizing: border-box;
 }
 
-header h1 {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-[class*="icon-"] {
-  background-image: url("../../images/sprite.png");
+.main {
+  position: absolute;
+  width: 100%;
 }

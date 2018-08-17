@@ -23,6 +23,7 @@ class BoardIndex extends React.Component {
       <div className="board-index-container">
         <div className="board-index-section">
           <div className="board-index-section-header">
+            <i className="icon-personal"></i>
             <h1>Personal Boards</h1>
           </div>
           <ul className="board-index-list">

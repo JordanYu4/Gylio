@@ -1,0 +1,34 @@
+.global-header {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+.global-header-spacer {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+i.icon-home {
+  background: url(images/flipped_trello_logo.png);
+  background-size: 98%;
+  width: 36px;
+  height: 36px;
+  margin-right: 7px;
+  padding-bottom: 8px;
+}

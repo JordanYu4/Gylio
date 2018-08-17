@@ -31,10 +31,16 @@ const GlobalHeader = ({ currentUser, logout, login }) => {
   );
 
   return (
-    <header className="global-navbar">
-      <a href="/">Gylio</a>
-      {currentUser ? userNav() : sessionLinks()}
-    </header>
+    <div className="global-header-container">
+      <header className="global-header">
+        <a href="/" className="home-link">
+          <i className="icon-home"></i>
+          Gylio
+        </a>
+        {currentUser ? userNav() : sessionLinks()}
+      </header>
+      <section className="global-header-spacer" />
+    </div>
   );
 };
 
