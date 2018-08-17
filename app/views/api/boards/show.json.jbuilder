@@ -1,7 +1,5 @@
-json.board do
-  json.partial! 'api/boards/board', board: @board
-  json.listIds @board.lists.pluck(:id)
-end
+json.partial! 'api/boards/board', board: @board
+json.listIds @board.lists.pluck(:id)
 
 @board.lists.each do |list|
   json.lists do
