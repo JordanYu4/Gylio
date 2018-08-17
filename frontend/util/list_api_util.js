@@ -2,6 +2,14 @@ export const fetchLists = () => (
   $.ajax({
     method: 'GET',
     url: 'api/lists',
+    error: err => console.log(err) // refactor this error handling 
+  })
+);
+
+export const fetchList = listId => (
+  $.ajax({
+    method: 'GET',
+    url: `api/lists/${listId}`,
     error: err => console.log(err)
   })
 );

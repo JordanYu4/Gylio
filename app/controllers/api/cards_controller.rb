@@ -2,10 +2,12 @@ class Api::CardsController < ApplicationController
   before_action :require_login
 
   def show
+    @card = Card.find(params[:id])
     render :json
   end
 
   def index
+    
     render :json
   end
 

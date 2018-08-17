@@ -7,7 +7,6 @@ import BoardIndex from './board_index';
 const mapStateToProps = state => {
   return {
     boards: getAllBoards(state.entities),
-    // board_memberships: board_memberships ?
   };
 };
 
