@@ -8,7 +8,7 @@ import BoardShow from './board_show';
 const mapStateToProps = (state, { match }) => {
   const boardId = parseInt(match.params.boardId);
   const board = selectBoard(state.entities, boardId);
-  return { board };
+  return { board, boardId };
 };
 
 const mapDispatchToProps = dispatch => ({

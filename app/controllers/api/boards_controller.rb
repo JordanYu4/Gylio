@@ -2,7 +2,7 @@ class Api::BoardsController < ApplicationController
   before_action :require_login
 
   def show
-    @board = Board.find(params[:id].to_i)
+    @board = Board.find(params[:id])
     render :show
   end
 
