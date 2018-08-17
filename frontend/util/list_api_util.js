@@ -17,7 +17,7 @@ export const fetchList = listId => (
 export const createList = list => (
   $.ajax({
     method: 'POST',
-    url: `api/${list.board_id}/lists`,
+    url: `api//boards/${list.board_id}/lists`,
     data: { list }
   })
 );

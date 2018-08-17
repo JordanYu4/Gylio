@@ -13,7 +13,6 @@ class Api::ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    # @list.board_id = params[:board_id]
     unless @list.save
       render json: @list.errors.full_messages, status: 422
     end
