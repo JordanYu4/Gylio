@@ -1,10 +1,8 @@
-json.card do
-  json.partial! 'api/cards/card', card: @card
-  json.commentIds @card.comments.pluck(:id)
-end
+json.partial! 'api/lists/list', list: @list
+json.cardIds @list.cards.pluck(:id)
 
-# @card.comments.each do |comment|
-#   json.comments do
-    # json.partial! 'api/comments/comment', comment: comment
-#   end
-# end
+@list.cards.each do |card|
+  json.cards do
+    json.partial! 'api/cards/card', card: card
+  end
+end
