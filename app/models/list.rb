@@ -10,10 +10,11 @@
 #
 
 class List < ApplicationRecord
-  validates :title, presence: true
+  validates :title, ,:board_id, presence: true
 
   has_many :cards, dependent: :destroy
   belongs_to :board,
+             primary_key: :id,
              foreign_key: :board_id,
              class_name: :Board
 

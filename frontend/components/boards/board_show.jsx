@@ -20,8 +20,8 @@ class BoardShow extends React.Component {
       editList,
       deleteList
     } = this.props;
-    console.log(this.props.board);
-    console.log(boardListIds);
+    console.log(`board props: ${this.props.board}`);
+    console.log(`boardListIds: ${boardListIds}`);
 
     return (
       <div>

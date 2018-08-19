@@ -23,6 +23,7 @@
   background: rgba(226, 228, 230, 1);
   padding: 6px;
   width: 200px;
+  transition: 0.3s;
   display: none;
 
   &.is-open {
