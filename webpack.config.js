@@ -1,5 +1,5 @@
 var path = require("path");
-var webpack = require("webpack");
+// var webpack = require("webpack");
 
 // var plugins = [];
 // var devPlugins = [];
@@ -23,7 +23,7 @@ var webpack = require("webpack");
 
 module.exports = {
   context: __dirname,
-  entry: "./frontend/mise.jsx",
+  entry: "./frontend/gylio.jsx",
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js"
