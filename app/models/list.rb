@@ -10,7 +10,7 @@
 #
 
 class List < ApplicationRecord
-  validates :title, ,:board_id, presence: true
+  validates :title, :board_id, presence: true
 
   has_many :cards, dependent: :destroy
   belongs_to :board,
