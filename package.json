@@ -28,7 +28,7 @@
     "npm": "6.1.0"
   },
   "scripts": {
-    "postinstall": "webpack --mode=production --display-error-details",
+    "postinstall": "webpack --mode=production",
     "webpack": "webpack --mode=development --watch"
   },
   "keywords": [],
