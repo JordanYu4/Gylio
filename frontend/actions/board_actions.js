@@ -23,7 +23,9 @@ export const fetchBoard = boardId => dispatch => (
 export const createBoard = board => dispatch => (
   BoardAPIUtil.createBoard(board).then(board => (
     dispatch(receiveBoard(board))
-  )) // add error handling here
+  ), error => (
+    dispatch(receiveErrors(error.responseJSON))
+  )) 
 );
 
 export const editBoard = board => dispatch => (

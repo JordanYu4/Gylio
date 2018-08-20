@@ -10,7 +10,6 @@ const sessionErrorsReducer = (state = [], action) => {
     case RECEIVE_SESSION_ERRORS:
       return action.errors;
     case CLEAR_ERRORS:
-      console.log("trying to clear errors");
       return [];
     case RECEIVE_CURRENT_USER:
       return [];

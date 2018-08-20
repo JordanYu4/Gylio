@@ -5,7 +5,7 @@ import ListIndex from '../lists/list_index.jsx';
 
 class BoardShow extends React.Component {
   componentDidMount() {
-    this.props.fetchBoard(this.props.boardId);
+    this.props.fetchBoards();
   }
 
   render() {
@@ -20,8 +20,12 @@ class BoardShow extends React.Component {
       editList,
       deleteList
     } = this.props;
-    console.log(`board props: ${this.props.board}`);
-    console.log(`boardListIds: ${boardListIds}`);
+    console.log(`props:`);
+    console.log(this.props);
+    console.log('board:');
+    console.log(board);
+    console.log(`board.listIds:`);
+    console.log(board.listIds);
 
     return (
       <div>

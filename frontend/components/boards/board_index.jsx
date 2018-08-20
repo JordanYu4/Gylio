@@ -7,6 +7,7 @@ import BoardFormModal from './board_form_modal';
 class BoardIndex extends React.Component {
   componentDidMount() {
     this.props.fetchBoards();
+    console.log("Fetched boards");
   }
 
   render() {

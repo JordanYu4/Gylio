@@ -5,6 +5,8 @@ import { getAllBoards } from '../../reducers/selectors';
 import BoardIndex from './board_index';
 
 const mapStateToProps = state => {
+  console.log("state.entities:")
+  console.log(state.entities);
   return {
     boards: getAllBoards(state.entities),
   };

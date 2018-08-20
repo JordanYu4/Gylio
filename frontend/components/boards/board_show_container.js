@@ -7,16 +7,18 @@ import { fetchList,
          createList,
          editList,
          deleteList } from '../../actions/list_actions';
-import { selectBoard } from '../../reducers/selectors';
+import { getAllBoards, selectBoard } from '../../reducers/selectors';
 import BoardShow from './board_show';
 
 const mapStateToProps = (state, { match }) => {
-  const boardId = parseInt(match.params.boardId);
+  const boards = getAllBoards(state.entities);
+  const boardId = parseInt(match.params.id);
   const board = selectBoard(state.entities, boardId);
-  return { board, boardId };
+  return { boards, board, boardId };
 };
 
 const mapDispatchToProps = dispatch => ({
+  fetchBoards: () => dispatch(fetchBoards()),
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   editBoard: board => dispatch(editBoard(board)),
   deleteBoard: boardId => dispatch(deleteBoard(boardId)),

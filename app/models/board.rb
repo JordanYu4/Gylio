@@ -12,7 +12,10 @@
 class Board < ApplicationRecord
   validates :title, :background_color, presence: true
 
-  has_many :lists, dependent: :destroy
+  has_many :lists, dependent: :destroy,
+           primary_key: :id,
+           foreign_key: :board_id,
+           class_name: :List
   has_many :board_memberships
   has_many :members,
            through: :board_memberships,
