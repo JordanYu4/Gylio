@@ -1,6 +1,6 @@
 # Gylio
 
-[Live Demo](htps://gylio.herokuapp.com/)
+[Live Demo](https://gylio.herokuapp.com/)
 
 Gylio is a project management platform that enables users to visualize their workflow by destructuring projects into modular tasks represented by cards. Users can then distribute their cards between lists to organize project phases and deadlines, as well as delegate tasks between team members. Gylio's design is intended to clone the UI/UX of [Trello](https://trello.com/).
 
@@ -34,7 +34,7 @@ While displaying form submission errors can be an important feature for app func
 
 ## Project Design
 
-The build focus of Gylio was achieving a clean, intuitive user interface in a tool that would ultimately be effective and fun to use. Because of the abbreviated production timeline, it was determined that the minimum viable product should be defined by a core feature set. Producing a solid foundational codebase conducive for future development too precedence over constructing a shallow clone of every one of Trello's features. 
+The build focus of Gylio was achieving a clean, intuitive user interface in a tool that would ultimately be effective and fun to use. Because of the abbreviated production timeline, it was determined that the minimum viable product should be defined by a core feature set. Producing a solid foundational codebase conducive for future development too precedence over constructing a shallow clone of every one of Trello's features.
 
 ### Design Documents
 
