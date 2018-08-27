@@ -9,10 +9,11 @@ Gylio utilizes a Rails/PostgreSQL backend compounded with a React.js and Redux f
 This project was designed, built, and deployed within a two-week deadline. Additional enhancements will be added.
 
 This README covers the following:
-* [Features](https://github.com/JordanYu4/Mise#features)
-* [Project Design](https://github.com/JordanYu4/Mise#project-design)
-* [Technologies](https://github.com/JordanYu4/Mise#technologies)
-* [Future Features](https://github.com/JordanYu4/Mise#future-features)
+* [Current Features](https://github.com/JordanYu4/Gylio#current-features)
+* [Project Design](https://github.com/JordanYu4/Gylio#project-design)
+* [Technologies](https://github.com/JordanYu4/Gylio#technologies)
+* [Project Design](https://github.com/JordanYu4/Gylio#project-design)
+* [Future Features](https://github.com/JordanYu4/Gylio#future-features)
 
 ## Current Features
 
