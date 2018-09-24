@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import BoardShow from './board_show';
 
 import { fetchBoard,
          editBoard,
@@ -7,14 +8,14 @@ import { fetchList,
          createList,
          editList,
          deleteList } from '../../actions/list_actions';
-import { getAllBoards, selectBoard } from '../../reducers/selectors';
-import BoardShow from './board_show';
+import { getAllBoards, 
+         selectBoard } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
-  const boards = getAllBoards(state.entities);
+  // const boards = getAllBoards(state.entities);
   const boardId = parseInt(match.params.id);
   const board = selectBoard(state.entities, boardId);
-  return { boards, board, boardId };
+  return { board };
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -28,7 +29,7 @@ const mapDispatchToProps = dispatch => ({
   deleteList: listId => dispatch(deleteList(listId))
 });
 
-export default connect (
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BoardShow);

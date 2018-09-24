@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BoardHeader from './board_header';
-import ListIndex from '../lists/list_index.jsx';
+import ListIndex from '../lists/list_index';
 
 class BoardShow extends React.Component {
   componentDidMount() {
@@ -20,18 +20,15 @@ class BoardShow extends React.Component {
       editList,
       deleteList
     } = this.props;
-    console.log(`props:`);
-    console.log(this.props);
-    console.log('board:');
-    console.log(board);
-    console.log(`board.listIds:`);
-    console.log(board.listIds);
+    // console.log(`props:`, this.props);
+    // console.log('board:', board);
+    // console.log(`board.listIds:`, board.listIds);
 
     return (
       <div>
         <BoardHeader board={board} />
         <ListIndex
-          boardId={board.id}
+          board={board}
           listIds={boardListIds}
           fetchList={fetchList}
           createList={createList}

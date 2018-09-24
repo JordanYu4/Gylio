@@ -1,17 +1,14 @@
 import React from 'react';
+import merge from 'lodash/merge';
 
 class ListForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      board_id: props.boardId
+      title: ""
     }
-    // console.log(props);
-    // console.log(props.boardId);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
 
   update(field) { // refactor into shared helper file and bind to this?
     return e => this.setState({
@@ -21,11 +18,15 @@ class ListForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const list = Object.assign({}, this.state);
+    let list = merge({}, this.state, {board_id: this.props.board.id} );
+    console.log('list', list);
     console.log(this.props);
-    console.log(this.state);
-    console.log(list);
-    this.props.createList(list);
+    this.props.createList(list)
+    .then(action => {
+      let newList = action.payload.list;
+      console.log(newList);
+      this.board.listIds.push(newList.id);
+    });
   }
 
   render() {

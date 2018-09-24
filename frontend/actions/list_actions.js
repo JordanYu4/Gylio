@@ -12,8 +12,8 @@ export const fetchLists = () => dispatch => (
 );
 
 export const fetchList = listId => dispatch => (
-  ListAPIUtil.fetchList(listId).then(list => (
-    dispatch(receiveList(list))
+  ListAPIUtil.fetchList(listId).then(payload => (
+    dispatch(receiveList(payload))
   ))
 );
 
@@ -21,7 +21,7 @@ export const createList = list => dispatch => (
   ListAPIUtil.createList(list).then(payload => (
     dispatch(receiveList(payload))
   )), errors => (
-    dispatch(receiveErrors(erros.responseJSON)
+    dispatch(receiveErrors(errors.responseJSON)
   )) // add error handling here
 );
 
@@ -42,9 +42,9 @@ export const receiveLists = lists => ({
   lists
 });
 
-export const receiveList = list => ({
+export const receiveList = payload => ({
   type: RECEIVE_LIST,
-  list
+  payload
 });
 
 export const removeList = listId => ({
