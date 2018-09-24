@@ -6,7 +6,7 @@ class BoardForm extends React.Component {
     super(props);
     this.state = {
       title: ""
-    }
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -25,9 +25,12 @@ class BoardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const board = Object.assign({}, this.state);
-    this.props.createBoard(board).then(
-      ({ board }) => this.navigateToBoard(board.id)
-    );
+    this.props.createBoard(board)
+    .then(action => {
+      debugger
+      let newBoard = action.payload.board;
+      this.navigateToBoard(newBoard.id);
+    });
   }
 
   render () {

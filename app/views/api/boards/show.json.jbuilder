@@ -1,4 +1,4 @@
-board do
+json.board do
   json.partial! 'api/boards/board', board: @board
   json.listIds @board.lists, :id
 end

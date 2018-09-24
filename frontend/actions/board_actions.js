@@ -7,24 +7,24 @@ export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
 export const fetchBoards = () => dispatch => (
   BoardAPIUtil.fetchBoards().then(boards => (
     dispatch(receiveBoards(boards))
-  ), error => (
-    dispatch(receiveErrors(error.responseJSON))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 
 export const fetchBoard = boardId => dispatch => (
   BoardAPIUtil.fetchBoard(boardId).then(board => (
     dispatch(receiveBoard(board))
-  ), error => (
-    dispatch(receiveErrors(error.responseJSON))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 
 export const createBoard = board => dispatch => (
-  BoardAPIUtil.createBoard(board).then(board => (
-    dispatch(receiveBoard(board))
-  ), error => (
-    dispatch(receiveErrors(error.responseJSON))
+  BoardAPIUtil.createBoard(board).then(payload => (
+    dispatch(receiveBoard(payload))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   )) 
 );
 
@@ -45,9 +45,9 @@ export const receiveBoards = boards => ({
   boards
 });
 
-export const receiveBoard = board => ({
+export const receiveBoard = payload => ({
   type: RECEIVE_BOARD,
-  board
+  payload
 });
 
 export const removeBoard = boardId => ({
