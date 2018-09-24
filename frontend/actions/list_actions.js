@@ -18,8 +18,10 @@ export const fetchList = listId => dispatch => (
 );
 
 export const createList = list => dispatch => (
-  ListAPIUtil.createList(list).then(list => (
-    dispatch(receiveList(list))
+  ListAPIUtil.createList(list).then(payload => (
+    dispatch(receiveList(payload))
+  )), errors => (
+    dispatch(receiveErrors(erros.responseJSON)
   )) // add error handling here
 );
 

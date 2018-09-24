@@ -27,7 +27,6 @@ class BoardForm extends React.Component {
     const board = Object.assign({}, this.state);
     this.props.createBoard(board)
     .then(action => {
-      debugger
       let newBoard = action.payload.board;
       this.navigateToBoard(newBoard.id);
     });

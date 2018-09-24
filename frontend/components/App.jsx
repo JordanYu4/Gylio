@@ -17,8 +17,8 @@ import BoardShowContainer from './boards/board_show_container';
 const App = () => (
   <div className="app-container">
     <Route path="/" component={ GlobalHeaderContainer } />
-    {/* <AuthRoute path="/login" component={ LogInFormContainer } />
-    <AuthRoute path="/signup" component={ SignUpFormContainer } /> */}
+    <AuthRoute path="/login" component={ LogInFormContainer } />
+    <AuthRoute path="/signup" component={ SignUpFormContainer } />
     <div className="main">
       <Switch>
         <AuthRoute exact path="/" component={ SplashBody } />
