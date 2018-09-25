@@ -33,7 +33,7 @@ export const editList = list => dispatch => (
 
 export const deleteList = listId => dispatch => (
   ListAPIUtil.deleteList(listId).then(listId => (
-    dispatch(removeList(listId)) // change list to listId?
+    dispatch(removeList(listId)) 
   ))
 );
 

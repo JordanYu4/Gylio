@@ -17,6 +17,12 @@ header {
   box-sizing: border-box;
 }
 
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
 .main {
   position: absolute;
   width: 100%;

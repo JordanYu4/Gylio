@@ -20,7 +20,6 @@ class ListIndex extends React.Component {
 
   render() {
     const { board, createList } = this.props;
-    console.log('board', board);
     if (!board) return null;
     // {indexedLists}
     return(
