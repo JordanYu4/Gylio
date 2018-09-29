@@ -1,6 +1,6 @@
 json.board do
   json.partial! 'api/boards/board', board: @board
-  json.listIds @board.lists, :id
+  json.listIds @board.lists, :id # may need to change this - rails syntax 
 end
 
 @board.lists.each do |list|
