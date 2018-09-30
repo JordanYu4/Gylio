@@ -21,6 +21,9 @@ class Api::ListsController < ApplicationController
   end
 
   def update
+    list = List.find(params[:listId])
+    list.update_attributes(list_params)
+    render :index
   end
 
   def destroy
