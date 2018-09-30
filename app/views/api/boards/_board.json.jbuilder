@@ -1,1 +1,1 @@
-json.extract! board, :id, :title, :background_color
+json.extract! board, :id, :title, :background_color, :list_ids
