@@ -1,12 +1,6 @@
 import { connect } from 'react-redux';
-
+import { withRouter } from "react-router";
 import ListIndex from './list_index';
-
-board = { board }
-lists = { lists }
-createList = { createList }
-editList = { editList }
-deleteList = { deleteList }
 
 import {
   fetchBoard,
@@ -43,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
   deleteList: listId => dispatch(deleteList(listId))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(ListIndex);
+)(ListIndex));

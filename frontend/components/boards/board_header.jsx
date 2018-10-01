@@ -5,6 +5,10 @@ class BoardHeader extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchBoard(this.props.boardId);
+  }
+
   render() {
     const board = this.props.board;
 
