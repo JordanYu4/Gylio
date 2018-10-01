@@ -11,41 +11,42 @@ class BoardShow extends React.Component {
   componentDidMount() {
     console.log('boardId', this.props.boardId);
     console.log('board', this.props.board);
-    // console.log('lists', this.props.lists);
+    console.log('lists', this.props.lists);
     this.props.fetchBoard(this.props.boardId);
   }
 
-//   board, 
-//   boardId, 
-//   lists,
-//   fetchBoard, 
-//   createList, 
-//   editList, 
-//   deleteList
-// }) => {
-//   const boards = {
-//     [boardId]: board
-//   };
+  componentDidUpdate() {
+    console.log("boardId", this.props.boardId);
+    console.log('board', this.props.board);
+    console.log('lists', this.props.lists);
+  }
 
   render() {
     const board = this.props.board;
     if (!board) return null;
     const { 
+      editBoard,
+      deleteBoard,
       createList, 
       editList, 
-      deleteList
+      deleteList, 
+      lists
     } = this.props;
 
     return (
       <div className="board-show">
-        <BoardHeader board={board} />
+        <BoardHeader 
+          board={board} 
+          editBoard={editBoard} 
+          deleteBoard={deleteBoard}
+        />
         <ListIndex
           board={board}
-          // lists={lists}
+          lists={lists}
           createList={createList}
           editList={editList}
           deleteList={deleteList}
-          />
+        />
       </div>
     );
   }

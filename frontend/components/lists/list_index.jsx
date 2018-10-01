@@ -12,6 +12,10 @@ class ListIndex extends React.Component {
     // this.props.listIds.map(listId => this.props.fetchList(listId));
   }
 
+  componentDidUpdate() {
+    console.log("list index props", this.props);
+  }
+
   // const indexedLists = lists.map(list => {
   //   return (
   //     <div></div>
