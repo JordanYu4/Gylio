@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import BoardIndexItem from './board_index_item';
 import BoardFormModal from './board_form_modal';
@@ -37,8 +36,6 @@ class BoardIndex extends React.Component {
       </div>
     );
   }
-
-
 };
 
 export default BoardIndex;
