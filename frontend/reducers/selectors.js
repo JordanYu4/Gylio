@@ -8,3 +8,7 @@ export const selectBoard = ({ boards }, boardId) => {
   return boards[boardId] || {};
 };
 
+export const selectListsForBoard = ({lists}, board) => {
+  // debugger
+  return board.listIds.map(listId => lists[listId]);
+};

@@ -9,13 +9,17 @@ import { fetchList,
          editList,
          deleteList } from '../../actions/list_actions';
 import { getAllBoards, 
-         selectBoard } from '../../reducers/selectors';
+         selectBoard, 
+         selectListsForBoard } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
   // const boards = getAllBoards(state.entities);
   const boardId = parseInt(match.params.id);
   const board = selectBoard(state.entities, boardId);
-  return { board };
+  // const lists = selectListsForBoard(state.entities, board); 
+  return { boardId, board, 
+          // lists
+        };
 };
 
 const mapDispatchToProps = dispatch => ({

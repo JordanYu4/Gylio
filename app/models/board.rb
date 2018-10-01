@@ -7,7 +7,7 @@
 #  background_color :string           not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
-#  list_ids         :integer          default([]), is an Array
+#  list_order       :integer          default([]), is an Array
 #
 
 class Board < ApplicationRecord
