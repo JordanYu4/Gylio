@@ -1,21 +1,30 @@
-import { connect } from 'react-redux';
-import BoardShow from './board_show';
+import { connect } from 'react-redux'
 
-import { fetchBoard,
-         editBoard,
-         deleteBoard } from '../../actions/board_actions';
-import { fetchList,
-         createList,
-         editList,
-         deleteList } from '../../actions/list_actions';
-import { getAllBoards, 
-         selectBoard, 
-         selectListsForBoard } from '../../reducers/selectors';
+import BoardHeader from './board_header';
+
+const mapStateToProps({sta})
+
+import {
+  fetchBoard,
+  editBoard,
+  deleteBoard
+} from '../../actions/board_actions';
+import {
+  fetchList,
+  createList,
+  editList,
+  deleteList
+} from '../../actions/list_actions';
+import {
+  getAllBoards,
+  selectBoard,
+  selectListsForBoard
+} from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
   const boardId = parseInt(match.params.id);
   const board = selectBoard(state.entities, boardId);
-  const lists = board.listIds ? selectListsForBoard(state.entities, board) : {}; 
+  const lists = board.listIds ? selectListsForBoard(state.entities, board) : {};
   return { boardId, board, lists };
 };
 
@@ -30,7 +39,12 @@ const mapDispatchToProps = dispatch => ({
   deleteList: listId => dispatch(deleteList(listId))
 });
 
+board = { board }
+editBoard = { editBoard }
+deleteBoard = { deleteBoard }
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BoardShow);
+)(BoardHeader);
+

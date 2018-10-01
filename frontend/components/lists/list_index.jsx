@@ -8,8 +8,8 @@ class ListIndex extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchList
-    // this.props.listIds.map(listId => this.props.fetchList(listId));
+    // this.props.fetchList 
+    // this.props.listIds.map(listId => this.props.fetchList(listId)); 
   }
 
   componentDidUpdate() {

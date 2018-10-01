@@ -12,7 +12,7 @@ import SplashBody from './splash/splash_body';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import BoardIndexContainer from './boards/board_index_container';
-import BoardShowContainer from './boards/board_show_container';
+import BoardShow from './boards/board_show';
 
 const App = () => (
   <div className="app-container">
@@ -23,7 +23,7 @@ const App = () => (
       <Switch>
         <AuthRoute exact path="/" component={ SplashBody } />
         <ProtectedRoute exact path="/boards" component={ BoardIndexContainer } />
-        <ProtectedRoute path="/boards/:id" component={ BoardShowContainer } />
+        <ProtectedRoute path="/boards/:id" component={ BoardShow } />
       </Switch>
     </div>
   </div>
