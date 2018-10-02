@@ -1,7 +1,7 @@
-export const fetchList = listId => (
+export const fetchList = (boardId, listId) => (
   $.ajax({
     method: 'GET',
-    url: `api/lists/${listId}`,
+    url: `api/boards/${boardId}/lists/${listId}`,
     error: err => console.log(err)
   })
 );
@@ -25,7 +25,7 @@ export const createList = list => (
 export const updateList = list => (
   $.ajax({
     method: 'PATCH',
-    url: `api/lists/${list.id}`,
+    url: `api/boards/${list.board_id}/lists/${list.id}`,
     data: { list }
   })
 );

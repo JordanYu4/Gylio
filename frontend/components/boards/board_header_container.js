@@ -9,8 +9,7 @@ import {
 } from '../../actions/board_actions';
 
 import {
-  selectBoard,
-  selectListsForBoard
+  selectBoard
 } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {

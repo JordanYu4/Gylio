@@ -11,7 +11,8 @@ class BoardHeader extends React.Component {
 
   render() {
     const board = this.props.board;
-
+    if (!board) return null;
+    
     return(
       <div className="board-show-header">
         <h1>{board.title}</h1>

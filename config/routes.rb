@@ -11,7 +11,7 @@ Rails.application.routes.draw do
         end
       end
     end
-    resources :lists, only: [:destroy]
+    resources :lists, only: [:index, :destroy]
     resources :cards, only: [:destroy]
     resources :labels, only: [:destroy]
   end

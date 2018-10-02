@@ -2,13 +2,14 @@ class Api::ListsController < ApplicationController
   before_action :require_login
 
   def show
-    render :json
+    @list = List.find(params[:id])
+    render :show
   end
 
   def index
     current_board = Board.find(params[:board_id])
     @lists = current_board.lists
-    render :json
+    render :index
   end
 
   def create

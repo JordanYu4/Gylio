@@ -11,8 +11,8 @@ export const fetchLists = () => dispatch => (
   )) // add error handling here
 );
 
-export const fetchList = listId => dispatch => (
-  ListAPIUtil.fetchList(listId).then(payload => (
+export const fetchList = (boardId, listId) => dispatch => (
+  ListAPIUtil.fetchList(boardId, listId).then(payload => (
     dispatch(receiveList(payload))
   ))
 );
@@ -26,8 +26,8 @@ export const createList = list => dispatch => (
 );
 
 export const editList = list => dispatch => (
-  ListAPIUtil.updateList(list).then(list => (
-    dispatch(receiveList(list))
+  ListAPIUtil.updateList(list).then(payload => (
+    dispatch(receiveList(payload))
   )) // add error handling here
 );
 
