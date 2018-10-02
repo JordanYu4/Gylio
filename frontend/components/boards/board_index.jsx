@@ -15,8 +15,7 @@ class BoardIndex extends React.Component {
         board={board}
         key={board.id}
       />
-      )
-    );
+    ));
 
     return(
       <div className="board-index-container">

@@ -28,7 +28,7 @@ const mapStateToProps = (state, { match }) => {
 const mapDispatchToProps = dispatch => ({
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   editBoard: board => dispatch(editBoard(board)),
-  fetchList: (boardId, listId) => dispatch(fetchList(boardId, listId)),
+  // fetchList: (boardId, listId) => dispatch(fetchList(boardId, listId)),
   fetchListsForBoard: boardId => dispatch(fetchListsForBoard(boardId)),
   createList: list => dispatch(createList(list)),
   editList: list => dispatch(editList(list)),

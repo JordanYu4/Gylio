@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ListIndexItem from './list_index_item';
 import ListForm from './list_form';
 
 class ListIndex extends React.Component {
@@ -13,32 +14,29 @@ class ListIndex extends React.Component {
     this.props.fetchListsForBoard(this.boardId);
   }
   
-  componentDidMount() {
-    // this.listIds = this.board.listIds;
-    // for (let i = 0; i < this.listIds.length; i++) {
-    //   // debugger
-    //   this.props.fetchList(this.boardId, this.listIds[i]);
-    // }
-    // console.log("listIds", this.board.listIds)
-    // this.board.listIds.map(listId => this.props.fetchList(this.boardId, listId));
-    // console.log("list index props", this.props);
-    // console.log('this.board', this.board);
-  }
+  // componentDidMount() {
+  //   this.board = this.props.board;
+  // }
   
   render() {
-    const { board, createList } = this.props;
-    if (!board) return null;
-
-    // {indexedLists}
-    // const indexedLists = lists.map(list => {
-    //   return (
-    //     <div></div>
-    //   );
-    // });
+    if (typeof this.props.board.list_order === "undefined") {// || typeof this.props.lists === "undefined") {
+      return null;
+    }
+    const { board, 
+            createList, 
+            lists } = this.props;
+    console.log('board.list_order', board.list_order);
+    console.log('lists', lists);
+    const indexedLists = lists.map(list => (
+      <ListIndexItem
+        list={list}
+        key={list.id}
+      /> 
+    ));
 
     return(
       <ul className="list-index">
-
+        {indexedLists}
         <li className="form-toggle-button js-form-open">
           <span className="create-new-list">+ Add another list</span>
         </li>
