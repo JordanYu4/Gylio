@@ -9,7 +9,7 @@ import {
 const ListsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_LISTS:
+    case RECEIVE_LISTS: // may need to refactor w/ receiveListsForBoard
       return action.lists;
     case RECEIVE_LIST:
       console.log(action);

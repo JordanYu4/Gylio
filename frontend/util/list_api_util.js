@@ -6,6 +6,14 @@ export const fetchList = (boardId, listId) => (
   })
 );
 
+export const fetchListsForBoard = boardId => (
+  $.ajax({
+    method: 'GET', 
+    url: `api/boards/${boardId}/lists`,
+    error: err => console.log(err)
+  })
+);
+
 export const fetchLists = () => (
   $.ajax({
     method: 'GET',
