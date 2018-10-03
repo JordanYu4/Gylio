@@ -2,7 +2,7 @@ class Api::ListsController < ApplicationController
   before_action :require_login
 
   def show
-    @list = List.find(params[:id])
+    @list = List.find(params[:list_id])
     render :show
   end
 
@@ -22,12 +22,16 @@ class Api::ListsController < ApplicationController
   end
 
   def update
-    list = List.find(params[:listId])
-    list.update_attributes(list_params)
-    render :index
+    # @list = List.find(params[:listId])
+    if @list.update_attributes(list_params)
+      render :show
+    else
+      render json: @list.errors.full_messages, status: 422
+    end
   end
 
   def destroy
+    @list.destroy
   end
 
   private

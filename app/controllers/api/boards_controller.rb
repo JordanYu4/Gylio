@@ -33,13 +33,16 @@ class Api::BoardsController < ApplicationController
   end
 
   def update
-    @board = Board.find(params[:id])
-    # execute edits
-    render :show
+    # @board = Board.find(params[:id])
+    if @board.update_attributes(board_params)
+      render :show
+    else
+      render json: @board.errors.full_messages, status: 422
+    end
   end
 
   def destroy
-
+    @board.destroy
   end
 
   private
