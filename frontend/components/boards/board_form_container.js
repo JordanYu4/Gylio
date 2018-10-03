@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { createBoard } from '../../actions/board_actions';
-
 import BoardForm from './board_form';
+
+import { createBoard } from '../../actions/board_actions';
 
 const mapStateToProps = ({ errors }) => ({
   // Adds redundancy in conjunction w/ conditional submit disabling 

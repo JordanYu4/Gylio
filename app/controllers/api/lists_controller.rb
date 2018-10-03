@@ -14,9 +14,12 @@ class Api::ListsController < ApplicationController
 
   def create
     current_board = Board.find(params[:board_id])
-    
+    p current_board
     @list = List.new(list_params)
-    unless @list.save
+    p @list
+    if @list.save
+      render :show
+    else
       render json: @list.errors.full_messages, status: 422
     end
   end

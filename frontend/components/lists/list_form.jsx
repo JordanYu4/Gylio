@@ -13,10 +13,6 @@ class ListForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidUpdate() {
-    // console.log('list form props', this.props);
-  }
-
   update(field) { // refactor into shared helper file and bind to this?
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -25,16 +21,17 @@ class ListForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // let boardId = this.props.match.params.boardId;
-    let list = merge({}, this.state);
+    const list = Object.assign({}, this.state);
     this.props.createList(list)
     .then(action => {
       let newList = action.payload.list;
+      console.log('newList', newList);
       let editedBoard = merge(
         {}, 
         board, 
-        {board_order: this.props.board_order.concat(newList.id)}
+        {list_order: this.props.list_order.concat(newList.id)}
       );
+      console.log('editedBoard', editedBoard);
       this.props.editBoard(editedBoard);
     });
   }
