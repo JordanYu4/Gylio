@@ -19,10 +19,7 @@ class ListIndex extends React.Component {
         typeof this.props.lists === "undefined") {
       return null;
     }
-    const { board, 
-            editBoard,
-            createList, 
-            lists } = this.props;
+    const { lists } = this.props;
     let indexedLists = jQuery.isEmptyObject(lists) ? null : lists.map(list => (
       <ListIndexItem
         list={list}

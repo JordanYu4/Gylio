@@ -5,7 +5,8 @@ class BoardForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: ""
+      title: "", 
+      list_order: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

@@ -2,7 +2,7 @@ class Api::ListsController < ApplicationController
   before_action :require_login
 
   def show
-    @list = List.find(params[:list_id])
+    @list = List.find(params[:id])
     render :show
   end
 
@@ -14,9 +14,7 @@ class Api::ListsController < ApplicationController
 
   def create
     current_board = Board.find(params[:board_id])
-    p current_board
     @list = List.new(list_params)
-    p @list
     if @list.save
       render :show
     else
@@ -25,8 +23,9 @@ class Api::ListsController < ApplicationController
   end
 
   def update
-    # @list = List.find(params[:listId])
-    if @list.update(list_params)
+    @list = List.find(params[:id])
+    @list.update_attributes(list_params)
+    if @list.save
       render :show
     else
       render json: @list.errors.full_messages, status: 422
@@ -34,6 +33,7 @@ class Api::ListsController < ApplicationController
   end
 
   def destroy
+    @list = List.find(params)
     @list.destroy
   end
 
