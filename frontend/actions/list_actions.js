@@ -8,12 +8,16 @@ export const RECEIVE_LIST_ERRORS = 'RECEIVE_LIST_ERRORS';
 export const fetchLists = () => dispatch => (
   ListAPIUtil.fetchLists().then(lists => (
     dispatch(receiveLists(lists))
-  )) // add error handling here
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
+  )) 
 );
 
 export const fetchListsForBoard = boardId => dispatch => (
   ListAPIUtil.fetchListsForBoard(boardId).then(lists => (
     dispatch(receiveLists(lists))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   )) 
 );
 
