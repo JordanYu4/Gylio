@@ -4,7 +4,7 @@ import { createBoard } from '../../actions/board_actions';
 import BoardForm from './board_form';
 
 const mapStateToProps = ({ errors }) => ({
-  // Shouldn't be necessary w/ conditional submit disabling 
+  // Adds redundancy in conjunction w/ conditional submit disabling 
   errors: errors.boards
 });
 

@@ -28,7 +28,7 @@ export const createList = list => dispatch => (
     dispatch(receiveList(payload))
   )), errors => (
     dispatch(receiveErrors(errors.responseJSON)
-  )) // add error handling here
+  )) 
 );
 
 export const editList = list => dispatch => (

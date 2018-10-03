@@ -2,7 +2,9 @@ import React from 'react';
 
 const ListIndexItem = ({ list }) => {
   return(
-    <li>{list.title}</li>
+    <li className="list-index-item">
+      {list.title}
+    </li>
   );
 };
 

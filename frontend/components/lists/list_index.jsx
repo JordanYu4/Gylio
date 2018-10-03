@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ListIndexItem from './list_index_item';
-import ListForm from './list_form';
+import ListFormContainer from './list_form_container';
 
 class ListIndex extends React.Component {
   constructor(props) {
@@ -14,19 +14,15 @@ class ListIndex extends React.Component {
     this.props.fetchListsForBoard(this.boardId);
   }
   
-  // componentDidMount() {
-  //   this.board = this.props.board;
-  // }
-  
   render() {
-    if (typeof this.props.board.list_order === "undefined") {// || typeof this.props.lists === "undefined") {
+    if (typeof this.props.board.list_order === "undefined" || 
+        typeof this.props.lists === "undefined") {
       return null;
     }
     const { board, 
+            editBoard,
             createList, 
             lists } = this.props;
-    console.log('board.list_order', board.list_order);
-    console.log('lists', lists);
     const indexedLists = lists.map(list => (
       <ListIndexItem
         list={list}
@@ -40,7 +36,7 @@ class ListIndex extends React.Component {
         <li className="form-toggle-button js-form-open">
           <span className="create-new-list">+ Add another list</span>
         </li>
-        <ListForm board={board} createList={createList} />
+        <ListFormContainer />
       </ul>
     );
   }

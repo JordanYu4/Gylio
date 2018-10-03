@@ -1,13 +1,20 @@
 import React from 'react';
-import merge from 'lodash/merge';
+import merge from 'lodash/merge'; 
+import { withRouter } from 'react-router-dom';
 
 class ListForm extends React.Component {
   constructor(props) {
     super(props);
+    this.board_id = props.match.params.id;
     this.state = {
-      title: ""
+      title: "", 
+      board_id: this.board_id
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidUpdate() {
+    // console.log('list form props', this.props);
   }
 
   update(field) { // refactor into shared helper file and bind to this?
@@ -18,14 +25,17 @@ class ListForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let list = merge({}, this.state, {board_id: this.props.board.id} );
-    console.log('list', list);
-    console.log(this.props);
+    // let boardId = this.props.match.params.boardId;
+    let list = merge({}, this.state);
     this.props.createList(list)
     .then(action => {
       let newList = action.payload.list;
-      console.log(newList);
-      this.board.listIds.push(newList.id);
+      let editedBoard = merge(
+        {}, 
+        board, 
+        {board_order: this.props.board_order.concat(newList.id)}
+      );
+      this.props.editBoard(editedBoard);
     });
   }
 
@@ -52,4 +62,4 @@ class ListForm extends React.Component {
   }
 }
 
-export default ListForm;
+export default withRouter(ListForm);
