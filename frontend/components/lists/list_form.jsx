@@ -1,5 +1,6 @@
 import React from 'react';
 import merge from 'lodash/merge'; 
+
 import { withRouter } from 'react-router-dom';
 
 class ListForm extends React.Component {
@@ -22,14 +23,15 @@ class ListForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const list = Object.assign({}, this.state);
-    this.props.createList(list)
-    .then(action => {
+    const result = this.props.createList(list);
+    debugger;
+    result.then(action => {
       let newList = action.payload.list;
       console.log('newList', newList);
       let editedBoard = merge(
         {}, 
-        board, 
-        {list_order: this.props.list_order.concat(newList.id)}
+        this.props.board, 
+        {list_order: this.props.board.list_order.concat(newList.id)}
       );
       console.log('editedBoard', editedBoard);
       this.props.editBoard(editedBoard);

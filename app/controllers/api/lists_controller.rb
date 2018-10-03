@@ -26,7 +26,7 @@ class Api::ListsController < ApplicationController
 
   def update
     # @list = List.find(params[:listId])
-    if @list.update_attributes(list_params)
+    if @list.update(list_params)
       render :show
     else
       render json: @list.errors.full_messages, status: 422
