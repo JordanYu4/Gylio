@@ -31,13 +31,17 @@ export const createBoard = board => dispatch => (
 export const editBoard = board => dispatch => (
   BoardAPIUtil.updateBoard(board).then(board => (
     dispatch(receiveBoard(board))
-  )) // add error handling here
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
+  )) 
 );
 
 export const deleteBoard = boardId => dispatch => (
   BoardAPIUtil.deleteBoard(boardId).then(boardId => (
     dispatch(removeBoard(boardId))
-  )) // add error handling here
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
+  ))
 );
 
 export const receiveBoards = boards => ({
