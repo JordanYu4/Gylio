@@ -23,12 +23,12 @@ class ListIndex extends React.Component {
             editBoard,
             createList, 
             lists } = this.props;
-    let indexedLists = jQuery.isEmptyObject(lists) ? lists.map(list => (
+    let indexedLists = jQuery.isEmptyObject(lists) ? null : lists.map(list => (
       <ListIndexItem
         list={list}
         key={list.id}
       /> 
-    )) : null;
+    ));
 
     return(
       <ul className="list-index">
