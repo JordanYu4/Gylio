@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import ListForm from './list_form';
 import { withRouter } from 'react-router';
+import ListForm from './list_form';
 
 import { createList } from '../../actions/list_actions';
 import { editBoard } from '../../actions/board_actions';
