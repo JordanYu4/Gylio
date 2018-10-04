@@ -23,15 +23,17 @@ class ListForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const list = Object.assign({}, this.state);
-    const result = this.props.createList(list);
-    debugger;
-    result.then(action => {
+    this.props.createList(list)
+    .then(action => {
       let newList = action.payload.list;
       console.log('newList', newList);
+      let { title, list_order } = this.props.board;
+      let oldBoard = Object.assign({}, this.props.board);
       let editedBoard = merge(
         {}, 
-        this.props.board, 
-        {list_order: this.props.board.list_order.concat(newList.id)}
+        oldBoard,
+        // { title, list_order },
+        { list_order: this.props.board.list_order.concat(newList.id) }
       );
       console.log('editedBoard', editedBoard);
       this.props.editBoard(editedBoard);

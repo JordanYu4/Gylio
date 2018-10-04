@@ -9,7 +9,7 @@ class ListIndex extends React.Component {
   }
 
   componentWillMount() {
-    this.boardId = this.props.boardId;
+    this.boardId = this.props.boardId; 
     this.props.fetchBoard(this.boardId); 
     this.props.fetchListsForBoard(this.boardId);
   }
