@@ -3,6 +3,7 @@ import * as BoardAPIUtil from '../util/board_api_util';
 export const RECEIVE_BOARDS = 'RECEIVE_BOARDS';
 export const RECEIVE_BOARD = 'RECEIVE_BOARD';
 export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
+export const REMOVE_BOARD = 'REMOVE_BOARD';
 
 export const fetchBoards = () => dispatch => (
   BoardAPIUtil.fetchBoards().then(boards => (

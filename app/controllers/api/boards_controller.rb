@@ -44,6 +44,7 @@ class Api::BoardsController < ApplicationController
   end
 
   def destroy
+    @board = Board.find(params[:id])
     @board.destroy
   end
 
