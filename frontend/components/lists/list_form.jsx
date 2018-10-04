@@ -27,12 +27,10 @@ class ListForm extends React.Component {
     .then(action => {
       let newList = action.payload.list;
       console.log('newList', newList);
-      let { title, list_order } = this.props.board;
       let oldBoard = Object.assign({}, this.props.board);
       let editedBoard = merge(
         {}, 
         oldBoard,
-        // { title, list_order },
         { list_order: this.props.board.list_order.concat(newList.id) }
       );
       console.log('editedBoard', editedBoard);

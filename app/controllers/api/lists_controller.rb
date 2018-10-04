@@ -24,7 +24,7 @@ class Api::ListsController < ApplicationController
 
   def update
     @list = List.find(params[:id])
-    @list.update_attributes(list_params)
+    @list.update_attributes(create_list_params)
     if @list.save
       render :show
     else
@@ -33,14 +33,18 @@ class Api::ListsController < ApplicationController
   end
 
   def destroy
-    @list = List.find(params)
+    @list = List.find(params[:id])
     @list.destroy
   end
 
   private
 
-  def list_params
+  def create_list_params
     params.require(:list).permit(:title, :board_id)
+  end
+
+  def edit_list_params
+    params.require(:list).permit(:title, :card_order)
   end
 
 end

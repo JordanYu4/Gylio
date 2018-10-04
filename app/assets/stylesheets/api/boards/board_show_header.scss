@@ -1,10 +1,16 @@
 .board-show-header {
+  width: 100%;
+  min-height: 50px;
+  position: fixed;
   display: flex;
-  padding: 1.5em 1.5em 1.5em 1.5em;
+  justify-content: space-between;
+  padding: 1.5em;
+  margin: auto;
   box-sizing: border-box;
 
   h1 {
     font-size: 20px;
     font-weight: bold;
   }
+
 }
