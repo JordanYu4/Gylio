@@ -8,6 +8,7 @@
 
 User.delete_all
 Board.delete_all
+List.delete_all
 BoardMembership.delete_all
 
 User.create!(

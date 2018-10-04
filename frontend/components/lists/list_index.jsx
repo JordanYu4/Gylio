@@ -19,11 +19,11 @@ class ListIndex extends React.Component {
         typeof this.props.lists === "undefined") {
       return null;
     }
-    const { lists } = this.props;
-    let indexedLists = jQuery.isEmptyObject(lists) ? null : lists.map(list => (
+    const { lists, board: {list_order} } = this.props;
+    let indexedLists = jQuery.isEmptyObject(lists) ? null : list_order.map(list_id => (
       <ListIndexItem
-        list={list}
-        key={list.id}
+        list={lists[list_id]}
+        key={list_id}
       /> 
     ));
 
