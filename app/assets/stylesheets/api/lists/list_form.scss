@@ -1,6 +1,6 @@
 .list-index {
   .form-toggle-button {
-    position: fixed;
+    position: sticky;
     width: 200px;
     height: 2.3em;
     color: rgb(225, 225, 225);
@@ -14,7 +14,7 @@
 }
 
 .toggle-form {
-  position: absolute;
+  position: relative;
   border: none;
   border-radius: 3px;
   background: rgba(226, 228, 230, 1);

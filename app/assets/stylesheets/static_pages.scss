@@ -4,17 +4,8 @@ body {
   font-family: $roboto;
   height: 100%;
   margin: 0;
-}
-
-header {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 25px 20px;
-  color: #fff;
-  background-color: #026AA7;
-  box-sizing: border-box;
+  flex-direction: column;
 }
 
 input {
@@ -25,5 +16,6 @@ input {
 
 .main {
   position: absolute;
+  flex-grow: 3;
   width: 100%;
 }
