@@ -8,6 +8,13 @@ body {
   flex-direction: column;
 }
 
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
 input {
   &:focus {
     outline: none;
@@ -15,7 +22,8 @@ input {
 }
 
 .main {
-  position: absolute;
+  position: relative;
   flex-grow: 3;
   width: 100%;
+  box-sizing: border-box;
 }
