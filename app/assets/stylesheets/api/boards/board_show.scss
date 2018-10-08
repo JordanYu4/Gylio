@@ -1,3 +1,5 @@
+@import 'variables';
+
 .board-show {
   position: absolute;
   left: 0;
@@ -13,9 +15,52 @@
   padding: 2em 25px 2em;
   box-sizing: border-box;
 
-  h1 {
-    font-size: 20px;
-    font-weight: bold;
+  .board-info {
+    display: flex;
+    align-items: baseline;
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      padding-right: 15px;
+    }
+
+    h2 {
+      font-size: 16px;
+      padding: 10px 15px 10px;
+      border-radius: 2px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        cursor: no-drop;
+      }
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 300;
+      padding: 0 5px 0;
+      opacity: 0.3;
+    }
   }
 
+  .board-delete-form {
+    .board-delete-button {
+      font-size: 16px;
+      padding: 10px 15px 10px;
+      background: darken($light-gray, 5%);
+      border: none;
+      border-radius: 2px;
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background: darken($light-gray, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }

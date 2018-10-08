@@ -5,28 +5,35 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  // height: 50%;
-  // bottom: 0;
-  padding: 0 25px 15px 25px;
+  margin-bottom: 15px;
   box-sizing: border-box;
   overflow: auto;
   overflow-y: hidden;
-  background: rgba(255, 0, 0, 0.7); 
-  
+  // background: rgba(255, 0, 0, 0.7); 
 }
 
 .list-index {
   width: 100%;
   display: flex;
+  padding-right: 10px;
+
+  &:first-child {
+    margin-left: 10px;
+  }
+  
+  &:last-child {
+    margin-right: 10px; 
+  }
 }
 
 .list-index-item {
-  width: 270px;
+  min-width: 270px;
   max-height: 100%;
-  margin-right: 20px;
+  margin-right: 15px;
   padding: 15px;
   box-sizing: border-box;
   border-radius: 4px;
   background: $light-gray;
   color: set-text-color($light-gray);
+
 }

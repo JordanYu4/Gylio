@@ -1,25 +1,25 @@
-.list-index {
-  .form-toggle-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 270px;
-    height: 2.3em;
-    color: rgb(225, 225, 225);
-    background: rgba(0, 0, 0, 0.4);
-    transition: 0.25s;
+.list-form-container {
+  position: relative;
+  border-right: 10px solid transparent;
+}
 
-    &:hover {
-      background: rgba(0, 0, 0, 0.5);
-    }
+.form-toggle-button {
+  width: 270px;
+  height: 2.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgb(225, 225, 225);
+  transition: 0.25s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
-.list-form-container {
-  position: relative;
-}
-
 .toggle-form {
+  width: 270px;
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,6 @@
   background: rgba(226, 228, 230, 1);
   padding: 6px;
   box-sizing: border-box;
-  width: 270px;
   transition: 0.3s;
   animation-duration: 0.2s;
   display: none;
