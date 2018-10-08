@@ -11,7 +11,7 @@ class BoardForm extends React.Component {
   }
 
   componentDidUpdate() {
-    this.focus();
+    this.focus(); // Requires update 
   }
 
   update(field) {

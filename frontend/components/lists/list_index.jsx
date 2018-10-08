@@ -27,17 +27,17 @@ class ListIndex extends React.Component {
       /> 
     ));
 
-    return(
-      <div className="list-index-container">
+    return <div className="list-index-container">
         <ul className="list-index">
           {indexedLists}
-          <li className="form-toggle-button js-form-open">
-            <span className="create-new-list">+ Add another list</span>
+          <li className="list-form-container">
+            <span className="form-toggle-button js-form-open">
+              + Add another list
+            </span>
+            <ListFormContainer />
           </li>
-          <ListFormContainer />
         </ul>
-      </div>
-    );
+      </div>;
   }
 };
 
