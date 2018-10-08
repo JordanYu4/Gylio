@@ -13,3 +13,7 @@ export const selectListsForBoard = ({lists}, board) => {
   board.listIds.map(listId => listCollection[listId] = lists[listId]);
   return listCollection;
 };
+
+export const selectList = ({ lists }, listId) => {
+  return lists[listId] || {};
+}
