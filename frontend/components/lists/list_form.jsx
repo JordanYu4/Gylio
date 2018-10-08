@@ -23,6 +23,7 @@ class ListForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const list = Object.assign({}, this.state);
+    this.setState({ ['title']: ""} );
     this.props.createList(list)
     .then(action => {
       let newList = action.payload.list;
@@ -41,7 +42,9 @@ class ListForm extends React.Component {
   render() {
 
     return(
-      <form onSubmit={this.handleSubmit} className="toggle-form">
+      <form onSubmit={this.handleSubmit} 
+        className="toggle-form animated fadeIn"
+        >
         <input type="text"
           value={this.state.title}
           onChange={this.update('title')}

@@ -30,6 +30,7 @@
   box-sizing: border-box;
   width: 270px;
   transition: 0.3s;
+  animation-duration: 0.2s;
   display: none;
 
   &.is-open {
