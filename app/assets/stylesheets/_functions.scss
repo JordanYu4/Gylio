@@ -1,0 +1,9 @@
+// Functions 
+
+@function set-text-color($bg-color) {
+  @if (lightness($bg-color) > 60) {
+    @return rgba(50, 50, 50, 1);
+  } @else {
+    @return #fff;
+  }
+}
