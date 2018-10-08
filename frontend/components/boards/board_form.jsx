@@ -10,6 +10,10 @@ class BoardForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidUpdate() {
+    this.focus();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -34,7 +38,9 @@ class BoardForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className="board-form-container">
         <section className="board-form-main">
-          <input type="text"
+          <input 
+            ref = {(input) => {this.nameInput = input;}}
+            type="text"
             value={this.state.title}
             onChange={this.update('title')}
             className="board-form-input"

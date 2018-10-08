@@ -1,7 +1,7 @@
 .list-index {
   .form-toggle-button {
     position: sticky;
-    width: 200px;
+    width: 270px;
     height: 2.3em;
     color: rgb(225, 225, 225);
     background: rgba(0, 0, 0, 0.4);
@@ -14,12 +14,12 @@
 }
 
 .toggle-form {
-  position: relative;
+  position: sticky;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   background: rgba(226, 228, 230, 1);
   padding: 6px;
-  width: 200px;
+  width: 270px;
   transition: 0.3s;
   display: none;
 

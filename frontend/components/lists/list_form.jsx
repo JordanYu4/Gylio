@@ -42,7 +42,8 @@ class ListForm extends React.Component {
 
     return(
       <form onSubmit={this.handleSubmit} className="toggle-form">
-        <input type="text"
+        <input autoFocus 
+          type="text"
           value={this.state.title}
           onChange={this.update('title')}
           className="list-form-input"

@@ -1,9 +1,14 @@
 @import 'variables';
 
-body {
-  font-family: $roboto;
+html, body {
+  width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: $roboto;
   display: flex;
   flex-direction: column;
 }
@@ -26,5 +31,6 @@ input {
   position: relative;
   flex-grow: 3;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }

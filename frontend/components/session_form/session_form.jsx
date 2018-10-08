@@ -71,7 +71,8 @@ class SessionForm extends React.Component {
           <h3>or {this.props.navLink}</h3>
           <div className="login-form">
             <label>Username
-              <input type="text"
+              <input autoFocus 
+                type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"

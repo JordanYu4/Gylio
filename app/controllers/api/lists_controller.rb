@@ -14,7 +14,7 @@ class Api::ListsController < ApplicationController
 
   def create
     current_board = Board.find(params[:board_id])
-    @list = List.new(list_params)
+    @list = List.new(create_list_params)
     if @list.save
       render :show
     else
@@ -24,7 +24,7 @@ class Api::ListsController < ApplicationController
 
   def update
     @list = List.find(params[:id])
-    @list.update_attributes(create_list_params)
+    @list.update_attributes(edit_list_params)
     if @list.save
       render :show
     else
