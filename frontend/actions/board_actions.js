@@ -30,8 +30,8 @@ export const createBoard = board => dispatch => (
 );
 
 export const editBoard = board => dispatch => (
-  BoardAPIUtil.updateBoard(board).then(board => (
-    dispatch(receiveBoard(board))
+  BoardAPIUtil.updateBoard(board).then(payload => (
+    dispatch(receiveBoard(payload))
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
   )) 

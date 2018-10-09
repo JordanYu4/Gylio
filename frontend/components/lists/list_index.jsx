@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListIndexItem from './list_index_item';
+import ListIndexItemContainer from './list_index_item_container';
 import ListFormContainer from './list_form_container';
 
 class ListIndex extends React.Component {
@@ -21,7 +21,7 @@ class ListIndex extends React.Component {
     }
     const { lists, board: {list_order} } = this.props;
     let indexedLists = jQuery.isEmptyObject(lists) ? null : list_order.map(list_id => (
-      <ListIndexItem
+      <ListIndexItemContainer
         list={lists[list_id]}
         key={list_id}
       /> 

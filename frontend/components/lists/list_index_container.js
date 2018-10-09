@@ -9,8 +9,6 @@ import {
 import {
   fetchListsForBoard,
   createList,
-  editList,
-  deleteList
 } from '../../actions/list_actions';
 import {
   selectBoard,
@@ -28,9 +26,7 @@ const mapDispatchToProps = dispatch => ({
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   editBoard: board => dispatch(editBoard(board)),
   fetchListsForBoard: boardId => dispatch(fetchListsForBoard(boardId)),
-  createList: list => dispatch(createList(list)),
-  editList: list => dispatch(editList(list)),
-  deleteList: listId => dispatch(deleteList(listId))
+  createList: list => dispatch(createList(list))
 });
 
 export default withRouter(connect(

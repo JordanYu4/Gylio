@@ -25,6 +25,12 @@ export const createCard = card => dispatch => (
   )
 );
 
+export const editCard = card => dispatch => (
+  CardAPIUtil.updateCard(card).then(action => 
+    dispatch(receiveCard(action.payload.card))
+  )
+);
+
 export const fetchCards = () => dispatch => (
   CardAPIUtil.fetchCards().then(cards =>
     dispatch(receiveCards(cards))
