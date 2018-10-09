@@ -17,3 +17,9 @@ export const selectListsForBoard = ({lists}, board) => {
 export const selectList = ({ lists }, listId) => {
   return lists[listId] || {};
 }
+
+export const selectCardsForList = ({cards}, list) => {
+  let cardCollection = {};
+  list.cardIds.map(cardId => cardCollection[cardId] = cards[cardId]);
+  return cardCollection;
+}
