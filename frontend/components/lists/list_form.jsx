@@ -23,24 +23,21 @@ class ListForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const list = Object.assign({}, this.state);
-    this.setState({ ['title']: ""} );
+    this.setState({ ['title']: "" });
     this.props.createList(list)
     .then(action => {
       let newList = action.payload.list;
-      console.log('newList', newList);
-      let oldBoard = Object.assign({}, this.props.board);
+      let currentBoard = Object.assign({}, this.props.board);
       let editedBoard = merge(
         {}, 
-        oldBoard,
-        { list_order: this.props.board.list_order.concat(newList.id) }
+        currentBoard,
+        { list_order: currentBoard.list_order.concat(newList.id) }
       );
-      console.log('editedBoard', editedBoard);
       this.props.editBoard(editedBoard);
     });
   }
 
   render() {
-
     return(
       <form onSubmit={this.handleSubmit} 
         className="toggle-form animated fadeIn"
@@ -52,9 +49,12 @@ class ListForm extends React.Component {
           placeholder="Enter list title..."
         />
         <section className="list-form-buttons">
-          <input className={this.state.title ? "form-submit-enabled" : "form-submit-disabled"}
-            type="submit"
+          <input type="submit"
             value="Add List"
+            className={
+              this.state.title ? 
+              "form-submit-enabled" : "form-submit-disabled"
+            }
             disabled={!this.state.title}
           />
           <span className="form-close js-form-close">&times;</span>
