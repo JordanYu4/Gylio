@@ -29,7 +29,7 @@ class ListIndex extends React.Component {
 
     return <div className="list-index-container">
         <ul className="list-index">
-          {indexedLists}
+          { indexedLists }
           <li className="list-form-container">
             <span className="form-toggle-button js-form-open">
               + Add another list
