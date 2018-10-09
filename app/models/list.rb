@@ -7,7 +7,7 @@
 #  board_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  card_ids   :integer          default([]), is an Array
+#  card_order :integer          default([]), is an Array
 #
 
 class List < ApplicationRecord
