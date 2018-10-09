@@ -32,6 +32,7 @@ class BoardHeader extends React.Component {
           <h2>Personal</h2>
           <span>|</span>
           <h2>Private</h2>
+          <span>|</span>
         </section>
         <form onClick={this.handleDelete} className="board-delete-form">
           <input type="button"
