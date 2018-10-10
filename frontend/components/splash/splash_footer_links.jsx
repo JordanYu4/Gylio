@@ -19,7 +19,7 @@ const FooterLinks = () => (
       >
         <img
           className="github-footer-image"
-          src={require("../../../images/github-logo.png")}
+          src={require("../../../app/assets/images/github-logo.png")}
         />
       </a>
     </ul>

@@ -1,18 +1,23 @@
 @import 'variables';
+@import 'functions';
 
-.footer-body {
+.splash-footer-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 50px 30px 50px;
   box-sizing: border-box;
   height: 75px;
+  background: lighten($primary-color, 5%);
   
   a {
     text-decoration: none;
+    color: #fff;
 
     h1 {
       font-size: 32px;
+      font-weight: 700px;
     }
   }
 }
@@ -33,7 +38,7 @@
       
       .footer-link {
         a {
-          color: set-text-color(#fff);
+          color: set-text-color($primary-color);
           line-height: 1.2em;
           padding-right: 20px;
           text-decoration: none;
