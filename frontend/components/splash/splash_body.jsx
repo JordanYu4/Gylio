@@ -13,8 +13,8 @@ import CardExpo from './card_expo.jsx';
 const SplashBody = () => (
   <div className="splash-body">
     <Tagline />
-    <BoardExpoSlideshow />
-    <CardExpo />
+    {/* <BoardExpoSlideshow /> */}
+    {/* <CardExpo /> */}
   </div>
 )
 
