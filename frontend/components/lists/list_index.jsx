@@ -10,7 +10,7 @@ class ListIndex extends React.Component {
 
   componentWillMount() {
     this.boardId = this.props.boardId; 
-    this.props.fetchBoard(this.boardId); 
+    if (!this.props.board) this.props.fetchBoard(this.boardId); 
     this.props.fetchListsForBoard(this.boardId);
   }
   
@@ -22,12 +22,13 @@ class ListIndex extends React.Component {
     const { lists, board: {list_order} } = this.props;
     let indexedLists = jQuery.isEmptyObject(lists) ? null : list_order.map(list_id => (
       <ListIndexItemContainer
-        list={lists[list_id]}
         key={list_id}
+        list={lists[list_id]}
       /> 
     ));
 
-    return <div className="list-index-container">
+    return (
+      <div className="list-index-container">
         <ul className="list-index">
           { indexedLists }
           <li className="list-form-container">
@@ -37,7 +38,8 @@ class ListIndex extends React.Component {
             <ListFormContainer />
           </li>
         </ul>
-      </div>;
+      </div>
+    )
   }
 };
 

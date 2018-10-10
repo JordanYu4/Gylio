@@ -3,32 +3,48 @@ import React from 'react';
 import CardFormContainer from '../cards/card_form_container';
 
 class ListIndexItem extends React.Component {
-  constuctor(props) {
+  constructor(props) {
     super(props);
+  }
+
+  componentWillMount() {
+    this.props.fetchCardsForList(this.listId);
+    console.log(this.props);
+    this.listId = this.list.id;
+    this.list = this.props;
+  }
+  
+  componentDidMount() {
+    console.log(this.props);
+    console.log('card order', this.props.list.card_order)
   }
   
   render() {
-    const modalButtonText = list.card_order.length == 0 ? 
+    if (typeof this.props.list.card_order === "undefined" ||
+        typeof this.props.cards === "undefined") {
+      return null;
+    }
+    const modalButtonText = this.list.card_order.length == 0 ? 
       "a card" : "another card";
   
-    const { card_order } = list;
-    const indexedCards = jQuery.isEmptyObject
+    const { card_order } = this.list;
+    // const indexedCards = jQuery.isEmptyObject
     
     return (
       <li className="list-index-item">
-        <h1>{list.title}</h1>
+        <h1>{this.list.title}</h1>
         <ul className="card-index">
-          { indexedCards }
+          {/* { indexedCards } */}
         </ul>
         <section className="card-form-container">
           <span className="form-toggle-button js-form-open">
             + Add {modalButtonText}
           </span>
-          <CardFormContainer listId={list.id}/>
+          <CardFormContainer listId={this.listId}/>
         </section>
       </li>
     )
   }
-}
+};
 
 export default ListIndexItem;

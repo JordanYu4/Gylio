@@ -14,14 +14,6 @@ export const fetchListsForBoard = boardId => (
   })
 );
 
-export const fetchLists = () => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/lists',
-    error: err => console.log(err) // refactor this error handling
-  })
-);
-
 export const createList = list => (
   $.ajax({
     method: 'POST',

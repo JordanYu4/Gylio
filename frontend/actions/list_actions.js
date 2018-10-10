@@ -5,13 +5,13 @@ export const RECEIVE_LIST = 'RECEIVE_LIST';
 export const REMOVE_LIST = 'REMOVE_LIST';
 export const RECEIVE_LIST_ERRORS = 'RECEIVE_LIST_ERRORS';
 
-export const fetchLists = () => dispatch => (
-  ListAPIUtil.fetchLists().then(lists => (
-    dispatch(receiveLists(lists))
-  ), errors => (
-    dispatch(receiveErrors(errors.responseJSON))
-  )) 
-);
+// export const fetchLists = () => dispatch => (
+//   ListAPIUtil.fetchLists().then(lists => (
+//     dispatch(receiveLists(lists))
+//   ), errors => (
+//     dispatch(receiveErrors(errors.responseJSON))
+//   )) 
+// );
 
 export const fetchListsForBoard = boardId => dispatch => (
   ListAPIUtil.fetchListsForBoard(boardId).then(lists => (
@@ -21,11 +21,11 @@ export const fetchListsForBoard = boardId => dispatch => (
   )) 
 );
 
-export const fetchList = (boardId, listId) => dispatch => (
-  ListAPIUtil.fetchList(boardId, listId).then(payload => (
-    dispatch(receiveList(payload))
-  ))
-);
+// export const fetchList = (boardId, listId) => dispatch => (
+//   ListAPIUtil.fetchList(boardId, listId).then(payload => (
+//     dispatch(receiveList(payload))
+//   ))
+// );
 
 export const createList = list => dispatch => (
   ListAPIUtil.createList(list).then(payload => (
@@ -38,12 +38,16 @@ export const createList = list => dispatch => (
 export const editList = list => dispatch => (
   ListAPIUtil.updateList(list).then(payload => (
     dispatch(receiveList(payload))
-  )) // add error handling here
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
+  )) 
 );
 
 export const deleteList = listId => dispatch => (
   ListAPIUtil.deleteList(listId).then(listId => (
     dispatch(removeList(listId)) 
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 

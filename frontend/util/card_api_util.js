@@ -1,15 +1,23 @@
-export const fetchCards = () => (
+export const fetchCard = (boardId, listId, cardId) => (
   $.ajax({
     method: 'GET',
-    url: 'api/cards',
+    url: `api/boards/${boardId}/lists/${listId}/cards/${cardId}`,
     error: err => console.log(err)
   })
 );
 
-export const createCard = card => (
+export const fetchCardsforList = (boardId, listId) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/boards/${boardId}/lists/${listId}/cards`,
+    error: err => console.log(err)
+  })
+);
+
+export const createCard = (boardId, listId, card) => (
   $.ajax({
     method: 'POST',
-    url: 'api/cards',
+    url: `api/boards/${boardId}/lists/${listId}/cards`,
     data: { card }
   })
 );

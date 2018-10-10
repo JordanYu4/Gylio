@@ -26,7 +26,6 @@ const mapDispatchToProps = dispatch => ({
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   editBoard: board => dispatch(editBoard(board)),
   fetchListsForBoard: boardId => dispatch(fetchListsForBoard(boardId)),
-  createList: list => dispatch(createList(list))
 });
 
 export default withRouter(connect(
