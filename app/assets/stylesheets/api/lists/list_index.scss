@@ -42,3 +42,18 @@
   }
 
 }
+
+.list-form-toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  font-weight: bold;
+  background: lightgray;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}

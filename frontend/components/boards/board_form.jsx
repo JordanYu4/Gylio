@@ -10,10 +10,6 @@ class BoardForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidUpdate() {
-    this.focus(); // Requires update 
-  }
-
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value

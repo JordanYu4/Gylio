@@ -26,7 +26,11 @@ class BoardIndex extends React.Component {
           </div>
           <ul className="board-index-list">
             {indexedBoards}
-            <li className="form-toggle-button js-modal-open">
+            <li className="
+              board-index-item-box 
+              board-form-toggle-button 
+              js-modal-open"
+            >
               <span className="create-new-board">Create new board...</span>
             </li>
           </ul>

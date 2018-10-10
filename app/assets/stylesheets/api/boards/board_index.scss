@@ -27,7 +27,7 @@ i.icon-personal {
   flex-direction: row;
 }
 
-.board-index-item-box, .form-toggle-button {
+.board-index-item-box, .board-form-toggle-button {
   display: flex;
   height: 5em;
   flex-wrap: wrap;
@@ -36,12 +36,14 @@ i.icon-personal {
   border: 1px solid none;
   border-radius: 3px;
   box-sizing: border-box;
-  background: rgba(2, 106, 167, 0.9); // Replace this w/ custom board background
+  background: rgb(2, 106, 167); // Replace this w/ custom board background
+  opacity: 0.9;
 }
 
 .board-index-item-box:hover {
   cursor: pointer;
-  background: rgba(2, 106, 167, 1);
+  opacity: 1;
+  // background: rgba(2, 106, 167, 1);
 }
 
 .board-index-item {
@@ -51,7 +53,7 @@ i.icon-personal {
   margin: 0.5em;
 }
 
-.form-toggle-button {
+.board-form-toggle-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,11 +61,11 @@ i.icon-personal {
   font-weight: bold;
   background: lightgray;
   opacity: 0.7;
-}
 
-.form-toggle-button:hover {
-  opacity: 0.9;
-  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
 }
 
 .create-new-board {

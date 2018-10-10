@@ -32,7 +32,7 @@ class ListIndex extends React.Component {
         <ul className="list-index">
           { indexedLists }
           <li className="list-form-container">
-            <span className="form-toggle-button js-form-open">
+            <span className="list-form-toggle-button js-form-open">
               + Add another list
             </span>
             <ListFormContainer />
