@@ -50,7 +50,10 @@
       }
     }
 
-    .github-footer-image {
+    .icon-github {
+      background: image-url("github-logo.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
       height: 50px;
       width: 50px;
       margin-right: 15px;

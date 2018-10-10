@@ -17,10 +17,7 @@ const FooterLinks = () => (
         href="https://github.com/JordanYu4/Gylio"
         target="_blank"
       >
-        <img
-          className="github-footer-image"
-          src={require("../../../app/assets/images/github-logo.png")}
-        />
+        <i className="icon-github" />
       </a>
     </ul>
   </div>
