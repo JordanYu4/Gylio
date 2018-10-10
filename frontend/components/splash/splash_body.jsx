@@ -2,7 +2,7 @@ import React from 'react';
 
 import Tagline from './splash_tagline.jsx';
 // import BoardExpoSlideshow from './board_expo_slideshow.jsx';
-// import CardExpo from './card_expo.jsx';
+import CardExpo from './card_expo.jsx';
 import SplashFooter from './splash_footer.jsx';
 
 // <TeamExpo />
@@ -15,7 +15,7 @@ const SplashBody = () => (
   <div className="splash-body">
     <Tagline />
     {/* <BoardExpoSlideshow /> */}
-    {/* <CardExpo /> */}
+    <CardExpo />
     <SplashFooter />
   </div>
 )
