@@ -4,17 +4,24 @@
 }
 
 .list-form-toggle-button {
-  width: 270px;
-  height: 2.5em;
   position: absolute;
   top: 0;
   left: 0;
+  width: 270px;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   color: rgb(225, 225, 225);
-  transition: 0.25s;
+  font-weight: bold;
+  transition: 0.2s;
 
   &:hover {
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
+    // opacity: 0.9;
   }
 }
 
