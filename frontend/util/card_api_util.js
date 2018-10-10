@@ -6,26 +6,26 @@
 //   })
 // );
 
-export const fetchCardsforList = (boardId, listId) => (
+export const fetchCardsForList = (listId) => (
   $.ajax({
     method: 'GET',
-    url: `api/boards/${boardId}/lists/${listId}/cards`,
+    url: `api/lists/${listId}/cards`,
     error: err => console.log(err)
   })
 );
 
-export const createCard = (boardId, card) => (
+export const createCard = (card) => (
   $.ajax({
     method: 'POST',
-    url: `api/boards/${boardId}/lists/${card.list_id}/cards`,
+    url: `api/lists/${card.list_id}/cards`,
     data: { card }
   })
 );
 
-export const updateCard = (boardId, card) => (
+export const updateCard = (card) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/boards/${boardId}/lists/${card.list_id}/cards/${card.id}`,
+    url: `api/cards/${card.id}`,
     data: { card }
   })
 );

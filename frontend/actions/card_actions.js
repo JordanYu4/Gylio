@@ -11,24 +11,24 @@ export const RECEIVE_CARD_ERRORS = 'RECEIVE_CARD_ERRORS';
 //   )
 // );
 
-export const fetchCardsForList = (boardId, listId) => dispatch => (
-  ListAPIUtil.fetchCardsForList(boardId, listId).then(cards => (
+export const fetchCardsForList = (listId) => dispatch => (
+  CardAPIUtil.fetchCardsForList(listId).then(cards => (
     dispatch(receiveCards(cards))
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 
-export const createCard = (boardId, card) => dispatch => (
-  CardAPIUtil.createCard(boardId, card).then(payload => (
+export const createCard = (card) => dispatch => (
+  CardAPIUtil.createCard(card).then(payload => (
     dispatch(receiveCard(payload))
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 
-export const editCard = (boardId, card) => dispatch => (
-  CardAPIUtil.updateCard(boardId, card).then(payload => ( 
+export const editCard = (card) => dispatch => (
+  CardAPIUtil.updateCard(card).then(payload => ( 
     dispatch(receiveCard(payload))
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
@@ -36,7 +36,7 @@ export const editCard = (boardId, card) => dispatch => (
 );
 
 export const deleteCard = cardId => dispatch => (
-  ListAPIUtil.deleteCard(cardId).then(cardId => (
+  CardAPIUtil.deleteCard(cardId).then(cardId => (
     dispatch(removeCard(cardId))
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
