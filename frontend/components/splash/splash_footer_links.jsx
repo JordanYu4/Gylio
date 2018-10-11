@@ -6,10 +6,22 @@ const FooterLinks = () => (
     <ul className="footer-links">
       <div className="internal-links">
         <li className="footer-link">
-          <Link to="/contact">Careers</Link>
+          {/* <Link to="/contact">Careers</Link> */}
+          <a 
+            href="https://www.linkedin.com/in/jordan-yu-4400/"
+            target="_blank"
+          >
+            Careers
+          </a>
         </li>
         <li className="footer-link">
-          <Link to="/contact">Contact</Link>
+          {/* <Link to="/contact">Contact</Link> */}
+          <a
+            href="https://www.linkedin.com/in/jordan-yu-4400/"
+            target="_blank"
+          >
+            Careers
+          </a>
         </li>
       </div>
       <a
