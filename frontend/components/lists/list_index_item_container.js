@@ -8,11 +8,14 @@ import {
   editList, 
   deleteList
 } from '../../actions/list_actions';
+import { selectCardsForList } from '../../reducers/selectors';
 
-const mapStateToProps = (state, ownProps) => ({
-  list: ownProps.list, 
-  ownProps: ownProps
-});
+const mapStateToProps = (state, ownProps) => {
+  const listId = ownProps.listId;
+  const list = ownProps.list ? ownProps.list : selectList(state.entites, listId);
+  const cards = list.cardIds ? selectCardsForList(state.entities, list) : {};
+  return { listId, list, cards };
+};
 
 const mapDispatchToProps = dispatch => ({
   editList: list => dispatch(editList(list)),

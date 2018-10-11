@@ -8,7 +8,6 @@ import {
 } from '../../actions/board_actions';
 import {
   fetchListsForBoard,
-  createList,
 } from '../../actions/list_actions';
 import {
   selectBoard,

@@ -8,9 +8,10 @@ class ListIndexItem extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchCardsForList(this.listId);
+    this.props.fetchCardsForList(this.props.listId);
     console.log(this.props);
-    this.list = this.props;
+    const { list }= this.props;
+    this.list = list;
   }
   
   componentDidMount() {

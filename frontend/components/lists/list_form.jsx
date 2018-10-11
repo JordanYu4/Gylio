@@ -14,7 +14,7 @@ class ListForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  update(field) { // refactor into shared helper file and bind to this?
+  update(field) { 
     return e => this.setState({
       [field]: e.currentTarget.value
     });
@@ -41,7 +41,7 @@ class ListForm extends React.Component {
     return(
       <form onSubmit={this.handleSubmit} 
         className="toggle-form animated fadeIn"
-        >
+      >
         <input type="text"
           value={this.state.title}
           onChange={this.update('title')}

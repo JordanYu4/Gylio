@@ -23,6 +23,7 @@ class ListIndex extends React.Component {
     let indexedLists = jQuery.isEmptyObject(lists) ? null : list_order.map(list_id => (
       <ListIndexItemContainer
         key={list_id}
+        listId={list_id}
         list={lists[list_id]}
       /> 
     ));
