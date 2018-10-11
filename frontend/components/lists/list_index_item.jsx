@@ -9,9 +9,6 @@ class ListIndexItem extends React.Component {
 
   componentWillMount() {
     this.props.fetchCardsForList(this.props.listId);
-    console.log(this.props);
-    const { list }= this.props;
-    this.list = list;
   }
   
   componentDidMount() {
@@ -20,7 +17,9 @@ class ListIndexItem extends React.Component {
   }
   
   render() {
-    if (typeof this.props.list.card_order === "undefined" ||
+    this.list = this.props.list;
+
+    if (typeof this.list.card_order === "undefined" ||
         typeof this.props.cards === "undefined") {
       return null;
     }
@@ -40,7 +39,7 @@ class ListIndexItem extends React.Component {
           <span className="form-toggle-button js-form-open">
             + Add {modalButtonText}
           </span>
-          <CardFormContainer listId={this.listId}/>
+          <CardFormContainer listId={this.props.listId}/>
         </section>
       </li>
     )

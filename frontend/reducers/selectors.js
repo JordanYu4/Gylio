@@ -10,7 +10,7 @@ export const selectBoard = ({ boards }, boardId) => {
 
 export const selectListsForBoard = ({lists}, board) => {
   let listCollection = {};
-  board.listIds.map(listId => listCollection[listId] = lists[listId]);
+  board.list_order.map(listId => listCollection[listId] = lists[listId]);
   return listCollection;
 };
 

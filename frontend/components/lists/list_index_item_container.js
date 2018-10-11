@@ -8,11 +8,14 @@ import {
   editList, 
   deleteList
 } from '../../actions/list_actions';
-import { selectCardsForList } from '../../reducers/selectors';
+import { 
+  selectList, 
+  selectCardsForList 
+} from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const listId = ownProps.listId;
-  const list = ownProps.list ? ownProps.list : selectList(state.entites, listId);
+  const list = ownProps.list ? ownProps.list : selectList(state.entities, listId);
   const cards = list.cardIds ? selectCardsForList(state.entities, list) : {};
   return { listId, list, cards };
 };
