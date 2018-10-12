@@ -11,12 +11,7 @@ class ListIndexItem extends React.Component {
   componentWillMount() {
     this.props.fetchCardsForList(this.props.listId);
   }
-  
-  componentDidMount() {
-    console.log(this.props);
-    console.log('card order', this.props.list.card_order)
-  }
-  
+
   render() {
     this.list = this.props.list;
 

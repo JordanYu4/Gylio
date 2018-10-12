@@ -17,7 +17,7 @@ import {
 const mapStateToProps = (state, { match }) => {
   const boardId = parseInt(match.params.id); 
   const board = selectBoard(state.entities, boardId); 
-  const lists = board.listIds ? selectListsForBoard(state.entities, board) : {};
+  const lists = board.list_order ? selectListsForBoard(state.entities, board) : {};
   return { boardId, board, lists };
 };
 

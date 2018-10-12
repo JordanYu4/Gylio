@@ -11,7 +11,7 @@ export const fetchBoards = () => dispatch => (
   ), errors => (
     dispatch(receiveErrors(errors.responseJSON))
   ))
-);
+); 
 
 export const fetchBoard = boardId => dispatch => (
   BoardAPIUtil.fetchBoard(boardId).then(payload => (
