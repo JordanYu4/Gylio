@@ -20,13 +20,15 @@ class ListIndex extends React.Component {
       return null;
     }
     const { lists, board: {list_order} } = this.props;
-    let indexedLists = jQuery.isEmptyObject(lists) ? null : list_order.map(list_id => (
-      <ListIndexItemContainer
-        key={list_id}
-        listId={list_id}
-        list={lists[list_id]}
-      /> 
-    ));
+    let indexedLists = jQuery.isEmptyObject(lists) ? null : 
+      list_order.map(listId => (
+        <ListIndexItemContainer
+          key={listId}
+          listId={listId}
+          list={lists[listId]}
+        /> 
+      )
+    );
 
     return (
       <div className="list-index-container">

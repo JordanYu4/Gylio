@@ -2,7 +2,7 @@ export const getAllBoards = ({ boards }) => {
   return (
     Object.keys(boards).map(key => boards[key])
   );
-};
+}; // refactor with getAllBoardsForUser
 
 export const selectBoard = ({ boards }, boardId) => {
   return boards[boardId] || {};
@@ -20,6 +20,6 @@ export const selectList = ({ lists }, listId) => {
 
 export const selectCardsForList = ({cards}, list) => {
   let cardCollection = {};
-  list.cardIds.map(cardId => cardCollection[cardId] = cards[cardId]);
+  list.card_order.map(cardId => cardCollection[cardId] = cards[cardId]);
   return cardCollection;
 }
