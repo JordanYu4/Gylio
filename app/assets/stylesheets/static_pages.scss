@@ -25,6 +25,14 @@ body {
 input {
   &:focus {
     outline: none;
+
+    // &::-webkit-input-placeholder {
+    //   color: rgba(0, 0, 0, 0.2);
+    // }
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
