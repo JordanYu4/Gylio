@@ -22,7 +22,7 @@
   }
 }
 
-.toggle-card-form {
+[class^="toggle-card-form"] {
   width: 270px;
   position: absolute;
   top: 0;
@@ -41,7 +41,7 @@
   }
 }
 
-.list-form-input {
+.card-form-input {
   width: 100%;
   color: #4D4D4D;
   font-size: 14px;
@@ -55,7 +55,7 @@
 
 }
 
-.list-form-buttons {
+.card-form-buttons {
   display: flex;
   flex-direction: row;
   align-items: center;

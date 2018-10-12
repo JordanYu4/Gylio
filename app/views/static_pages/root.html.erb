@@ -37,6 +37,7 @@
   $(function(){
     $("body").on("click", ".js-card-form-open", function(event){
       event.preventDefault();
+      $(".toggle-card-form").removeClass("is-open");
       $(".toggle-card-form").addClass("is-open");
     });
     $("body").on("click", ".js-card-form-close", function(event){
