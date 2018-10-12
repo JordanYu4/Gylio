@@ -30,15 +30,17 @@ class CardForm extends React.Component {
         currentList,
         { card_order: currentList.card_order.concat(newCard.id) }
       );
-      this.props.editLIst(editedList);
+      this.props.editList(editedList);
     });
   }
 
   render() {
+    const list = this.props.list;
 
     return (
       <form onSubmit={this.handleSubmit}
         className="toggle-card-form"
+        id={list.id}
       >
         <input type="text"
           value={this.state.title}

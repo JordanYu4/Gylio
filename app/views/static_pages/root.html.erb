@@ -9,12 +9,12 @@
 
 <script>
   $(function(){
-    $("body").on("click", ".js-modal-open", function(event){
-      event.preventDefault();
+    $("body").on("click", ".js-modal-open", function(e){
+      e.preventDefault();
       $(".modal").addClass("is-open");
     });
-    $("body").on("click", ".js-modal-close", function(event){
-      event.preventDefault();
+    $("body").on("click", ".js-modal-close", function(e){
+      e.preventDefault();
       $(".modal").removeClass("is-open");
     });
   });
@@ -22,12 +22,12 @@
 
 <script>
   $(function(){
-    $("body").on("click", ".js-list-form-open", function(event){
-      event.preventDefault();
+    $("body").on("click", ".js-list-form-open", function(e){
+      e.preventDefault();
       $(".toggle-list-form").addClass("is-open");
     });
-    $("body").on("click", ".js-list-form-close", function(event){
-      event.preventDefault();
+    $("body").on("click", ".js-list-form-close", function(e){
+      e.preventDefault();
       $(".toggle-list-form").removeClass("is-open");
     });
   });
@@ -35,13 +35,13 @@
 
 <script>
   $(function(){
-    $("body").on("click", ".js-card-form-open", function(event){
-      event.preventDefault();
+    $("body").on("click", ".js-card-form-open", function(e){
+      e.preventDefault();
       $(".toggle-card-form").removeClass("is-open");
-      $(".toggle-card-form").addClass("is-open");
+      $(`#${e.target.id}.toggle-card-form`).addClass("is-open");
     });
-    $("body").on("click", ".js-card-form-close", function(event){
-      event.preventDefault();
+    $("body").on("click", ".js-card-form-close", function(e){
+      e.preventDefault();
       $(".toggle-card-form").removeClass("is-open");
     });
   });

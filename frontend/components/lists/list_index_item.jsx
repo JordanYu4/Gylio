@@ -39,7 +39,7 @@ class ListIndexItem extends React.Component {
         </section>
         <ul className="card-index">{indexedCards}</ul>
         <section className="card-form-container">
-          <div className="card-form-toggle-button js-card-form-open">
+          <div id={this.props.listId} className="card-form-toggle-button js-card-form-open">
             + Add {cardFormButtonText}
           </div>
           <CardFormContainer listId={this.props.listId} />
