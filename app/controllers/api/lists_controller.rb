@@ -13,7 +13,7 @@ class Api::ListsController < ApplicationController
   end
 
   def create
-    current_board = Board.find(params[:board_id])
+    # current_board = Board.find(params[:board_id])
     @list = List.new(create_list_params)
     if @list.save
       render :show
@@ -44,7 +44,7 @@ class Api::ListsController < ApplicationController
   end
 
   def edit_list_params
-    params.require(:list).permit(:title, :card_order)
+    params.require(:list).permit(:title, :card_order, :due_date)
   end
 
 end

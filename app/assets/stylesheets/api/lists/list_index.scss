@@ -6,12 +6,16 @@
   box-sizing: border-box;
   overflow: auto;
   overflow-y: hidden;
+  // transform: rotate(-90deg) translateY(-100%);
+  // transform-origin: right top;
 }
 
 .list-index {
   width: 100%;
   display: flex;
   padding-right: 10px;
+  // transform: rotate(90deg);
+  // transform-origin: right top;
 
   &:first-child {
     margin-left: 10px;

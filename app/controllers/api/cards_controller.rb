@@ -39,11 +39,11 @@ class Api::CardsController < ApplicationController
   private
 
   def create_card_params
-    params.require(:card).permit(:title)
+    params.require(:card).permit(:title, :list_id)
   end
   
   def edit_card_params
-    params.require(:card).permit(:title)
+    params.require(:card).permit(:title, :description)
   end
 
 end

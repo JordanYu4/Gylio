@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardIndexItemContainer from '../cards/card_index_item_container';
+import CardIndexItem from '../cards/card_index_item';
 import CardFormContainer from '../cards/card_form_container';
 
 class ListIndexItem extends React.Component {
@@ -25,7 +25,7 @@ class ListIndexItem extends React.Component {
     const { cards, list: {card_order} } = this.props;
     const indexedCards = jQuery.isEmptyObject(cards) ? null : 
       card_order.map(cardId => (
-        <CardIndexItemContainer 
+        <CardIndexItem
           key={cardId}
           cardId={cardId}
           card={cards[cardId]}
@@ -37,7 +37,9 @@ class ListIndexItem extends React.Component {
         <section className="list-index-item-header">
           <h1>{this.list.title}</h1>
         </section>
-        <ul className="card-index">{indexedCards}</ul>
+        <ul className="card-index">
+          {indexedCards}
+        </ul>
         <section className="card-form-container">
           <div id={this.props.listId} className="card-form-toggle-button js-card-form-open">
             + Add {cardFormButtonText}

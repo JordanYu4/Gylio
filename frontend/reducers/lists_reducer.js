@@ -12,7 +12,6 @@ const ListsReducer = (state = {}, action) => {
     case RECEIVE_LISTS: // may need to refactor w/ receiveListsForBoard
       return action.lists;
     case RECEIVE_LIST:
-      console.log(action);
       const newList = { [action.payload.list.id]: action.payload.list };
       return merge({}, state, newList);
     case REMOVE_LIST:

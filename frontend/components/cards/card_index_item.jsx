@@ -1,15 +1,14 @@
 import React from 'react';
 
-class CardIndexItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <li></li>
-    );
-  }
+const CardIndexItem = (cardId, card) => {
+  console.log(cardId);
+  console.log(card);
+  
+  return(
+    <li>
+      {card.title}
+    </li>
+  );
 }
 
 export default CardIndexItem;

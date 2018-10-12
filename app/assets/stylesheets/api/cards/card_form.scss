@@ -22,8 +22,9 @@
   }
 }
 
-[class^="toggle-card-form"] {
+.toggle-card-form {
   width: 270px;
+  // height: 2.5em;
   position: absolute;
   top: 0;
   left: 0;
@@ -32,12 +33,11 @@
   background: rgba(226, 228, 230, 1);
   padding: 6px;
   box-sizing: border-box;
-  transition: 0.3s;
-  animation-duration: 0.2s;
   display: none;
 
   &.is-open {
     display: block;
+    // height: 6em;
   }
 }
 

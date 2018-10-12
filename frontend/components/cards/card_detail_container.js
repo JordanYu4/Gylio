@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CardIndexItem from './card_index_item';
+import CardDetail from './card_detail';
 
 import {
   editCard
@@ -24,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps, 
   mapDispatchToProps
-)(CardIndexItem);
+)(CardDetail);
