@@ -38,7 +38,7 @@ class CardForm extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit}
-        className="toggle-form"
+        className="toggle-card-form"
       >
         <input type="text"
           value={this.state.title}
@@ -54,7 +54,7 @@ class CardForm extends React.Component {
               "form-submit-enabled" : "form-submit-disabled"
             }
           />
-          <span className="form-close js-form-close">&times;</span>
+          <span className="form-close js-card-form-close">&times;</span>
         </section>
       </form>
     );

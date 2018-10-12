@@ -63,7 +63,7 @@
   }
 }
 
-.modal-close {
+.modal-close-button {
   position: absolute;
   color: #fff;
   top: 10px;
@@ -74,6 +74,8 @@
 }
 
 .board-form-container {
+  animation-duration: 0.25s;
+
   input[type="submit"] {
     position: absolute;
     left: 0;

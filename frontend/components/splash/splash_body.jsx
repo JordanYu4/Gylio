@@ -12,12 +12,15 @@ import SplashFooter from './splash_footer.jsx';
 // <FinalPlug />
 
 const SplashBody = () => (
-  <div className="splash-body">
-    <Tagline />
-    {/* <BoardExpoSlideshow /> */}
-    <CardExpo />
-    <SplashFooter />
+  <div className="splash-main">
+    <div className="splash-body">
+      <Tagline />
+      {/* <BoardExpoSlideshow /> */}
+      <CardExpo />
+      <SplashFooter />
+    </div>
   </div>
+
 )
 
 export default SplashBody;

@@ -19,7 +19,7 @@ class ListIndexItem extends React.Component {
         typeof this.props.cards === "undefined") {
       return null;
     }
-    const modalButtonText = this.list.card_order.length == 0 ? 
+    const cardFormButtonText = this.list.card_order.length == 0 ? 
       "a card" : "another card";
   
     const { cards, list: {card_order} } = this.props;
@@ -33,20 +33,18 @@ class ListIndexItem extends React.Component {
       )
     );
     
-    return (
-      <li className="list-index-item">
-        <h1>{this.list.title}</h1>
-        <ul className="card-index">
-          { indexedCards }
-        </ul>
-        <section className="card-form-container">
-          <span className="form-toggle-button js-form-open">
-            + Add {modalButtonText}
-          </span>
-          <CardFormContainer listId={this.props.listId}/>
+    return <li className="list-index-item">
+        <section className="list-index-item-header">
+          <h1>{this.list.title}</h1>
         </section>
-      </li>
-    )
+        <ul className="card-index">{indexedCards}</ul>
+        <section className="card-form-container">
+          <div className="card-form-toggle-button js-card-form-open">
+            + Add {cardFormButtonText}
+          </div>
+          <CardFormContainer listId={this.props.listId} />
+        </section>
+      </li>;
   }
 };
 

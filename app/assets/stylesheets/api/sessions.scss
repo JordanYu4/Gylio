@@ -1,15 +1,13 @@
 @import '../variables';
 
-body {
-  background-color: #F8F9F9;
-}
-
-header a {
-  font-size: 36px;
-  font-weight: 800;
-  text-decoration: none;
-  color: #fff;
-}
+header {
+  a {
+    font-size: 36px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+  }
+} 
 
 nav.header-login-signup {
   display: flex;
@@ -24,6 +22,15 @@ nav.header-login-signup {
       font-weight: 700;
       background: rgba($green-button-color, 0.8);
     }
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    font-size: 20px;
   }
 }
 
@@ -53,19 +60,6 @@ nav.header-login-signup {
   }
 }
 
-.user-nav {
-  display: flex;
-  align-items: center;
-
-  h2 {
-    font-size: 20px;
-  }
-}
-
-.login-form {
-  margin-top: 10px;
-}
-
 .session-form-error {
   font-size: 14px;
   color: #fff;
@@ -74,6 +68,10 @@ nav.header-login-signup {
   margin-bottom: 15px;
   padding-left: 10px;
   background: $alert-color;
+}
+
+.login-form {
+  margin-top: 10px;
 }
 
 .login-form-box {
@@ -87,6 +85,7 @@ nav.header-login-signup {
     font-size: 42px;
     font-weight: 1000px;
   }
+  
   a {
     color: #298FCA;
 

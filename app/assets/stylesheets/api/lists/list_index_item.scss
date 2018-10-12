@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'functions';
+
+.list-index-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 270px;
+  max-width: 270px;
+  max-height: 100%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: $light-gray;
+  color: set-text-color($light-gray);
+}
+
+.list-index-item-header {
+  padding: 15px;
+  box-sizing: border-box;
+  
+  h1 {
+    font-size: 15px;
+    font-weight: 800;
+    padding: 2px 2px 15px;
+  }
+}

@@ -41,16 +41,16 @@ class GlobalHeader extends React.Component { // ({ currentUser, logout, login })
     );
 
     return (
-      <div className="global-header-container">
-        <header className="global-header">
+      <header className="global-header-container">
+        <div className="global-header">
           <a href="/" className="home-link">
             <i className="icon-home"></i>
             Gylio
           </a>
           {this.props.currentUser ? userNav() : sessionLinks()}
-        </header>
+        </div>
         <section className="global-header-spacer" />
-      </div>
+      </header>
     );
   }
 };

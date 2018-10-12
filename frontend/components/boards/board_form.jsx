@@ -32,7 +32,7 @@ class BoardForm extends React.Component {
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit} className="board-form-container">
+      <form onSubmit={this.handleSubmit} className="board-form-container animated fadeIn">
         <section className="board-form-main">
           <input 
             ref = {(input) => {this.nameInput = input;}}
@@ -42,7 +42,7 @@ class BoardForm extends React.Component {
             className="board-form-input"
             placeholder="Add board title"
           />
-          <span className="modal-close js-modal-close">&times;</span>
+          <span className="modal-close-button js-modal-close">&times;</span>
         </section>
         <input className={this.state.title ? "form-submit-enabled" : "form-submit-disabled"}
           type="submit"

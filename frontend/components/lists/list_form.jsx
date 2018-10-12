@@ -40,7 +40,7 @@ class ListForm extends React.Component {
   render() {
     return(
       <form onSubmit={this.handleSubmit} 
-        className="toggle-form animated fadeIn"
+        className="toggle-list-form animated fadeIn"
       >
         <input type="text"
           value={this.state.title}
@@ -57,7 +57,7 @@ class ListForm extends React.Component {
             }
             disabled={!this.state.title}
           />
-          <span className="form-close js-form-close">&times;</span>
+          <span className="form-close js-list-form-close">&times;</span>
         </section>
       </form>
     );
