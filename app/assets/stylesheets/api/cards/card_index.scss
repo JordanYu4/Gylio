@@ -1,0 +1,18 @@
+.card-index {
+  flex: 1;
+  padding: 0 15px 0 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.card-index-item {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 4px;
+  line-height: 1.2em;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}

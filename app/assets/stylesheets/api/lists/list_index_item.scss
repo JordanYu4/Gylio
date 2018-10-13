@@ -7,16 +7,21 @@
   flex-direction: column;
   min-width: 270px;
   max-width: 270px;
+  min-height: 100px;
   max-height: 100%;
   margin-right: 10px;
   box-sizing: border-box;
   border-radius: 4px;
   background: $light-gray;
   color: set-text-color($light-gray);
+
+  @media screen and (max-height: 715px) {
+    max-height: 75%;
+  }
 }
 
 .list-index-item-header {
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   box-sizing: border-box;
   
   h1 {

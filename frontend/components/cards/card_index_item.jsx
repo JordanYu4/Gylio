@@ -6,7 +6,7 @@ const CardIndexItem = (props) => {
   if (!props.card) return null;
 
   return(
-    <li>
+    <li className="card-index-item">
       {props.card.title}
     </li>
   );
