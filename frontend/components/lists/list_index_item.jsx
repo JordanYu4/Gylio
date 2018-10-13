@@ -32,6 +32,10 @@ class ListIndexItem extends React.Component {
         />
       )
     );
+
+    if (!indexedCards) return null;
+
+    console.log('indexedCards', indexedCards);
     
     return <li className="list-index-item">
         <section className="list-index-item-header">

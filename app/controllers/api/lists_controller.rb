@@ -44,7 +44,7 @@ class Api::ListsController < ApplicationController
   end
 
   def edit_list_params
-    params.require(:list).permit(:title, :card_order, :due_date)
+    params.require(:list).permit(:id, :title, :board_id, card_order: [])
   end
 
 end

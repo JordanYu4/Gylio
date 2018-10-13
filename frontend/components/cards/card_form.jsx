@@ -34,6 +34,10 @@ class CardForm extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    console.log(this.props.list);
+  }
+
   render() {
     const list = this.props.list;
 

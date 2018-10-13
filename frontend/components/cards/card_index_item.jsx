@@ -1,12 +1,12 @@
 import React from 'react';
 
-const CardIndexItem = (cardId, card) => {
-  console.log(cardId);
-  console.log(card);
-  
+const CardIndexItem = (props) => {
+  console.log(props.cardId);
+  console.log(props.card);
+
   return(
     <li>
-      {card.title}
+      {props.card.title}
     </li>
   );
 }
