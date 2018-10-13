@@ -8,7 +8,7 @@ const CardIndexItem = (props) => {
   const dueDate = card.due_date ? 
     "no date" : null; 
   const commentIcon = card.commentIds.length == 0 ? 
-    null : "comments";
+    null : "comments"; 
 
   return(
     <li className="card-index-item js-modal-open js-card-detail-open">
