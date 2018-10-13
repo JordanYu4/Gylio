@@ -11,10 +11,10 @@ end
   end
 end
 
-# @card.labels.each do |label|
-#   json.labels do 
-#     json.set! label.id
-      
-#     end
-#   end
-# end
+@card.labels.each do |label|
+  json.labels do 
+    json.set! label.id
+      json.partial! 'api/labels/label', label: label
+    end
+  end
+end

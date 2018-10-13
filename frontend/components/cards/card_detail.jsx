@@ -7,7 +7,9 @@ class CardDetail extends React.Component {
 
   render() {
     return(
-      <div></div>
+      <div className="card-detail-container">
+
+      </div>
     );
   }
 }
