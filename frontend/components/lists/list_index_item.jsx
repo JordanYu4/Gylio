@@ -23,6 +23,8 @@ class ListIndexItem extends React.Component {
       "a card" : "another card";
   
     const { cards, list: {card_order} } = this.props;
+    // console.log('cards', cards);
+    // console.log('card_order', card_order);
     const indexedCards = jQuery.isEmptyObject(cards) ? null : 
       card_order.map(cardId => (
         <CardIndexItem
@@ -33,7 +35,7 @@ class ListIndexItem extends React.Component {
       )
     );
 
-    console.log('indexedCards', indexedCards);
+    // console.log('indexedCards', indexedCards);
     
     return <li className="list-index-item">
         <section className="list-index-item-header">
