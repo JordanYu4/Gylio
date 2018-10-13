@@ -6,7 +6,9 @@ const CardIndexItem = (props) => {
   const card = props.card;
   // const labels = card.labels;
   const dueDate = card.due_date ? 
-    "no date" : null; 
+    "due date" : null; 
+  const descriptionIcon = card.description ? 
+    "description": null;
   const commentIcon = card.commentIds.length == 0 ? 
     null : "comments"; 
 
@@ -16,6 +18,7 @@ const CardIndexItem = (props) => {
       {props.card.title}
       <section className="card-index-item-attributes">
         {dueDate}
+        {descriptionIcon}
         {commentIcon}
       </section>
     </li>
