@@ -23,23 +23,20 @@ class ListIndexItem extends React.Component {
       "a card" : "another card";
   
     const { cards, list: {card_order} } = this.props;
-    const indexedCards = jQuery.isEmptyObject(cards) ? null : 
-      card_order.map(cardId => (
-        <CardIndexItem
-          key={cardId}
-          cardId={cardId}
-          card={cards[cardId]}
-        />
-      )
-    );
-
+    const indexedCards = card_order.map(cardId => (
+      <CardIndexItem
+        key={cardId}
+        cardId={cardId}
+        card={cards[cardId]}
+      />
+    ));
     
     return <li className="list-index-item">
         <section className="list-index-item-header">
           <h1>{this.list.title}</h1>
         </section>
         <ul className="card-index">
-          {indexedCards}
+          {jQuery.isEmptyObject(cards) ? null : indexedCards}
         </ul>
         <section className="card-form-container">
           <div id={this.props.listId} className="card-form-toggle-button js-card-form-open">

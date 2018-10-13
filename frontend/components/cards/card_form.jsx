@@ -34,10 +34,6 @@ class CardForm extends React.Component {
     });
   }
 
-  componentDidUpdate() {
-    console.log(this.props.list);
-  }
-
   render() {
     const list = this.props.list;
 
@@ -46,11 +42,10 @@ class CardForm extends React.Component {
         className="toggle-card-form"
         id={list.id}
       >
-        <input type="text"
+        <textarea onChange={this.update('title')}
           value={this.state.title}
-          onChange={this.update('title')}
           className="card-form-input"
-          placeholder="Enter card title..."
+          placeholder="Enter a title for this card..."
         />
         <section className="card-form-buttons">
           <input type="submit"

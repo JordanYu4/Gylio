@@ -30,7 +30,7 @@
   border: none;
   border-radius: 4px;
   background: rgba(226, 228, 230, 1);
-  padding: 6px;
+  padding: 0 10px 10px;
   box-sizing: border-box;
   display: none;
 
@@ -42,16 +42,24 @@
 
 .card-form-input {
   width: 100%;
+  min-height: 65px;
+  max-height: 175px;
+  resize: vertical;
+  vertical-align: top;
   color: #4D4D4D;
   font-size: 14px;
-  line-height: 1.5em;
+  line-height: 1.4em;
   background: #fff;
-  border: 1px solid lightgray;
-  border-radius: 3px;
-  padding: 5px 12px 5px;
-  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px 5px;
   margin-bottom: 8px;
-
+  box-sizing: border-box;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  
+  &:focus {
+    outline: none;
+  }
 }
 
 .card-form-buttons {
