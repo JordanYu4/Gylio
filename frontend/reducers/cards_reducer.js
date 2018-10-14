@@ -15,7 +15,7 @@ const CardsReducer = (state = {}, action) => {
       const newCard = { [action.payload.card.id]: action.payload.card };
       return merge({}, state, newCard);
     default:
-      return state;
+      return state; 
   }
 };
 

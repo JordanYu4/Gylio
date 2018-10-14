@@ -23,3 +23,7 @@ export const selectCardsForList = ({cards}, list) => {
   list.card_order.map(cardId => cardCollection[cardId] = cards[cardId]);
   return cardCollection;
 }
+
+export const selectCard = ({ cards }, cardId) => {
+  return cards[cardId] || {};
+}
