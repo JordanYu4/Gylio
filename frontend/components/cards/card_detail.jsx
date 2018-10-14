@@ -7,7 +7,7 @@ class CardDetail extends React.Component {
 
   render() {
     return(
-      <div className="card-detail-container">
+      <div className="card-detail-container modal-form">
 
       </div>
     );
