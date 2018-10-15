@@ -1,14 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 User.delete_all
 Board.delete_all
 List.delete_all
+Card.delete_all
+Comment.delete_all
 BoardMembership.delete_all
 
 User.create!(
@@ -34,6 +28,8 @@ BoardMembership.create(
   admin: 'true'
 )
 
+####################################
+
 gandalf = User.create!(
   username: 'Gandalf',
   email: 'thewhitewizard@undin.com',
@@ -41,14 +37,99 @@ gandalf = User.create!(
 )
 
 board_1 = Board.create!(
-  title: 'Recruit some hobbits',
+  title: 'Recruit some dwarves',
   background_color: '#0078BF'
 )
 
-BoardMembership.create(
+BoardMembership.create!(
   board_id: board_1.id,
   member_id: gandalf.id,
   admin: 'true'
+)
+
+list_10 = List.create!(
+  title: 'Prospective candidates', 
+  board_id: board_1.id
+)
+
+list_11 = List.create!(
+  title: 'Invitations sent',
+  board_id: board_1.id
+)
+
+list_12 = List.create!(
+  title: 'Accepted the adventure', 
+  board_id: board_1.id
+)
+
+list_13 = List.create!(
+  title: 'Accepted, but don\'t know it yet',
+  board_id: board_1.id
+)
+
+card_100 = Card.create!(
+  title: 'Thorin',
+  list_id: list_12.id
+)
+
+card_101 = Card.create!(
+  title: 'Fili',
+  list_id: list_12.id
+)
+
+card_102 = Card.create!(
+  title: 'Kili',
+  list_id: list_13.id
+)
+
+card_103 = Card.create!(
+  title: 'Balin',
+  list_id: list_11.id
+)
+
+card_104 = Card.create!(
+  title: 'Dwalin',
+  list_id: list_11.id
+)
+
+card_105 = Card.create!(
+  title: 'Oin',
+  list_id: list_11.id
+)
+
+card_106 = Card.create!(
+  title: 'Gloin',
+  list_id: list_10.id
+)
+
+card_107 = Card.create!(
+  title: 'Dori',
+  list_id: list_10.id
+)
+
+card_108 = Card.create!(
+  title: 'Nori',
+  list_id: list_11.id
+)
+
+card_109 = Card.create!(
+  title: 'Ori',
+  list_id: list_10.id
+)
+
+card_1010 = Card.create!(
+  title: 'Bifur',
+  list_id: list_12.id
+)
+
+card_1011 = Card.create!(
+  title: 'Bofur',
+  list_id: list_11.id
+)
+
+card_1012 = Card.create!(
+  title: 'Bombur',
+  list_id: list_10.id
 )
 
 board_2 = Board.create!(
@@ -56,7 +137,7 @@ board_2 = Board.create!(
   background_color: '#282C34'
 )
 
-BoardMembership.create(
+BoardMembership.create!(
   board_id: board_2.id,
   member_id: gandalf.id,
   admin: 'true'
@@ -66,7 +147,7 @@ board_3 = Board.create!(
   background_color: 'green'
 )
 
-BoardMembership.create(
+BoardMembership.create!(
   board_id: board_3.id,
   member_id: gandalf.id,
   admin: 'true'
@@ -86,8 +167,10 @@ board_5 = Board.create!(
   background_color: 'navyblue'
 )
 
-BoardMembership.create(
+BoardMembership.create!(
   board_id: board_5.id,
   member_id: gandalf.id,
   admin: 'true'
 )
+
+

@@ -15,7 +15,7 @@ import {
 
 const mapStateToProps = (state, ownProps) => {
   const listId = ownProps.listId;
-  const list = ownProps.list ? ownProps.list : selectList(state.entities, listId);
+  const list = selectList(state.entities, listId);
   const cards = list.card_order ? selectCardsForList(state.entities, list) : {};
   return { listId, list, cards };
 };
