@@ -1,3 +1,5 @@
+require_relative 'seeds_helper'
+
 User.delete_all
 Board.delete_all
 List.delete_all
@@ -17,13 +19,13 @@ sinatra = User.create!(
   password: 'sinatra'
 )
 
-board_0 = Board.create!(
+board00 = Board.create!(
   title: 'Do it my way',
   background_color: 'black'
 )
 
 BoardMembership.create(
-  board_id: board_0.id,
+  board_id: board00.id,
   member_id: sinatra.id,
   admin: 'true'
 )
@@ -36,100 +38,39 @@ gandalf = User.create!(
   password: 'shadowfax'
 )
 
-board_1 = Board.create!(
-  title: 'Recruit some dwarves',
-  background_color: '#0078BF'
-)
+board01_title = 'Recruit some dwarves'
 
-BoardMembership.create!(
-  board_id: board_1.id,
-  member_id: gandalf.id,
-  admin: 'true'
-)
-
-board_1_list_titles = [
+board01_list_titles = [
   'Prospective candidates', 
   'Invitations sent', 
   'Accepted the adventure', 
   'Accepted, but don\'t know it yet'
 ]
 
-board_1_list_order = []
+board01_card_titles = [
+  'Thorin', 
+  'Fili', 
+  'Kili', 
+  'Balin', 
+  'Dwalin', 
+  'Oin', 
+  'Gloin', 
+  'Dori', 
+  'Nori',
+  'Ori', 
+  'Bifur', 
+  'Bofur', 
+  'Bombur'
+]
 
-board_1_list_titles.each do |list_title| 
-  new_list = List.create!(
-    title: list_title, 
-    board_id: board_1.id
-  )
-  board_1_list_order << new_list.id
-end
+board01 = generate_board(
+  gandalf, 
+  board01_title, 
+  board01_list_titles, 
+  board01_card_titles
+)
 
-board_1.update_attributes(list_order: board_1_list_order)
-
-# card_100 = Card.create!(
-#   title: 'Thorin',
-#   list_id: list_12.id
-# )
-
-# card_101 = Card.create!(
-#   title: 'Fili',
-#   list_id: list_12.id
-# )
-
-# card_102 = Card.create!(
-#   title: 'Kili',
-#   list_id: list_13.id
-# )
-
-# card_103 = Card.create!(
-#   title: 'Balin',
-#   list_id: list_11.id
-# )
-
-# card_104 = Card.create!(
-#   title: 'Dwalin',
-#   list_id: list_11.id
-# )
-
-# card_105 = Card.create!(
-#   title: 'Oin',
-#   list_id: list_11.id
-# )
-
-# card_106 = Card.create!(
-#   title: 'Gloin',
-#   list_id: list_10.id
-# )
-
-# card_107 = Card.create!(
-#   title: 'Dori',
-#   list_id: list_10.id
-# )
-
-# card_108 = Card.create!(
-#   title: 'Nori',
-#   list_id: list_11.id
-# )
-
-# card_109 = Card.create!(
-#   title: 'Ori',
-#   list_id: list_10.id
-# )
-
-# card_1010 = Card.create!(
-#   title: 'Bifur',
-#   list_id: list_12.id
-# )
-
-# card_1011 = Card.create!(
-#   title: 'Bofur',
-#   list_id: list_11.id
-# )
-
-# card_1012 = Card.create!(
-#   title: 'Bombur',
-#   list_id: list_10.id
-# )
+############################################
 
 board_2 = Board.create!(
   title: 'Research Bilbo\'s shady ring',
