@@ -18,10 +18,11 @@ class Api::ListsController < ApplicationController
       board = Board.find(@list.board_id)
       new_list_order = board.list_order.dup << @list.id 
       board.update_attributes(list_order: new_list_order)
-      unless board.save 
+      if board.save 
+        render :show
+      else
         render json: board.errors.full_messages, status: 422
       end
-      render :show
     else
       render json: @list.errors.full_messages, status: 422
     end

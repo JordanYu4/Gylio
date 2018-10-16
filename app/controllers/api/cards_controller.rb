@@ -16,9 +16,13 @@ class Api::CardsController < ApplicationController
     @card = Card.new(create_card_params)
     if @card.save
       list = List.find(@card.list_id)
-      new_card_order = list.card_order << @card.id 
+      new_card_order = list.card_order.dup << @card.id 
       list.update_attributes(card_order: new_card_order)
-      render :show
+      if list.save
+        render :show
+      else
+        render json: list.errors.full_messages, status: 422
+      end
     else
       render json: @card.errors.full_messages, status: 422
     end
