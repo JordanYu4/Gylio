@@ -13,7 +13,7 @@ end
 
 @card.labels.each do |label|
   json.labels do 
-    json.set! label.id
+    json.set! label.id do 
       json.partial! 'api/labels/label', label: label
     end
   end
