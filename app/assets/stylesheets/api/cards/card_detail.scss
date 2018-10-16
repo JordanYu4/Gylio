@@ -1,5 +1,23 @@
+@import 'variables';
+@import 'functions';
+
 .card-detail-container {
-  width: 100px;
+  width: 400px;
   height: 100px;
-  background: red;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-left: -200px;
+  border-radius: 4px;
+  background: desaturate($primary-color, 10%);
+  color: set-text-color($primary-color);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5em;
 }
