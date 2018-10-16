@@ -1,3 +1,11 @@
+export const fetchList = (boardId, listId) => (
+  $.ajax({
+    method: 'GET', 
+    url: `api/boards/${boardId}/lists/${listId}`,
+    error: err => console.log(err)
+  })
+)
+
 export const fetchListsForBoard = boardId => (
   $.ajax({
     method: 'GET', 

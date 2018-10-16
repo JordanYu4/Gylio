@@ -26,14 +26,15 @@ class ListForm extends React.Component {
     this.setState({ ['title']: "" });
     this.props.createList(list)
     .then(action => {
-      let newList = action.payload.list;
-      let currentBoard = Object.assign({}, this.props.board);
-      let editedBoard = merge(
-        {}, 
-        currentBoard,
-        { list_order: currentBoard.list_order.concat(newList.id) }
-      );
-      this.props.editBoard(editedBoard);
+      // let newList = action.payload.list;
+      // let currentBoard = Object.assign({}, this.props.board);
+      // let editedBoard = merge(
+      //   {}, 
+      //   currentBoard,
+      //   { list_order: currentBoard.list_order.concat(newList.id) }
+      // );
+      // this.props.editBoard(editedBoard);
+      this.props.fetchBoard(this.board_id)
     });
   }
 

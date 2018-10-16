@@ -13,6 +13,14 @@ export const fetchListsForBoard = boardId => dispatch => (
   )) 
 );
 
+export const fetchList = (boardId, listId) => dispatch => (
+  ListAPIUtil.fetchList(boardId, listId).then(payload => (
+    dispatch(receiveList(payload))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
+  ))
+);
+
 export const createList = list => dispatch => (
   ListAPIUtil.createList(list).then(payload => (
     dispatch(receiveList(payload))

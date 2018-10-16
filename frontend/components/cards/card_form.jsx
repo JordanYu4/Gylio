@@ -23,14 +23,16 @@ class CardForm extends React.Component {
     this.setState({ ['title']: "" });
     this.props.createCard(card)
     .then(action => {
-      let newCard = action.payload.card;
-      let currentList = Object.assign({}, this.props.list);
-      let editedList = merge(
-        {}, 
-        currentList,
-        { card_order: currentList.card_order.concat(newCard.id) }
-      );
-      this.props.editList(editedList);
+      // let newCard = action.payload.card;
+      // let currentList = Object.assign({}, this.props.list);
+      // let editedList = merge(
+      //   {}, 
+      //   currentList,
+      //   { card_order: currentList.card_order.concat(newCard.id) }
+      // );
+      // this.props.editList(editedList);
+      const { id, board_id } = this.props.list;
+      this.props.fetchList(board_id, id);
     });
   }
 

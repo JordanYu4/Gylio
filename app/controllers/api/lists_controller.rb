@@ -13,9 +13,11 @@ class Api::ListsController < ApplicationController
   end
 
   def create
-    # current_board = Board.find(params[:board_id])
     @list = List.new(create_list_params)
-    if @list.save
+    if @list.save 
+      board = Board.find(@list.board_id)
+      new_list_order = board.list_order << @list.id 
+      board.update_attributes(list_order: new_list_order)
       render :show
     else
       render json: @list.errors.full_messages, status: 422

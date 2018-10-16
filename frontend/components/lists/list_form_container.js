@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import ListForm from './list_form';
 
 import { createList } from '../../actions/list_actions';
-import { editBoard } from '../../actions/board_actions';
+import { fetchBoard, editBoard } from '../../actions/board_actions';
 import { selectBoard } from "../../reducers/selectors";
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   createList: list => dispatch(createList(list)), 
-  editBoard: board => dispatch(editBoard(board))
+  editBoard: board => dispatch(editBoard(board)), 
+  fetchBoard: boardId => dispatch(fetchBoard(boardId))
 });
 
 export default withRouter(connect(

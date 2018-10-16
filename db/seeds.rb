@@ -157,7 +157,7 @@ board_4 = Board.create!(
   background_color: 'black'
 )
 
-BoardMembership.create(
+BoardMembership.create!(
   board_id: board_4.id,
   member_id: gandalf.id,
   admin: 'true'
@@ -171,6 +171,26 @@ BoardMembership.create!(
   board_id: board_5.id,
   member_id: gandalf.id,
   admin: 'true'
+)
+
+list_50 = List.create!(
+  title: 'Draft up invites', 
+  board_id: board_5.id
+)
+
+list_51 = List.create!(
+  title: 'Order refreshments', 
+  board_id: board_5.id
+)
+
+card_510 = Card.create!(
+  title: 'Get chanterelles approved by Saruman', 
+  list_id: list_51.id
+)
+
+card_511 = Card.create!(
+  title: 'Order mushroom platter from Radagast',
+  list_id: list_51.id
 )
 
 
