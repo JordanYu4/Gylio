@@ -5,7 +5,7 @@ Card.delete_all
 Comment.delete_all
 BoardMembership.delete_all
 
-User.create!(
+valjean = User.create!(
   username: 'Jean Valjean',
   email: '24601@gmail.com',
   password: 'whoami'
@@ -47,90 +47,89 @@ BoardMembership.create!(
   admin: 'true'
 )
 
-list_10 = List.create!(
-  title: 'Prospective candidates', 
-  board_id: board_1.id
-)
+board_1_list_titles = [
+  'Prospective candidates', 
+  'Invitations sent', 
+  'Accepted the adventure', 
+  'Accepted, but don\'t know it yet'
+]
 
-list_11 = List.create!(
-  title: 'Invitations sent',
-  board_id: board_1.id
-)
+board_1_list_order = []
 
-list_12 = List.create!(
-  title: 'Accepted the adventure', 
-  board_id: board_1.id
-)
+board_1_list_titles.each do |list_title| 
+  new_list = List.create!(
+    title: list_title, 
+    board_id: board_1.id
+  )
+  board_1_list_order << new_list.id
+end
 
-list_13 = List.create!(
-  title: 'Accepted, but don\'t know it yet',
-  board_id: board_1.id
-)
+board_1.update_attributes(list_order: board_1_list_order)
 
-card_100 = Card.create!(
-  title: 'Thorin',
-  list_id: list_12.id
-)
+# card_100 = Card.create!(
+#   title: 'Thorin',
+#   list_id: list_12.id
+# )
 
-card_101 = Card.create!(
-  title: 'Fili',
-  list_id: list_12.id
-)
+# card_101 = Card.create!(
+#   title: 'Fili',
+#   list_id: list_12.id
+# )
 
-card_102 = Card.create!(
-  title: 'Kili',
-  list_id: list_13.id
-)
+# card_102 = Card.create!(
+#   title: 'Kili',
+#   list_id: list_13.id
+# )
 
-card_103 = Card.create!(
-  title: 'Balin',
-  list_id: list_11.id
-)
+# card_103 = Card.create!(
+#   title: 'Balin',
+#   list_id: list_11.id
+# )
 
-card_104 = Card.create!(
-  title: 'Dwalin',
-  list_id: list_11.id
-)
+# card_104 = Card.create!(
+#   title: 'Dwalin',
+#   list_id: list_11.id
+# )
 
-card_105 = Card.create!(
-  title: 'Oin',
-  list_id: list_11.id
-)
+# card_105 = Card.create!(
+#   title: 'Oin',
+#   list_id: list_11.id
+# )
 
-card_106 = Card.create!(
-  title: 'Gloin',
-  list_id: list_10.id
-)
+# card_106 = Card.create!(
+#   title: 'Gloin',
+#   list_id: list_10.id
+# )
 
-card_107 = Card.create!(
-  title: 'Dori',
-  list_id: list_10.id
-)
+# card_107 = Card.create!(
+#   title: 'Dori',
+#   list_id: list_10.id
+# )
 
-card_108 = Card.create!(
-  title: 'Nori',
-  list_id: list_11.id
-)
+# card_108 = Card.create!(
+#   title: 'Nori',
+#   list_id: list_11.id
+# )
 
-card_109 = Card.create!(
-  title: 'Ori',
-  list_id: list_10.id
-)
+# card_109 = Card.create!(
+#   title: 'Ori',
+#   list_id: list_10.id
+# )
 
-card_1010 = Card.create!(
-  title: 'Bifur',
-  list_id: list_12.id
-)
+# card_1010 = Card.create!(
+#   title: 'Bifur',
+#   list_id: list_12.id
+# )
 
-card_1011 = Card.create!(
-  title: 'Bofur',
-  list_id: list_11.id
-)
+# card_1011 = Card.create!(
+#   title: 'Bofur',
+#   list_id: list_11.id
+# )
 
-card_1012 = Card.create!(
-  title: 'Bombur',
-  list_id: list_10.id
-)
+# card_1012 = Card.create!(
+#   title: 'Bombur',
+#   list_id: list_10.id
+# )
 
 board_2 = Board.create!(
   title: 'Research Bilbo\'s shady ring',
