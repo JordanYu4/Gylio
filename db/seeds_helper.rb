@@ -1,9 +1,19 @@
+def clear_database
+  User.delete_all
+  Board.delete_all
+  List.delete_all
+  Card.delete_all
+  Comment.delete_all
+  BoardMembership.delete_all
+end
+
 def generate_board(
   author, 
   board_title, 
   list_titles, 
   card_titles, 
-  background_color = nil)
+  background_color = nil
+  )
 
   board = create_board(author, board_title, background_color)
   populate_board(board, list_titles, card_titles)
