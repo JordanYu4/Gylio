@@ -40,7 +40,13 @@ class Api::ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
+    board = Board.find(@list.board_id)
+    new_list_order = board.list_order.reject { |id| id == @list.id }
     @list.destroy
+    board.update_attributes(list_order: new_list_order)
+    unless board.save 
+      render json: board.errors.full_messages, status: 422
+    end
   end
 
   private

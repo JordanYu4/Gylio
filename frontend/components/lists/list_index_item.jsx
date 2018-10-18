@@ -6,10 +6,17 @@ import CardFormContainer from '../cards/card_form_container';
 class ListIndexItem extends React.Component {
   constructor(props) {
     super(props);
+    this.handleDeleteList = this.handleDeleteList.bind(this);
   }
 
   componentWillMount() {
     this.props.fetchCardsForList(this.props.listId);
+  }
+
+  handleDeleteList() {
+    let boardId = this.props.list.board_id;
+    this.props.deleteList(this.props.listId)
+    .then(this.props.fetchBoard(boardId));
   }
 
   render() {
@@ -34,6 +41,13 @@ class ListIndexItem extends React.Component {
     return <li className="list-index-item">
         <section className="list-index-item-header">
           <h1>{this.list.title}</h1>
+          <form onClick={this.handleDeleteList}
+            className="list-delete-form"  
+          >
+            <input type="button"
+              className="list-delete-button"
+            />
+          </form>
         </section>
         <ul className="card-index">
           {jQuery.isEmptyObject(cards) ? null : indexedCards}

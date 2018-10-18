@@ -8,6 +8,7 @@ import {
   editList, 
   deleteList
 } from '../../actions/list_actions';
+import { fetchBoard } from '../../actions/board_actions';
 import { 
   selectList, 
   selectCardsForList 
@@ -23,6 +24,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   editList: list => dispatch(editList(list)),
   deleteList: listId => dispatch(deleteList(listId)),
   fetchCardsForList: listId => dispatch(fetchCardsForList(listId))

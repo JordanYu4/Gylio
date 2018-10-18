@@ -4,14 +4,14 @@ import { withRouter } from 'react-router-dom';
 class BoardHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.handleDelete = this.handleDelete.bind(this);
+    this.handleDeleteBoard = this.handleDeleteBoard.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchBoard(this.props.boardId);
   }
 
-  handleDelete() {
+  handleDeleteBoard() {
     this.props.deleteBoard(this.props.boardId)
     .then(this.navigateToIndex());
   }
@@ -34,7 +34,9 @@ class BoardHeader extends React.Component {
           <h2>Private</h2>
           <span>|</span>
         </section>
-        <form onClick={this.handleDelete} className="board-delete-form">
+        <form onClick={this.handleDeleteBoard} 
+          className="board-delete-form"
+        >
           <input type="button"
             value="Delete board"
             className="board-delete-button"

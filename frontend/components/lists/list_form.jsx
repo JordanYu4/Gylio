@@ -25,9 +25,7 @@ class ListForm extends React.Component {
     const list = Object.assign({}, this.state);
     this.setState({ ['title']: "" });
     this.props.createList(list)
-    .then(action => {
-      this.props.fetchBoard(this.board_id)
-    });
+    .then(action => this.props.fetchBoard(this.board_id));
   }
 
   render() {
