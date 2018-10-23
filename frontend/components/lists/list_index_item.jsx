@@ -27,10 +27,10 @@ class ListIndexItem extends React.Component {
     }
   }
 
-  handleDeleteList() {
-    let boardId = this.props.list.board_id;
+  handleDeleteList(e) {
+    e.preventDefault();
     this.props.deleteList(this.props.listId)
-    .then(this.props.fetchBoard(boardId));
+    .then(this.props.removeList(this.props.listId));
   }
 
   render() {

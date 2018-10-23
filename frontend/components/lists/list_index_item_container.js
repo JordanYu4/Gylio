@@ -20,7 +20,8 @@ const mapStateToProps = (state, ownProps) => {
     ownProps.list : selectList(state.entities, listId);
   const cards = list.card_order ? 
     selectCardsForList(state.entities, list) : {};
-  return { listId, list, cards };
+  const listIndex = ownProps.listIndex
+  return { listId, list, cards, listIndex };
 };
 
 const mapDispatchToProps = dispatch => ({

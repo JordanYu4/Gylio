@@ -53,5 +53,9 @@
       cursor: pointer;
       background: darken($light-gray, 10%);
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import isEqual from 'lodash/isEqual';
+import { removeId } from "../../util/shared_util";
 
 import ListIndexItemContainer from './list_index_item_container';
 import ListFormContainer from './list_form_container';
@@ -10,6 +11,7 @@ class ListIndex extends React.Component {
     this.state = {
       listOrder: []
     };
+    this.removeList = this.removeList.bind(this);
   }
 
   componentWillMount() {
@@ -26,19 +28,30 @@ class ListIndex extends React.Component {
       this.setState(currentState);
     }
   }
+
+  async removeList(listId) {
+    let newListOrder = await removeId(
+      this.state.listOrder.slice(), listId
+    );
+    this.setState({
+      listOrder: newListOrder
+    });
+  }
   
   render() {
-    if (typeof this.props.board.list_order === "undefined" || 
+    if (typeof this.state.listOrder === "undefined" || 
         typeof this.props.lists === "undefined") {
       return null;
     }
-    const { lists, board: {list_order} } = this.props;
+    const { lists } = this.props;
+    const listOrder = this.state.listOrder;
     let indexedLists = jQuery.isEmptyObject(lists) ? null : 
-      list_order.map(listId => (
+      listOrder.map(listId => (
         <ListIndexItemContainer
           key={listId}
           listId={listId}
           list={lists[listId]}
+          removeList={this.removeList}
         /> 
       )
     );
