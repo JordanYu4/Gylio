@@ -41,7 +41,7 @@ class Api::CardsController < ApplicationController
   def destroy
     @card = Card.find(params[:id])
     list = List.find(@card.list_id)
-    new_card_order = list.card_order.delete(@card.id)
+    new_card_order = list.card_order.reject { |id| id == @card.id }
     @card.destroy
     list.update_attributes(card_order: new_card_order)
     unless list.save
