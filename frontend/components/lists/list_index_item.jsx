@@ -64,9 +64,9 @@ class ListIndexItem extends React.Component {
           <form onClick={this.handleDeleteList}
             className="list-delete-form"  
           >
-            <input type="button"
-              className="list-delete-button"
-            />
+            <button className="list-delete-button">
+              <i className="icon-trash"></i>
+            </ button>
           </form>
         </section>
         {/* <Droppable droppableId="droppable"> */}

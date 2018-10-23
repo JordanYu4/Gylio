@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px 2px 15px;
+  padding: 12px 10px 7px 15px;
   box-sizing: border-box;
   
   h1 {
@@ -33,13 +33,25 @@
   }
 
   .list-delete-button {
-    width: 50px;
-    height: 20px;
-    background: red;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-radius: 2px;
+    padding: 0;
+
+    .icon-trash {
+      background-position: -1073px -428px;
+      transform: scale(0.70);
+      height: 27px;
+      width: 30px;
+    }
 
     &:hover {
       cursor: pointer;
-      background: lighten(red, 10%);
+      background: darken($light-gray, 10%);
     }
   }
 }
