@@ -8,7 +8,9 @@ import CardFormContainer from '../cards/card_form_container';
 class ListIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+      cardOrder: []
+    };
     this.handleDeleteList = this.handleDeleteList.bind(this);
   }
 
@@ -17,16 +19,12 @@ class ListIndexItem extends React.Component {
   }
   
   componentDidUpdate() {
-    console.log('props', this.props);
-    // lists = this.props.lists;
-    // list_order = this.props.board.list_order;
-    // let newState = {
-    //   listOrder: list_order,
-    //   lists: lists
-    // };
-    // if (!_.isEqual(this.state, newState)) {
-    //   this.setState(newState);
-    // }
+    const currentState = { 
+      cardOrder: this.props.list.card_order 
+    };
+    if (!isEqual(currentState, this.state)) {
+      this.setState(currentState);
+    }
   }
 
   handleDeleteList() {

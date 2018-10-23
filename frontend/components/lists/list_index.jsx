@@ -18,11 +18,14 @@ class ListIndex extends React.Component {
     this.props.fetchListsForBoard(this.boardId);
   }
 
-  // componentDidUpdate() {
-  //   if (this.props.board.list_order) {
-
-  //   } 
-  // }
+  componentDidUpdate() {
+    const currentState = {
+      listOrder: this.props.board.list_order
+    };
+    if (!isEqual(currentState, this.state)) {
+      this.setState(currentState);
+    }
+  }
   
   render() {
     if (typeof this.props.board.list_order === "undefined" || 
