@@ -1,4 +1,5 @@
 import React from 'react';
+import isEqual from 'lodash/isEqual';
 
 import ListIndexItemContainer from './list_index_item_container';
 import ListFormContainer from './list_form_container';
@@ -6,6 +7,9 @@ import ListFormContainer from './list_form_container';
 class ListIndex extends React.Component {
   constructor(props) {
     super(props); 
+    this.state = {
+      listOrder: []
+    };
   }
 
   componentWillMount() {
@@ -13,6 +17,12 @@ class ListIndex extends React.Component {
     if (!this.props.board) this.props.fetchBoard(this.boardId); 
     this.props.fetchListsForBoard(this.boardId);
   }
+
+  // componentDidUpdate() {
+  //   if (this.props.board.list_order) {
+
+  //   } 
+  // }
   
   render() {
     if (typeof this.props.board.list_order === "undefined" || 

@@ -1,11 +1,13 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import { DragDropContext } from 'react-beautiful-dnd';
 import {
   Route,
-  Switch,
-  HashRouter
+  Switch
 } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { 
+  AuthRoute, 
+  ProtectedRoute 
+} from '../util/route_util';
 
 import GlobalHeaderContainer from './global_header/global_header_container';
 import SplashBody from './splash/splash_body';
@@ -27,4 +29,5 @@ const App = () => (
   </div>
 );
 
+// export default DragDropContext(App);
 export default App;

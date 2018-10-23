@@ -38,7 +38,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'capistrano-rails'
 end
 
 group :development do
@@ -49,6 +48,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
+  gem 'capistrano-rails'
 end
 
 group :test do
