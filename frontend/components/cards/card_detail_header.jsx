@@ -6,9 +6,14 @@ class CardDetailHeader extends React.Component {
     this.state = {
       // title: props.card.title
     }; 
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update() {
+
+  }
+
+  handleSubmit() {
 
   }
 
