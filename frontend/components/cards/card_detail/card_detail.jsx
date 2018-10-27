@@ -1,6 +1,9 @@
 import React from 'react';
 
-import CardDetailHeader from './card_detail_header';
+import CardDetailHeaderContainer from './card_detail_header_container';
+import CardDetailDescription from './card_detail_description_container';
+import CardDetailCommentForm from './card_detail_comment_form_container';
+import CardDetailCommentLog from './card_detail_comment_log';
 
 class CardDetail extends React.Component {
   constructor(props) {
@@ -10,7 +13,7 @@ class CardDetail extends React.Component {
   render() {
     return(
       <div className="card-detail-container modal-form">
-        
+        <CardDetailHeaderContainer card={this.props.card} />
       </div>
     );
   }

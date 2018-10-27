@@ -2,7 +2,7 @@ import React from 'react';
 
 import BoardHeaderContainer from './board_header_container';
 import ListIndexContainer from '../lists/list_index_container';
-import CardDetailModal from '../cards/card_detail_modal';
+import CardDetailModal from '../cards/card_detail/card_detail_modal';
 
 const BoardShow = () => {
   return (

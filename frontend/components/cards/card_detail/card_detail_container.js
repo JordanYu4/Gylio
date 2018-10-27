@@ -3,10 +3,10 @@ import CardDetail from './card_detail';
 
 import {
   editCard
-} from '../../actions/card_actions';
+} from '../../../actions/card_actions';
 import {
   selectCard
-} from '../../reducers/selectors';
+} from '../../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const cardId = ownProps.cardId;

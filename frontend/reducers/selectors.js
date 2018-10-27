@@ -18,7 +18,7 @@ export const selectList = ({ lists }, listId) => {
   return lists[listId] || {};
 }
 
-export const selectCardsForList = ({cards}, list) => {
+export const selectCardsForList = ({ cards }, list) => {
   let cardCollection = {};
   list.card_order.map(cardId => cardCollection[cardId] = cards[cardId]);
   return cardCollection;
