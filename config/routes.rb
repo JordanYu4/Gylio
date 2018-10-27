@@ -11,8 +11,10 @@ Rails.application.routes.draw do
     end
     resources :cards, only: [:update, :destroy] do 
       resources :labels, only: [:index, :create]
+      resources :comments, only: [:index, :create]
     end
     resources :labels, only: [:update, :destroy]
+    resources :comments, only: [:destroy]
   end
 
   root "static_pages#root"
