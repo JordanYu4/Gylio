@@ -21,11 +21,15 @@ class CardDetailHeader extends React.Component {
   }
 
   render() {
+    if (jQuery.isEmptyObject(this.props.card)) return null;
     const cardTitle = this.state.title;
+    const listTitle = this.props.list.title;
+    console.log(cardTitle, listTitle);
 
     return (
       <div className="card-detail-header">
         <h1>{cardTitle}</h1>
+        <h3>in list {listTitle}</h3>
         {/* <form onSubmit={this.handleSubmit} 
           className="card-title-form" 
         >

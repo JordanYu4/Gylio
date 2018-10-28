@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardDeailCommentLog = (card) => {
+const CardDetailCommentLog = (card) => {
 
   return (
     <div></div>

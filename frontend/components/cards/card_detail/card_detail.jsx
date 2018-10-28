@@ -11,21 +11,17 @@ class CardDetail extends React.Component {
   }
 
   render() {
+    const { card, labels, comments } = this.props;
+    
     return(
       <div className="card-detail-container modal-form">
-        <CardDetailHeaderContainer card={this.props.card} />
+        <CardDetailHeaderContainer card={card} labels={labels} />
+        <CardDetailDescription card={card} />
+        <CardDetailCommentForm cardId={card.id} />
+        <CardDetailCommentLog comments={comments} />
       </div>
     );
   }
-
-  // render() {
-  //   return(
-  //     <div className="card-detail-placeholder modal-form">
-  //       <span>Card detail currently under construction.</span>
-  //       <span>We appreciate your patience!</span>
-  //     </div>
-  //   );
-  // }
 }
 
 export default CardDetail;
