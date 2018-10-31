@@ -9,7 +9,7 @@ class BoardShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardId: 277
+      cardId: null
     };
     this.passCardId = this.passCardId.bind(this);
   }
@@ -21,7 +21,6 @@ class BoardShow extends React.Component {
   }
        
   render() {
-    
     return (
       <div className="board-show">
         <BoardHeaderContainer />

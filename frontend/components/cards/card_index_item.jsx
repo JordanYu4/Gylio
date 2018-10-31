@@ -3,8 +3,7 @@ import React from 'react';
 const CardIndexItem = (props) => {
   if (!props.card) return null;
 
-  const card = props.card;
-  const passCardId = props.passCardId;
+  const { card, passCardId } = props;
   // const labels = card.labels;
   const dueDate = card.due_date ? 
     "due date" : null; 

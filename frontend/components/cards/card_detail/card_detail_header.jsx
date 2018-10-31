@@ -21,15 +21,17 @@ class CardDetailHeader extends React.Component {
   }
 
   render() {
-    const cardTitle = this.state.title;
+    // const cardTitle = this.state.title;
+    const cardTitle = this.props.card.title;
     const listTitle = this.props.currentList.title;
     if (!cardTitle && !listTitle) return null;
-    console.log(cardTitle, listTitle);
 
-    return (
-      <div className="card-detail-header">
+    return <div className="card-detail-header">
         <h1>{cardTitle}</h1>
-        <h3>in list {listTitle}</h3>
+        <br />
+        <label className="parent-list-indicator">
+          in list <h3>{listTitle}</h3>
+        </label>
         {/* <form onSubmit={this.handleSubmit} 
           className="card-title-form" 
         >
@@ -39,8 +41,7 @@ class CardDetailHeader extends React.Component {
             className="card-title-input"
           />
         </form>  */}
-      </div>
-    );
+      </div>;
   }
 }
 

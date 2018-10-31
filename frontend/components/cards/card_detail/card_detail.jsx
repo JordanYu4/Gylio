@@ -16,9 +16,22 @@ class CardDetail extends React.Component {
     return(
       <div className="card-detail-container modal-form">
         <CardDetailHeaderContainer card={card} labels={labels} />
-        <CardDetailDescription card={card} />
-        <CardDetailCommentForm cardId={card.id} />
-        <CardDetailCommentLog comments={comments} />
+        <div className="card-detail-body">
+          <section className="card-detail-main">
+            {/* <CardLabelsAndDueDate card={card}/>  */}
+            <CardDetailDescription card={card} />
+            <CardDetailCommentForm cardId={card.id} />
+            <CardDetailCommentLog comments={comments} />
+          </section>
+          <ul className="card-detail-sidebar">
+            <li className="card-detail-sidebar-props">
+
+            </li>
+            <li className="card-detail-sidebar-actions">
+
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
