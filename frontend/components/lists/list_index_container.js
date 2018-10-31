@@ -14,12 +14,13 @@ import {
   selectListsForBoard
 } from '../../reducers/selectors';
 
-const mapStateToProps = (state, { match }) => {
-  const boardId = parseInt(match.params.id); 
+const mapStateToProps = (state, ownProps) => {
+  const { passCardId } = ownProps;
+  const boardId = parseInt(ownProps.match.params.id); 
   const board = selectBoard(state.entities, boardId); 
   const lists = board.list_order ? 
     selectListsForBoard(state.entities, board) : {};
-  return { boardId, board, lists };
+  return { boardId, board, lists, passCardId };
 };
 
 const mapDispatchToProps = dispatch => ({

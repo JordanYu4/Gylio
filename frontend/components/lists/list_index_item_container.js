@@ -15,13 +15,13 @@ import {
 } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  const listId = ownProps.listId;
+  const { listId, passCardId }  = ownProps;
   const list = ownProps.list ? 
     ownProps.list : selectList(state.entities, listId);
   const cards = list.card_order ? 
     selectCardsForList(state.entities, list) : {};
   const listIndex = ownProps.listIndex
-  return { listId, list, cards, listIndex };
+  return { listId, list, cards, listIndex, passCardId };
 };
 
 const mapDispatchToProps = dispatch => ({

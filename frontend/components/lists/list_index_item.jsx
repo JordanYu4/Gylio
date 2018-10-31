@@ -53,6 +53,7 @@ class ListIndexItem extends React.Component {
           key={cardId}
           cardId={cardId}
           card={cards[cardId]}
+          passCardId={this.props.passCardId} 
         />
       // {/* </Draggable> */}
     ));

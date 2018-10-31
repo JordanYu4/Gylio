@@ -9,13 +9,14 @@ class BoardShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardId: null
+      cardId: 277
     };
+    this.passCardId = this.passCardId.bind(this);
   }
       
   passCardId(newCardId) {
     this.setState({
-        cardId: newCardId
+      cardId: newCardId
     })
   }
        
@@ -23,9 +24,9 @@ class BoardShow extends React.Component {
     
     return (
       <div className="board-show">
-      <BoardHeaderContainer />
-      <ListIndexContainer />
-      <CardDetailModal />
+        <BoardHeaderContainer />
+        <ListIndexContainer passCardId={this.passCardId} />
+        <CardDetailModal cardId={this.state.cardId} />
       </div>
     );
   }

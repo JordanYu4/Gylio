@@ -51,6 +51,7 @@ class ListIndex extends React.Component {
           key={listId}
           listId={listId}
           list={lists[listId]}
+          passCardId={this.props.passCardId}
           removeList={this.removeList}
         /> 
       )
