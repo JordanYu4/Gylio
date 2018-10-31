@@ -21,9 +21,9 @@ class CardDetailHeader extends React.Component {
   }
 
   render() {
-    if (jQuery.isEmptyObject(this.props.card)) return null;
     const cardTitle = this.state.title;
-    const listTitle = this.props.list.title;
+    const listTitle = this.props.currentList.title;
+    if (!cardTitle && !listTitle) return null;
     console.log(cardTitle, listTitle);
 
     return (

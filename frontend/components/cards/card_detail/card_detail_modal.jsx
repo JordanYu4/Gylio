@@ -5,7 +5,7 @@ import CardDetailContainer from './card_detail_container';
 const CardDetailModal = () => (
   <div className="modal">
     <section className="modal-screen js-modal-close"></section>
-    <CardDetailContainer />
+    <CardDetailContainer cardId={277}/>
   </div>
 );
 
