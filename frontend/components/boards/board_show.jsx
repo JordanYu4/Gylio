@@ -20,8 +20,7 @@ class BoardShow extends React.Component {
     })
   }
        
-  render() {
-    return (
+  render() { return (
       <div className="board-show">
         <BoardHeaderContainer />
         <ListIndexContainer passCardId={this.passCardId} />

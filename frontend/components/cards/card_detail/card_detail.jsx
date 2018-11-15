@@ -14,7 +14,7 @@ class CardDetail extends React.Component {
     const { card, labels, comments } = this.props;
     
     return(
-      <div className="card-detail-container modal-form">
+      <div className="card-detail-container">
         <CardDetailHeaderContainer card={card} labels={labels} />
         <div className="card-detail-body">
           <section className="card-detail-main">

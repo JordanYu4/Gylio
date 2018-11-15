@@ -24,24 +24,32 @@ class CardDetailHeader extends React.Component {
     // const cardTitle = this.state.title;
     const cardTitle = this.props.card.title;
     const listTitle = this.props.currentList.title;
-    if (!cardTitle && !listTitle) return null;
+    if (!cardTitle || !listTitle) return null;
 
-    return <div className="card-detail-header">
-        <h1>{cardTitle}</h1>
-        <br />
-        <label className="parent-list-indicator">
-          in list <h3>{listTitle}</h3>
-        </label>
-        {/* <form onSubmit={this.handleSubmit} 
-          className="card-title-form" 
-        >
-          <input type="text"
-            value={this.state.title}
-            onChange={this.update('title')}
-            className="card-title-input"
-          />
-        </form>  */}
-      </div>;
+    return (
+      <div className="card-detail-header">
+        <i className="card-detail-header-icon"></i>
+        <section className="card-detail-header-body">
+          <h1>{cardTitle}</h1>
+          <br />
+          <label className="parent-list-indicator">
+            in list <h3>{listTitle}</h3>
+          </label>
+          {/* <form onSubmit={this.handleSubmit} 
+            className="card-title-form" 
+          >
+            <input type="text"
+              value={this.state.title}
+              onChange={this.update('title')}
+              className="card-title-input"
+            />
+          </form>  */}
+        </section>
+        <section className="card-detail-close-button-container">
+          <span className="card-detail-close-button js-modal-close">&times;</span>
+        </section>
+      </div>
+    );
   }
 }
 
