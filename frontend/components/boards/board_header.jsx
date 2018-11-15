@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class BoardHeader extends React.Component {
   constructor(props) {
@@ -24,27 +25,22 @@ class BoardHeader extends React.Component {
     const board = this.props.board;
     if (!board) return null;
     
-    return(
-      <div className="board-show-header">
+    return <div className="board-show-header">
         <section className="board-info">
           <h1>{board.title}</h1>
           <span>|</span>
           <h2>Personal</h2>
           <span>|</span>
-          <FontAwesomeIcon icon="coffee" />
-          <h2>Private</h2>
+          <h2>
+            <FontAwesomeIcon icon="lock" className="fa-icon"/>&nbsp;
+            Private
+          </h2>
           <span>|</span>
         </section>
-        <form onClick={this.handleDeleteBoard} 
-          className="board-delete-form"
-        >
-          <input type="button"
-            value="Delete board"
-            className="board-delete-button"
-          />
+        <form onClick={this.handleDeleteBoard} className="board-delete-form">
+          <input type="button" value="Delete board" className="board-delete-button" />
         </form>
-      </div>
-    );
+      </div>;
   }
 }
 
