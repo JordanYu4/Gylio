@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class CardDetailHeader extends React.Component {
   constructor(props) {
@@ -28,7 +29,11 @@ class CardDetailHeader extends React.Component {
 
     return (
       <div className="card-detail-header">
-        <i className="card-detail-header-icon"></i>
+        {/* <i className="card-detail-header-icon"></i> */}
+        <FontAwesomeIcon icon="newspaper" 
+          className="card-detail-header-icon" 
+          transform="up-2"
+        />
         <section className="card-detail-header-body">
           <h1>{cardTitle}</h1>
           <br />

@@ -32,8 +32,12 @@ class BoardHeader extends React.Component {
           <h2>Personal</h2>
           <span>|</span>
           <h2>
-            <FontAwesomeIcon icon="lock" className="fa-icon"/>&nbsp;
-            Private
+            <FontAwesomeIcon icon="lock" 
+              className="fa-icon"
+              size="sm"
+              transform="up-2"
+            />
+            &nbsp;Private
           </h2>
           <span>|</span>
         </section>

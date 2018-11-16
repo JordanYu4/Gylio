@@ -29,10 +29,11 @@
   width: 100%;
 
   .card-detail-header-icon {
+    display: flex;
+    justify-content: center;
     grid-column: 1 / 2;
-    width: 32px;
-    height: 32px;
-    background: red;
+    width: 26px;
+    height: 26px;
   }
 
   .card-detail-close-button-container {

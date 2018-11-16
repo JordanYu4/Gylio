@@ -7,6 +7,10 @@
   overflow: hidden;
 }
 
-[class^="fa-"] {
+[class^="fa-icon"] {
   opacity: 0.5;
+}
+
+.fa-icon-major {
+  size: 20px 20px;
 }
