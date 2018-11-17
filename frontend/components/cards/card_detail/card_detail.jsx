@@ -24,11 +24,17 @@ class CardDetail extends React.Component {
             <CardDetailCommentLog comments={comments} />
           </section>
           <ul className="card-detail-sidebar">
-            <li className="card-detail-sidebar-props">
-
+            <li className="card-detail-sidebar-list">
+              <h3>Add to Card</h3>
+              <ul className="card-detail-properties">
+                <li>Members</li>
+              </ul>
             </li>
-            <li className="card-detail-sidebar-actions">
-
+            <li className="card-detail-sidebar-list">
+              <h3>Actions</h3>
+              <ul className="card-detail-actions">
+                <li>Delete</li>
+              </ul>
             </li>
           </ul>
         </div>
