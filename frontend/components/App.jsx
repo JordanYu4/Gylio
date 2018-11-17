@@ -1,12 +1,6 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, 
-         faNewspaper, 
-         faLock,
-         faCoffee
-} from '@fortawesome/free-solid-svg-icons';
 import {
   Route,
   Switch
@@ -35,6 +29,14 @@ const App = () => (
     </Switch>
   </div>
 );
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faCheckSquare, 
+  faNewspaper, 
+  faLock,
+  faCoffee
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   fab, 
