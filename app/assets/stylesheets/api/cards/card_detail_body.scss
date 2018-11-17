@@ -1,6 +1,6 @@
 .card-detail-body {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 25%;
   grid-gap: 10px;
 }
 
@@ -8,14 +8,15 @@
   grid-column: 1 / 4;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-template-columns: 50px, auto;
+  grid-template-columns: 32px auto;
+  grid-gap: 10px;
 }
 
 .card-detail-sidebar {
   grid-column: 4 / 5;
 
   .card-detail-sidebar-list {
-    padding: 10px 8px 20px;
+    padding: 0 8px 20px;
     
     h3 {
       font-size: 16px;
