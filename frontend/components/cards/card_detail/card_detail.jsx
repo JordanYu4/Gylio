@@ -4,6 +4,7 @@ import CardDetailHeaderContainer from './card_detail_header_container';
 import CardDetailDescription from './card_detail_description_container';
 import CardDetailCommentForm from './card_detail_comment_form_container';
 import CardDetailCommentLog from './card_detail_comment_log';
+import CardDetailSidebar from './card_detail_sidebar';
 
 class CardDetail extends React.Component {
   constructor(props) {
@@ -23,20 +24,7 @@ class CardDetail extends React.Component {
             <CardDetailCommentForm cardId={card.id} />
             <CardDetailCommentLog comments={comments} />
           </section>
-          <ul className="card-detail-sidebar">
-            <li className="card-detail-sidebar-list">
-              <h3>Add to Card</h3>
-              <ul className="card-detail-properties">
-                <li className="button">Members</li>
-              </ul>
-            </li>
-            <li className="card-detail-sidebar-list">
-              <h3>Actions</h3>
-              <ul className="card-detail-actions">
-                <li className="button">Delete</li>
-              </ul>
-            </li>
-          </ul>
+          <CardDetailSidebar />
         </div>
       </div>
     );
