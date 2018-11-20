@@ -35,7 +35,9 @@ import {
   faCheckSquare, 
   faNewspaper, 
   faLock,
-  faCoffee
+  faCoffee,
+  faTrashAlt,
+  faUserAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -43,7 +45,9 @@ library.add(
   faCheckSquare, 
   faCoffee, 
   faNewspaper,
-  faLock
+  faLock,
+  faTrashAlt,
+  faUserAlt
 );
 
 // export default DragDropContext(App);

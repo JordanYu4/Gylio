@@ -1,9 +1,18 @@
+@import 'variables';
+
 .card-detail-sidebar {
   
 
   .button {
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold; 
+
     &:hover {
       cursor: no-drop;
     }
+  }
+
+  [class^="fa-icon"] {
+    margin-right: 10px;
   }
 }
