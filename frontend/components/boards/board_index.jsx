@@ -36,13 +36,13 @@ class BoardIndex extends React.Component {
               <span className="create-new-board">Create new board...</span>
             </li>
           </ul>
-          <header className="board-index-section-header">
+          {/* <header className="board-index-section-header">
             <FontAwesomeIcon icon="newspaper"
               className="icon"
             />
             <h1>Board Templates</h1>
           </header>
-          <BoardTemplateList />
+          <BoardTemplateList /> */}
         </div>
         <BoardFormModal />
       </div>
