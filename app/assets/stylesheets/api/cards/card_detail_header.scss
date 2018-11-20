@@ -3,7 +3,6 @@
 .card-detail-header {
   display: grid;
   grid-template-columns: 32px 1fr 21px;
-  grid-template-rows: 1fr;
   grid-gap: 10px;
   width: 100%;
   padding-bottom: 15px;
@@ -38,8 +37,6 @@
   .card-detail-close-button-container {
     grid-column: 3 / 4;
     position: relative;
-    // position: absolute;
-    // text-align: right;
     
     .card-detail-close-button {
       position: absolute;

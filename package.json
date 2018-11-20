@@ -1,7 +1,7 @@
 {
   "name": "gylio",
   "private": true,
-  "description": "fullstack Trello clone built by Jordan Yu",
+  "description": "full-stack Trello clone built by Jordan Yu",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {

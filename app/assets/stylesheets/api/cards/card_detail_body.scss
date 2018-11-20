@@ -5,7 +5,7 @@
 }
 
 .card-detail-main {
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 32px auto;
@@ -13,7 +13,7 @@
 }
 
 .card-detail-sidebar {
-  grid-column: 4 / 5;
+  grid-column: 2 / 3;
 
   .card-detail-sidebar-list {
     padding: 0 8px 20px;

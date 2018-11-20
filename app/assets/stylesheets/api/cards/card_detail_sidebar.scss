@@ -1,3 +1,9 @@
 .card-detail-sidebar {
   
+
+  .button {
+    &:hover {
+      cursor: no-drop;
+    }
+  }
 }

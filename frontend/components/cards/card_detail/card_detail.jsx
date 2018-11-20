@@ -27,13 +27,13 @@ class CardDetail extends React.Component {
             <li className="card-detail-sidebar-list">
               <h3>Add to Card</h3>
               <ul className="card-detail-properties">
-                <li>Members</li>
+                <li className="button">Members</li>
               </ul>
             </li>
             <li className="card-detail-sidebar-list">
               <h3>Actions</h3>
               <ul className="card-detail-actions">
-                <li>Delete</li>
+                <li className="button">Delete</li>
               </ul>
             </li>
           </ul>
