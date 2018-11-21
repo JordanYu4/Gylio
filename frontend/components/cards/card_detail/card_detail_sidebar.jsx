@@ -7,9 +7,12 @@ const CardDetailSidebar = () => (
       <h3>Add to Card</h3>
       <ul className="card-detail-properties">
         <li className="button">
-          <FontAwesomeIcon icon="user-alt" 
-            className="fa-icon"
-          /> &nbsp;Members
+          <span className="fa-icon-container">
+            <FontAwesomeIcon icon="user-alt" 
+              className="fa-icon"
+            />
+          </span>
+          Members
         </li>
       </ul>
     </li>
@@ -17,9 +20,12 @@ const CardDetailSidebar = () => (
       <h3>Actions</h3>
       <ul className="card-detail-actions">
         <li className="button">
-          <FontAwesomeIcon icon="trash-alt" 
-            className="fa-icon"
-          /> &nbsp;Delete
+          <span className="fa-icon-container">
+            <FontAwesomeIcon icon="trash-alt" 
+              className="fa-icon"
+            />
+          </span>
+          Delete
         </li>
       </ul>
     </li>

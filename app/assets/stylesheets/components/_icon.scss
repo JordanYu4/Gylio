@@ -9,8 +9,9 @@
   overflow: hidden;
 }
 
-[class^="fa-icon"] {
-  opacity: 0.7;
+.fa-icon-container {
+  opacity: 0.4;
+  color: #000000;
 }
 
 .fa-icon-major {
@@ -21,4 +22,9 @@
 .fa-icon-med {
   width: $icon-med;
   height: $icon-med;
+}
+
+.fa-icon-sm {
+  width: $icon-sm;
+  height: $icon-sm;
 }

@@ -13,6 +13,7 @@ $font-size-small: 15px;
 $primary-color: #026AA7;
 $light-gray: #EBEEF0;
 $med-gray: #C2CCD1;
+$med-gray-hover: darken($med-gray, 3);
 $dark-gray: #7C7C7C;
 $dark-navy: #092D42;
 
@@ -23,3 +24,4 @@ $alert-color: #EB5A46;
 
 $icon-large: 22px;
 $icon-med: 16px;
+$icon-sm: 14px;

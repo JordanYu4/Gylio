@@ -28,19 +28,19 @@ class BoardHeader extends React.Component {
     return <div className="board-show-header">
         <section className="board-info">
           <h1>{board.title}</h1>
-          <span>|</span>
+          <span className="divider">|</span>
           <h2>Personal</h2>
-          <span>|</span>
+          <span className="divider">|</span>
           <h2>
-            <FontAwesomeIcon icon="lock" 
-              className="fa-icon"
-              size="sm"
-              color="#7C7C7C"
-              transform="up-2"
-            />
-            &nbsp;Private
+            <span className="fa-icon-container">
+              <FontAwesomeIcon icon="lock" 
+                className="fa-icon-sm"
+                transform="up-1"
+              />
+            </span>
+            &nbsp;&nbsp;Private
           </h2>
-          <span>|</span>
+          <span className="divider">|</span>
         </section>
         <form onClick={this.handleDeleteBoard} className="board-delete-form">
           <input type="button" value="Delete board" className="board-delete-button" />
