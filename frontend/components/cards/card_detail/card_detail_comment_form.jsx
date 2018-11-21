@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class CardDetailCommentForm extends React.Component {
   constructor(props) {
@@ -22,8 +23,13 @@ class CardDetailCommentForm extends React.Component {
   render() {
     
     return (
-      <div>
-        <span className="card-detail-section-icon">Icon</span>
+      <div className="card-detail-section">
+        <section className="fa-icon-container">
+          <FontAwesomeIcon icon="comment"
+            className="fa-icon-large"
+            transform="up-2"
+          />
+        </section>
         <section className="card-detail-section-body">
           Card Detail Comment Form 
         </section>

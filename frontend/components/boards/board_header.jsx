@@ -35,6 +35,7 @@ class BoardHeader extends React.Component {
             <FontAwesomeIcon icon="lock" 
               className="fa-icon"
               size="sm"
+              color="#7C7C7C"
               transform="up-2"
             />
             &nbsp;Private

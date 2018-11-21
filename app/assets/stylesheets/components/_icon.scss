@@ -1,3 +1,5 @@
+@import 'variables';
+
 [class^="icon-"] {
   display: inline-block;
   background: image-url("sprite.png");
@@ -8,10 +10,15 @@
 }
 
 [class^="fa-icon"] {
-  opacity: 0.5;
-  color: rbga(0, 0, 0, 0.5) !important;
+  opacity: 0.7;
 }
 
 .fa-icon-major {
-  size: 20px 20px;
+  width: $icon-large;
+  height: $icon-large;
+}
+
+.fa-icon-med {
+  width: $icon-med;
+  height: $icon-med;
 }

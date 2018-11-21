@@ -8,6 +8,22 @@
   grid-column: 1 / 2;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-template-columns: 32px auto;
   grid-gap: 10px;
 }
+
+.card-detail-section {
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-gap: 10px;
+  
+  .fa-icon-container {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / 2;
+  }
+
+  .card-detail-section-body {
+    grid-column: 2 / 3;
+  }
+}
+

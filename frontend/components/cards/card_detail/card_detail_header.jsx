@@ -30,10 +30,11 @@ class CardDetailHeader extends React.Component {
     return (
       <div className="card-detail-header">
         {/* <i className="card-detail-header-icon"></i> */}
-        <FontAwesomeIcon icon="newspaper" 
-          className="card-detail-section-icon" 
-          transform="up-2"
-        />
+        <section className="fa-icon-container">
+          <FontAwesomeIcon icon="newspaper" 
+            className="fa-icon-large" 
+          />
+        </section>
         <section className="card-detail-section-body">
           <h1>{cardTitle}</h1>
           <br />
