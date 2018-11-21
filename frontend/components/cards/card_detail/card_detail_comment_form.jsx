@@ -31,7 +31,12 @@ class CardDetailCommentForm extends React.Component {
           />
         </section>
         <section className="card-detail-section-body">
-          Card Detail Comment Form 
+          <h2>Add Comment</h2>
+          <form action="">
+            <textarea name="" id="">
+            </textarea>
+            <input type="submit"/>
+          </form> 
         </section>
       </div>
     );

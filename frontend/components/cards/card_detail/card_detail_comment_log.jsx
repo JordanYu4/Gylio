@@ -12,7 +12,7 @@ const CardDetailCommentLog = (card) => {
         />
       </section>
       <section className="card-detail-section-body">
-        Card Detail Comment Log
+        <h2>Comments</h2>
       </section>
     </div>
   );

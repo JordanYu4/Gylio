@@ -8,6 +8,14 @@ html, body {
   overflow: hidden;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: $roboto;
   display: flex;

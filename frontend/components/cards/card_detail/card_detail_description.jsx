@@ -19,7 +19,11 @@ class CardDetailDescription extends React.Component {
           />
         </section>
         <section className="card-detail-section-body">
-          Card Detail Description
+          <h2>Description</h2>
+          <form action="">
+            <textarea name="" id="">
+            </textarea>
+          </form>
         </section>
       </div>;
   }
