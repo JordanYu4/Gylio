@@ -6,7 +6,8 @@ $roboto: 'Roboto', sans-serif;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-$font-size-small: 15px;
+$font-size-med: 20px;
+$font-size-sm: 15px;
 
 // Color variables 
 
@@ -15,6 +16,7 @@ $light-gray: #EBEEF0;
 $med-gray: #C2CCD1;
 $med-gray-hover: darken($med-gray, 3);
 $dark-gray: #7C7C7C;
+$darkest-gray: darken(#7C7C7C, 2);
 $dark-navy: #092D42;
 
 $green-button-color: rgb(92, 176, 71);

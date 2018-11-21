@@ -32,10 +32,12 @@ class CardDetailCommentForm extends React.Component {
         </section>
         <section className="card-detail-section-body">
           <h2>Add Comment</h2>
-          <form action="">
-            <textarea name="" id="">
+          <form onSubmit={this.handleSubmit}>
+            <textarea name="" id=""
+              placeholder="Thank you for your patience!"
+            >
             </textarea>
-            <input type="submit"/>
+            {/* <input type="submit" className="session-button" value="Save"/> */}
           </form> 
         </section>
       </div>

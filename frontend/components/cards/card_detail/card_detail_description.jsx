@@ -7,6 +7,11 @@ class CardDetailDescription extends React.Component {
     this.state = {
       description: props.card.description
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   render() {
@@ -21,7 +26,9 @@ class CardDetailDescription extends React.Component {
         <section className="card-detail-section-body">
           <h2>Description</h2>
           <form action="">
-            <textarea name="" id="">
+            <textarea name="" id=""
+              placeholder="Card details currently under construction."
+            >
             </textarea>
           </form>
         </section>

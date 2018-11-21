@@ -39,9 +39,10 @@
 
     textarea {
       width: 100%;
+      border: 1px $darkest-gray;
       border-radius: 3px;
-      // box-sizing: border-box;
-      padding: 5px;
+      padding: 6px;
+      font-size: $font-size-sm;
       line-height: 1.2em;
 
       
