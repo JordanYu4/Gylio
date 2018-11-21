@@ -1,7 +1,17 @@
 @import 'variables';
 
 .card-detail-sidebar {
-  
+  grid-column: 2 / 3;
+
+  .card-detail-sidebar-list {
+    padding: 0 8px 20px;
+    
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 2em;
+    }
+  }
 
   .button {
     font-size: $font-size-small;

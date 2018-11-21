@@ -11,7 +11,12 @@ class CardDetailDescription extends React.Component {
   render() {
 
     return (
-      <div></div>
+      <div>
+        <span className="card-detail-section-icon">Icon</span>
+        <section className="card-detail-section-body">
+          Card Detail Description
+        </section>
+      </div>
     );
   }
 }
